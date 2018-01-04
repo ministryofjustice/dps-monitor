@@ -32,8 +32,8 @@ ping_count = 10
 servers = [
     {name: 'notm-dev', url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
     {name: 'notm-stage', url: 'https://notm-stage.hmpps.dsd.io/health', method: 'http'},
-    {name: 'notm-preprod', url: 'https://notm-preprod.service.hmpps.dsd.io/health', method: 'http'},
-    {name: 'notm-prod', url: 'https://notm.service.hmpps.dsd.io/health', method: 'http'}
+    {name: 'notm-preprod', url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
+    {name: 'notm-prod', url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io', method: 'http'}
 ]
 def gather_health_data(server)
     puts "requesting #{server[:url]}..."
