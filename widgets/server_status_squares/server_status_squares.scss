@@ -1,0 +1,47 @@
+// ----------------------------------------------------------------------------
+// Widget Styles
+// ----------------------------------------------------------------------------
+$value-color:       #fff;
+$label-color:       rgba(255, 255, 255, 0.7);
+
+
+.widget-server-status-squares {
+  background-color: #12b0c5;
+  vertical-align: top;
+
+  .title {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 25px;
+  }
+
+  .updated-at {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .build-number {
+    font-size: 30px;
+    margin-bottom: 1em;
+  }
+
+  .services {
+    display: block;
+    padding: 0 1em;
+    // text-transform: uppercase;
+  }
+
+  .services li {
+    text-align: left;
+    display: block;
+  }
+
+  .label {
+    color: $label-color;
+  }
+
+  .value {
+    float: right;
+    margin-left: 12px;
+    font-weight: 600;
+    color: $value-color;
+  }
+}

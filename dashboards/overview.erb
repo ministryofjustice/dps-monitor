@@ -1,0 +1,25 @@
+<script type='text/javascript'>
+    $(function() {
+        Dashing.widget_base_dimensions = [350, 400]
+        Dashing.numColumns = 3
+    });
+</script>
+
+<% content_for(:title) {"Overview"} %>
+<div class="gridster">
+  <ul>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-cool_syscon_team-mobile-nomis-api" data-view="CircleCi" data-title="Elite2-API"></div>
+    </li>
+    <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-cool_syscon_team-elite2-web-master" data-view="CircleCi" data-title="Elite2 Web"></div>
+    </li>
+    <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="notm-dev" data-view="ServerStatusSquares" data-title="NOTM - Dev"></div>
+    </li>
+    <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="notm-prod" data-view="ServerStatusSquares" data-title="NOTM - Prod"></div>
+    </li>
+  </ul>
+</div>
