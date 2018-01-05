@@ -18,9 +18,11 @@ $label-color:       rgba(255, 255, 255, 0.7);
     color: rgba(0, 0, 0, 0.3);
   }
 
-  .build-number {
-    font-size: 30px;
-    margin-bottom: 1em;
+  .ui-version {
+    font-size: 20px;
+  }
+  .api-version {
+    font-size: 20px;
   }
 
   .services {

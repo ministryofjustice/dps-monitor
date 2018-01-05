@@ -1,7 +1,8 @@
 <h1 class="title" data-bind="title"></h1>
-<p class="build-number" data-bind="result.buildNumber"></p>
+<p class="ui-version" data-bind="result.ui_version"></p>
+<p class="api-version" data-bind="result.api_version"></p>
 <ul class="services">
-    <li data-foreach-check="result.checks">
+    <li data-foreach-check="result.api">
         <span class="label" data-bind="check"></span>
         <span class="value" data-bind="result.checks[check]"></span>
     </li>

@@ -48,7 +48,7 @@ def build_data(project, auth_token)
   return {} if api_json.empty?
 
   latest_build = api_json.select{ |build| build['status'] != 'queued' }.first
-  # email_hash = Digest::MD5.hexdigest(latest_build['committer_email'])
+  email_hash = Digest::MD5.hexdigest(latest_build['author_email'])
   build_id = "#{latest_build['branch']}, build ##{latest_build['build_num']}"
 
   data = {
@@ -60,7 +60,7 @@ def build_data(project, auth_token)
     widget_class: "#{translate_status_to_class(latest_build['status'])}",
     committer_name: latest_build['committer_name'],
     commit_body: latest_build['subject'],
-    # avatar_url: "http://www.gravatar.com/avatar/#{email_hash}"
+    avatar_url: "http://www.gravatar.com/avatar/#{email_hash}"
   }
   return data
 end

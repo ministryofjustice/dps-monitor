@@ -43,7 +43,22 @@ def gather_health_data(server)
     puts server_response
     puts "Result from #{server[:url]} is #{server_response}"
 
-    server_response
+    api_version = "Not Known"
+    result_json = JSON.parse(server_response.body)
+    status = false
+
+    health_json = result_json['api']['healthInfo']
+
+    unless health_json.nil?
+      status = health_json['status'] == 'UP'
+      api_version = health_json['version']
+    end
+
+    {
+        status: status,
+        ui_version: "#{result_json['version']}",
+        api_version: api_version
+    }
 end
 
 SCHEDULER.every '60s', first_in: 0 do |_job|
