@@ -30,6 +30,7 @@ ping_count = 10
 #      the check will return false
 #
 servers = [
+    {name: 'syscon-demo', url: 'https://sysconjustice.systems/health', method: 'http'},
     {name: 'notm-dev', url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
     {name: 'notm-stage', url: 'https://notm-stage.hmpps.dsd.io/health', method: 'http'},
     {name: 'notm-preprod', url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
@@ -47,13 +48,15 @@ def gather_health_data(server)
     result_json = JSON.parse(server_response.body)
     status = false
 
-    health_json = result_json['api']['healthInfo']
+    apiData = result_json['api']
+    unless apiData == 'DOWN'
+        health_json = apiData['healthInfo']
 
-    unless health_json.nil?
-      status = health_json['status'] == 'UP'
-      api_version = health_json['version']
+        unless health_json.nil?
+          status = health_json['status'] == 'UP'
+          api_version = health_json['version']
+        end
     end
-
     {
         status: status,
         ui_version: "#{result_json['version']}",
