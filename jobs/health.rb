@@ -44,22 +44,25 @@ def gather_health_data(server)
     puts server_response
     puts "Result from #{server[:url]} is #{server_response}"
 
-    api_version = "Not Known"
+    api_version = nil
     result_json = JSON.parse(server_response.body)
     status = false
+    ui_version = nil
 
     apiData = result_json['api']
     unless apiData == 'DOWN'
         health_json = apiData['healthInfo']
+        ui_version = "#{result_json['version']}"
 
         unless health_json.nil?
           status = health_json['status'] == 'UP'
           api_version = health_json['version']
         end
     end
+
     {
         status: status,
-        ui_version: "#{result_json['version']}",
+        ui_version: ui_version,
         api_version: api_version
     }
 end
