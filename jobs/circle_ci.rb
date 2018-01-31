@@ -4,7 +4,8 @@ require 'httparty'
 projects = [
   { vcs: 'bitbucket', user: 'cool_syscon_team', repo: 'mobile', branch: 'nomis-api'},
   { vcs: 'bitbucket', user: 'cool_syscon_team', repo: 'elite2-web', branch: 'master'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'nomis-api', branch: 'dev'}
+  { vcs: 'github', user: 'ministryofjustice', repo: 'nomis-api', branch: 'dev'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'keyworker-ui', branch: 'master'}
 ]
 
 def duration(time)
