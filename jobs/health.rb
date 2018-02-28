@@ -30,13 +30,11 @@ ping_count = 10
 #      the check will return false
 #
 servers = [
-    {name: 'syscon-demo', url: 'https://sysconjustice.systems/health', method: 'http'},
-    {name: 'omic-ui-dev', url: 'https://omic-dev.hmpps.dsd.io/info', method: 'http'},
-    {name: 'omic-srv-dev', url: 'https://omic-srv.hmpps.dsd.io/health', method: 'http'},
     {name: 'notm-dev', url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
     {name: 'notm-stage', url: 'https://notm-stage.hmpps.dsd.io/health', method: 'http'},
     {name: 'notm-preprod', url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
-    {name: 'notm-prod', url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io', method: 'http'}
+    {name: 'notm-prod', url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io', method: 'http'},
+    {name: 'omic-ui-dev', url: 'https://omic-dev.hmpps.dsd.io/info', method: 'http'},
 ]
 def gather_health_data(server)
     puts "requesting #{server[:url]}..."
@@ -52,16 +50,16 @@ def gather_health_data(server)
     ui_version = nil
     health_check_done = false
 
-    apiData = result_json['api']
-    unless apiData == 'DOWN'
-        health_json = apiData['healthInfo']
+
+    api_data = result_json['api']
+    unless api_data == 'DOWN'
+        health_json = api_data['healthInfo']
         ui_version = "#{result_json['version']}"
 
         unless health_json.nil?
             status = health_json['status'] == 'UP'
             api_version = health_json['version']
         end
-
         health_check_done = true
     end
 
@@ -70,6 +68,7 @@ def gather_health_data(server)
       unless check_version.nil?
         status = true
         ui_version = check_version
+        health_check_done = true
       end
     end
 

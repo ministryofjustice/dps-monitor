@@ -2,11 +2,11 @@ require 'httparty'
 # require 'digest/md5'
 
 projects = [
-  { vcs: 'bitbucket', user: 'cool_syscon_team', repo: 'mobile', branch: 'nomis-api'},
-  { vcs: 'bitbucket', user: 'cool_syscon_team', repo: 'elite2-web', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'nomis-api', branch: 'dev'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'keyworker-ui', branch: 'master'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'keyworker-service', branch: 'master'}
+  { vcs: 'github', user: 'ministryofjustice', repo: 'keyworker-service', branch: 'master'},
+  { vcs: 'bitbucket', user: 'cool_syscon_team', repo: 'mobile', branch: 'nomis-api'},
+  { vcs: 'bitbucket', user: 'cool_syscon_team', repo: 'elite2-web', branch: 'master'}
 ]
 
 def duration(time)
@@ -48,23 +48,27 @@ def build_data(project, auth_token)
   api_response =  HTTParty.get(api_url, :headers => { "Accept" => "application/json" } )
   api_json = JSON.parse(api_response.body)
   return {} if api_json.empty?
+  email_hash = nil
 
   latest_build = api_json.select{ |build| build['status'] != 'queued' }.first
-  email_hash = Digest::MD5.hexdigest(latest_build['author_email'])
-  build_id = "#{latest_build['branch']}, build ##{latest_build['build_num']}"
+  unless latest_build.nil?
+    email_hash = Digest::MD5.hexdigest(latest_build['author_email'])
+    build_id = "#{latest_build['branch']}, build ##{latest_build['build_num']}"
 
-  data = {
-    build_id: build_id,
-    repo: "#{project[:repo]}",
-    branch: "#{latest_build['branch']}",
-    time: "#{calculate_time(latest_build['stop_time'])}",
-    state: "#{latest_build['status'].capitalize}",
-    widget_class: "#{translate_status_to_class(latest_build['status'])}",
-    committer_name: latest_build['committer_name'],
-    commit_body: latest_build['subject'],
-    avatar_url: "http://www.gravatar.com/avatar/#{email_hash}"
-  }
-  return data
+    data = {
+      build_id: build_id,
+      repo: "#{project[:repo]}",
+      branch: "#{latest_build['branch']}",
+      time: "#{calculate_time(latest_build['stop_time'])}",
+      state: "#{latest_build['status'].capitalize}",
+      widget_class: "#{translate_status_to_class(latest_build['status'])}",
+      committer_name: latest_build['committer_name'],
+      commit_body: latest_build['subject'],
+      avatar_url: "http://www.gravatar.com/avatar/#{email_hash}"
+    }
+    return data
+  end
+  nil
 end
 
 SCHEDULER.every '10s', :first_in => 0  do
