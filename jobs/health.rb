@@ -30,11 +30,11 @@ ping_count = 10
 #      the check will return false
 #
 servers = [
-    {name: 'notm-dev', url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
-    {name: 'notm-stage', url: 'https://notm-stage.hmpps.dsd.io/health', method: 'http'},
-    {name: 'notm-preprod', url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
-    {name: 'notm-prod', url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io', method: 'http'},
-    {name: 'omic-ui-dev', url: 'https://omic-dev.hmpps.dsd.io/info', method: 'http'},
+    {name: 'notm-dev', backend: true, url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
+    {name: 'notm-stage', backend: true, url: 'https://notm-stage.hmpps.dsd.io/health', method: 'http'},
+    {name: 'notm-preprod', backend: true, url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
+    {name: 'notm-prod', backend: true, url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io', method: 'http'},
+    {name: 'omic-ui-dev', backend: false, url: 'https://omic-dev.hmpps.dsd.io/info', method: 'http'},
 ]
 def gather_health_data(server)
     puts "requesting #{server[:url]}..."
@@ -51,20 +51,18 @@ def gather_health_data(server)
 
     api_data = result_json['api']
     unless api_data == 'DOWN'
+      ui_version = "#{result_json['version']}"
+      unless ui_version.nil? || ui_version == 0
+        status = true
+      end
 
-        check_version = result_json['version']
-        if check_version.nil?
-          health_json = api_data['healthInfo']
-          ui_version = "#{result_json['version']}"
-
-          unless health_json.nil?
-            status = health_json['status'] == 'UP'
-            api_version = health_json['version']
-          end
-        else
-          status = true
-          ui_version = check_version
+      if server[:backend]
+        health_json = api_data['healthInfo']
+        unless health_json.nil?
+          status = health_json['status'] == 'UP'
+          api_version = health_json['version']
         end
+      end
     end
     {
         status: status,
