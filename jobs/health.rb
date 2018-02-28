@@ -48,30 +48,24 @@ def gather_health_data(server)
     result_json = JSON.parse(server_response.body)
     status = false
     ui_version = nil
-    health_check_done = false
-
 
     api_data = result_json['api']
     unless api_data == 'DOWN'
-        health_json = api_data['healthInfo']
-        ui_version = "#{result_json['version']}"
 
-        unless health_json.nil?
+        check_version = result_json['version']
+        if check_version.nil?
+          health_json = api_data['healthInfo']
+          ui_version = "#{result_json['version']}"
+
+          unless health_json.nil?
             status = health_json['status'] == 'UP'
             api_version = health_json['version']
+          end
+        else
+          status = true
+          ui_version = check_version
         end
-        health_check_done = true
     end
-
-    unless health_check_done
-      check_version = result_json['version']
-      unless check_version.nil?
-        status = true
-        ui_version = check_version
-        health_check_done = true
-      end
-    end
-
     {
         status: status,
         ui_version: ui_version,
