@@ -31,6 +31,8 @@ ping_count = 10
 #
 servers = [
     {name: 'syscon-demo', url: 'https://sysconjustice.systems/health', method: 'http'},
+    {name: 'omic-ui-dev', url: 'https://omic-dev.hmpps.dsd.io/info', method: 'http'},
+    {name: 'omic-srv-dev', url: 'https://omic-srv.hmpps.dsd.io/health', method: 'http'},
     {name: 'notm-dev', url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
     {name: 'notm-stage', url: 'https://notm-stage.hmpps.dsd.io/health', method: 'http'},
     {name: 'notm-preprod', url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
@@ -49,15 +51,21 @@ def gather_health_data(server)
     status = false
     ui_version = nil
 
-    apiData = result_json['api']
-    unless apiData == 'DOWN'
-        health_json = apiData['healthInfo']
-        ui_version = "#{result_json['version']}"
+    checkVersion = result_json['version']
+    if checkVersion.nil?
+        apiData = result_json['api']
+        unless apiData == 'DOWN'
+            health_json = apiData['healthInfo']
+            ui_version = "#{result_json['version']}"
 
-        unless health_json.nil?
-          status = health_json['status'] == 'UP'
-          api_version = health_json['version']
+            unless health_json.nil?
+                status = health_json['status'] == 'UP'
+                api_version = health_json['version']
+            end
         end
+    else
+        status = true
+        ui_version = checkVersion
     end
 
     {
