@@ -30,11 +30,12 @@ ping_count = 10
 #      the check will return false
 #
 servers = [
-    {name: 'notm-dev', backend: true, url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
-    {name: 'notm-stage', backend: true, url: 'https://notm-stage.hmpps.dsd.io/health', method: 'http'},
-    {name: 'notm-preprod', backend: true, url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
-    {name: 'notm-prod', backend: true, url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io', method: 'http'},
-    {name: 'omic-ui-dev', backend: false, url: 'https://omic-dev.hmpps.dsd.io/info', method: 'http'},
+    {name: 'notm-dev', backend: true, backendOnly: false, url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
+    {name: 'notm-stage', backend: true, backendOnly: false, url: 'https://notm-stage.hmpps.dsd.io/health', method: 'http'},
+    {name: 'notm-preprod', backend: true, backendOnly: false, url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
+    {name: 'notm-prod', backend: true, backendOnly: false, url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io', method: 'http'},
+    {name: 'omic-ui-dev', backend: false, backendOnly: false, url: 'http://omic-dev.dsbavtpube.eu-west-2.elasticbeanstalk.com/info', method: 'http'},
+    {name: 'keyworker-srv-dev', backend: false, backendOnly: true, url: 'http://keyworker-srv-dev.d2jhvam9u2.eu-west-2.elasticbeanstalk.com/api/health', method: 'http'},
 ]
 def gather_health_data(server)
     puts "requesting #{server[:url]}..."
@@ -62,6 +63,10 @@ def gather_health_data(server)
           status = health_json['status'] == 'UP'
           api_version = health_json['version']
         end
+      end
+
+      if server[:backendOnly]
+        status = result_json['status'] == 'UP'
       end
     end
     {
