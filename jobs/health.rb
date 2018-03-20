@@ -57,6 +57,7 @@ def gather_health_data(server)
         status = true
       end
 
+
       if server[:backend]
         status = api_data['status'] == 'UP'
         health_json = api_data['healthInfo']
