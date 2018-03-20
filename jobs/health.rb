@@ -58,9 +58,9 @@ def gather_health_data(server)
       end
 
       if server[:backend]
+        status = api_data['status'] == 'UP'
         health_json = api_data['healthInfo']
         unless health_json.nil?
-          status = health_json['status'] == 'UP'
           api_version = health_json['version']
         end
       end
