@@ -36,6 +36,8 @@ servers = [
     {name: 'notm-prod', backend: true, backendOnly: false, url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io', method: 'http'},
     {name: 'omic-ui-dev', backend: false, backendOnly: false, url: 'https://omic-dev.hmpps.dsd.io/info', method: 'http'},
     {name: 'keyworker-srv-dev', backend: false, backendOnly: true, url: 'https://keyworker-api-dev.hmpps.dsd.io/health', method: 'http'},
+    {name: 'omic-ui-stage', backend: false, backendOnly: false, url: 'https://omic-stage.hmpps.dsd.io/info', method: 'http'},
+    {name: 'keyworker-srv-stage', backend: false, backendOnly: true, url: 'https://keyworker-api-stage.hmpps.dsd.io/health', method: 'http'},
 ]
 def gather_health_data(server)
     puts "requesting #{server[:url]}..."
