@@ -31,16 +31,16 @@ ping_count = 10
 #
 servers = [
     {name: 'notm-prod',       backend: true, backendOnly: false, url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io', method: 'http'},
-    {name: 'omic-ui-prod',    backend: true, backendOnly: false, url: 'https://omic.service.hmpps.dsd.io/health',         method: 'http'},
+    # {name: 'omic-ui-prod',    backend: true, backendOnly: false, url: 'https://omic.service.hmpps.dsd.io/health',         method: 'http'},
 
     {name: 'notm-dev',        backend: true, backendOnly: false, url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
     {name: 'omic-ui-dev',     backend: true, backendOnly: false, url: 'https://omic-dev.hmpps.dsd.io/health',             method: 'http'},
 
     {name: 'notm-stage',      backend: true, backendOnly: false, url: 'https://notm-stage.hmpps.dsd.io/health', method: 'http'},
-    {name: 'omic-ui-stage',   backend: true, backendOnly: false, url: 'https://omic-stage.hmpps.dsd.io/health',           method: 'http'},
+    # {name: 'omic-ui-stage',   backend: true, backendOnly: false, url: 'https://omic-stage.hmpps.dsd.io/health',           method: 'http'},
 
     {name: 'notm-preprod',    backend: true, backendOnly: false, url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
-    {name: 'omic-ui-preprod', backend: true, backendOnly: false, url: 'https://omic-preprod.service.hmpps.dsd.io/health', method: 'http'},
+    # {name: 'omic-ui-preprod', backend: true, backendOnly: false, url: 'https://omic-preprod.service.hmpps.dsd.io/health', method: 'http'},
 ]
 def gather_health_data(server)
     puts "requesting #{server[:url]}..."
