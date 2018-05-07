@@ -43,8 +43,8 @@ servers = [
     # {name: 'omic-ui-preprod', multiBackend: true, url: 'https://omic-preprod.service.hmpps.dsd.io/health', method: 'http'},
 ]
 
-def checkHealth(jsonStr)
-  api_data = JSON.parse(jsonStr)
+def checkHealth(api_data)
+  # api_data = JSON.parse(jsonStr)
   api_version = 'UNKNOWN'
   status = api_data['status'] == 'UP'
   health_json = api_data['healthInfo']
