@@ -30,18 +30,30 @@ ping_count = 10
 #      the check will return false
 #
 servers = [
-    {name: 'notm-prod',       backend: true, backendOnly: false, url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io', method: 'http'},
-    {name: 'omic-ui-prod',    backend: true, backendOnly: false, url: 'https://health-kick.hmpps.dsd.io/https/omic.service.hmpps.dsd.io', method: 'http'},
+    {name: 'notm-prod',       multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io', method: 'http'},
+    {name: 'omic-ui-prod',    multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/omic.service.hmpps.dsd.io', method: 'http'},
 
-    {name: 'notm-dev',        backend: true, backendOnly: false, url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
-    {name: 'omic-ui-dev',     backend: true, backendOnly: false, url: 'https://omic-dev.hmpps.dsd.io/health',             method: 'http'},
+    {name: 'notm-dev',        multiBackend: false, url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
+    {name: 'omic-ui-dev',     multiBackend: true, url: 'https://omic-dev.hmpps.dsd.io/health', method: 'http'},
 
-    {name: 'notm-stage',      backend: true, backendOnly: false, url: 'https://notm-stage.hmpps.dsd.io/health', method: 'http'},
-    # {name: 'omic-ui-stage',   backend: true, backendOnly: false, url: 'https://omic-stage.hmpps.dsd.io/health',           method: 'http'},
+    {name: 'notm-stage',      multiBackend: false, url: 'https://notm-stage.hmpps.dsd.io/health', method: 'http'},
+    # {name: 'omic-ui-stage',   multiBackend: true, url: 'https://omic-stage.hmpps.dsd.io/health', method: 'http'},
 
-    {name: 'notm-preprod',    backend: true, backendOnly: false, url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
-    # {name: 'omic-ui-preprod', backend: true, backendOnly: false, url: 'https://omic-preprod.service.hmpps.dsd.io/health', method: 'http'},
+    {name: 'notm-preprod',    multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
+    # {name: 'omic-ui-preprod', multiBackend: true, url: 'https://omic-preprod.service.hmpps.dsd.io/health', method: 'http'},
 ]
+
+def checkHealth(jsonStr)
+  api_data = JSON.parse(jsonStr)
+  api_version = 'UNKNOWN'
+  status = api_data['status'] == 'UP'
+  health_json = api_data['healthInfo']
+  unless health_json.nil?
+    api_version = health_json['version']
+  end
+  [api_version, status]
+end
+
 def gather_health_data(server)
     puts "requesting #{server[:url]}..."
 
@@ -50,7 +62,10 @@ def gather_health_data(server)
     puts server_response
     puts "Result from #{server[:url]} is #{server_response}"
 
-    api_version = nil
+    elite2_version = nil
+    kw_version = nil
+    kw_status = true
+    elite2_status = true
     result_json = JSON.parse(server_response.body)
     status = false
     ui_version = nil
@@ -62,23 +77,18 @@ def gather_health_data(server)
         status = true
       end
 
-
-      if server[:backend]
-        status = api_data['status'] == 'UP'
-        health_json = api_data['healthInfo']
-        unless health_json.nil?
-          api_version = health_json['version']
-        end
-      end
-
-      if server[:backendOnly]
-        status = result_json['status'] == 'UP'
+      if server[:multiBackend]
+        kw_version, kw_status = checkHealth(api_data['keyworkerApi'])
+        elite2_version, elite2_status = checkHealth(api_data['elite2Api'])
+      else
+        elite2_version, elite2_status = checkHealth(api_data)
       end
     end
     {
-        status: status,
+        status: status && elite2_status && kw_status,
         ui_version: ui_version,
-        api_version: api_version
+        api_version: elite2_version,
+        kw_version: kw_version
     }
 end
 
