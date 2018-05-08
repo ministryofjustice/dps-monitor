@@ -31,16 +31,16 @@ ping_count = 10
 #
 servers = [
     {name: 'notm-prod',       multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io', method: 'http'},
-    {name: 'omic-ui-prod',    multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/omic.service.hmpps.dsd.io', method: 'http'},
+    {name: 'omic-ui-prod',    multiBackend: true, url: 'https://health-kick.hmpps.dsd.io/https/omic.service.hmpps.dsd.io', method: 'http'},
 
     {name: 'notm-dev',        multiBackend: false, url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
     {name: 'omic-ui-dev',     multiBackend: true, url: 'https://omic-dev.hmpps.dsd.io/health', method: 'http'},
 
     {name: 'notm-stage',      multiBackend: false, url: 'https://notm-stage.hmpps.dsd.io/health', method: 'http'},
-    # {name: 'omic-ui-stage',   multiBackend: true, url: 'https://omic-stage.hmpps.dsd.io/health', method: 'http'},
+    {name: 'omic-ui-stage',   multiBackend: true, url: 'https://omic-stage.hmpps.dsd.io/health', method: 'http'},
 
     {name: 'notm-preprod',    multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
-    # {name: 'omic-ui-preprod', multiBackend: true, url: 'https://omic-preprod.service.hmpps.dsd.io/health', method: 'http'},
+    {name: 'omic-ui-preprod', multiBackend: true, url: 'https://omic-preprod.service.hmpps.dsd.io/health', method: 'http'},
 ]
 
 def checkHealth(api_data)
