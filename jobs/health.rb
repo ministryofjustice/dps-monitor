@@ -40,7 +40,7 @@ servers = [
     {name: 'omic-ui-stage',   multiBackend: true, url: 'https://omic-stage.hmpps.dsd.io/health', method: 'http'},
 
     {name: 'notm-preprod',    multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
-    {name: 'omic-ui-preprod', multiBackend: true, url: 'https://omic-preprod.service.hmpps.dsd.io/health', method: 'http'},
+    {name: 'omic-ui-preprod', multiBackend: true, url: 'https://health-kick.hmpps.dsd.io/https/omic-preprod.service.hmpps.dsd.io', method: 'http'},
 ]
 
 def checkHealth(api_data)
