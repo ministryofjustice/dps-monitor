@@ -39,6 +39,7 @@ servers = [
 
     {name: 'notm-stage',       singleBackend: false,multiBackend: false, url: 'https://notm-stage.hmpps.dsd.io/health', method: 'http'},
     {name: 'omic-ui-stage',    singleBackend: false,multiBackend: true, url: 'https://omic-stage.hmpps.dsd.io/health', method: 'http'},
+    {name: 'psh-stage',        singleBackend: true,  multiBackend: false, url: 'https://prisonstaffhub-stage.hmpps.dsd.io/health', method: 'http'},
 
     {name: 'notm-preprod',     singleBackend: false,multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
     {name: 'omic-ui-preprod',  singleBackend: false, multiBackend: true, url: 'https://health-kick.hmpps.dsd.io/https/omic-preprod.service.hmpps.dsd.io', method: 'http'},
@@ -71,15 +72,23 @@ def gather_health_data(server)
     status = false
     ui_version = nil
 
+    checks = []
+    api = []
+
     api_data = result_json['api']
     unless api_data == 'DOWN'
       ui_version = "#{result_json['version']}"
+      api.push( 'ui')
+      checks.push( 'ui' => ui_version)
       unless ui_version.nil? || ui_version == 0
         status = true
       end
 
       if server[:multiBackend]
         kw_version, kw_status = checkHealth(api_data['keyworkerApi'])
+        api.push( 'kw')
+        checks.push( 'kw' => kw_version)
+
         elite2_version, elite2_status = checkHealth(api_data['elite2Api'])
       else
         if server[:singleBackend]
@@ -88,12 +97,23 @@ def gather_health_data(server)
           elite2_version, elite2_status = checkHealth(api_data)
         end
       end
+      api.push( 'api')
+      checks.push( 'api' => elite2_version)
     end
-    {
+
+
+      {
         status: status && elite2_status && kw_status,
-        ui_version: ui_version,
-        api_version: elite2_version,
-        kw_version: kw_version
+        api: {
+            UI: status,
+            API: elite2_status,
+            KW_API: kw_status
+        },
+        checks: {
+            UI: ui_version,
+            API: elite2_version,
+            KW_API: kw_version
+        }
     }
 end
 
