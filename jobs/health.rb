@@ -43,8 +43,8 @@ servers = [
 
     {name: 'notm-preprod',     singleBackend: false,multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
     {name: 'omic-ui-preprod',  singleBackend: false, multiBackend: true, url: 'https://health-kick.hmpps.dsd.io/https/omic-preprod.service.hmpps.dsd.io', method: 'http'},
-    {name: 'psh-preprod',      singleBackend: true,  multiBackend: false, url: 'https://prisonstaffhub-preprod.service.hmpps.dsd.io/health', method: 'http'},
-    {name: 'psh-prod',        singleBackend: true,  multiBackend: false, url: 'https://prisonstaffhub.service.hmpps.dsd.io/health', method: 'http'},
+    {name: 'psh-preprod',      singleBackend: true,  multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/prisonstaffhub-preprod.service.hmpps.dsd.io', method: 'http'},
+    {name: 'psh-prod',        singleBackend: true,  multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/prisonstaffhub.service.hmpps.dsd.io', method: 'http'},
 
 ]
 
