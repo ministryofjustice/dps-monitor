@@ -32,10 +32,11 @@ ping_count = 10
 servers = [
     {name: 'notm-prod',       singleBackend: false, multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io', method: 'http'},
     {name: 'omic-ui-prod',    singleBackend: false, multiBackend: true, url: 'https://health-kick.hmpps.dsd.io/https/omic.service.hmpps.dsd.io', method: 'http'},
+    {name: 'psh-prod',        singleBackend: true,  multiBackend: false, url: 'https://prisonstaffhub.service.hmpps.dsd.io/health', method: 'http'},
 
     {name: 'notm-dev',        singleBackend: false, multiBackend: false, url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
-    {name: 'omic-ui-dev',    singleBackend: false,  multiBackend: true, url: 'https://omic-dev.hmpps.dsd.io/health', method: 'http'},
-    {name: 'psh-dev',        singleBackend: true,  multiBackend: false, url: 'https://prisonstaffhub-dev.hmpps.dsd.io/health', method: 'http'},
+    {name: 'omic-ui-dev',     singleBackend: false,  multiBackend: true, url: 'https://omic-dev.hmpps.dsd.io/health', method: 'http'},
+    {name: 'psh-dev',         singleBackend: true,  multiBackend: false, url: 'https://prisonstaffhub-dev.hmpps.dsd.io/health', method: 'http'},
 
     {name: 'notm-stage',       singleBackend: false,multiBackend: false, url: 'https://notm-stage.hmpps.dsd.io/health', method: 'http'},
     {name: 'omic-ui-stage',    singleBackend: false,multiBackend: true, url: 'https://omic-stage.hmpps.dsd.io/health', method: 'http'},
@@ -43,6 +44,8 @@ servers = [
 
     {name: 'notm-preprod',     singleBackend: false,multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
     {name: 'omic-ui-preprod',  singleBackend: false, multiBackend: true, url: 'https://health-kick.hmpps.dsd.io/https/omic-preprod.service.hmpps.dsd.io', method: 'http'},
+    {name: 'psh-preprod',      singleBackend: true,  multiBackend: false, url: 'https://prisonstaffhub-preprod.service.hmpps.dsd.io/health', method: 'http'},
+
 ]
 
 def checkHealth(api_data)
