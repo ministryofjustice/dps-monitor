@@ -34,8 +34,8 @@ servers = [
     {name: 'notm-prod',       singleBackend: false, multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io', method: 'http'},
     {name: 'omic-ui-prod',    singleBackend: false, multiBackend: true, url: 'https://health-kick.hmpps.dsd.io/https/omic.service.hmpps.dsd.io', method: 'http'},
     {name: 'nomis-api-prod',  apiOnly: true,  textOnly: true, url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/nomisapi/health', method: 'http'},
-    {name: 'newnomisapi-prod', apiOnly: true, url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/custodyapi/health', method: 'http'},
-    {name: 'oauth2-prod',      apiOnly: true, url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/health', method: 'http'},
+    {name: 'newnomisapi-prod', apiOnly: true, versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/custodyapi/health', method: 'http'},
+    {name: 'oauth2-prod',      apiOnly: true, versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/health', method: 'http'},
     {name: 'yjaf-prod',      apiOnly: true, url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/yjafapi/health', method: 'http'},
     {name: 'psh-prod',        singleBackend: true,  multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/prisonstaffhub.service.hmpps.dsd.io', method: 'http'},
 
@@ -43,24 +43,24 @@ servers = [
     {name: 'omic-ui-dev',     singleBackend: false, multiBackend: true, url: 'https://omic-dev.hmpps.dsd.io/health', method: 'http'},
     {name: 'psh-dev',         singleBackend: true,  multiBackend: false, url: 'https://prisonstaffhub-dev.hmpps.dsd.io/health', method: 'http'},
     {name: 'nomis-api-dev',   apiOnly: true, textOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/nomisapi/health', method: 'http'},
-    {name: 'newnomisapi-dev', apiOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/health', method: 'http'},
-    {name: 'oauth2-dev',      apiOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/health', method: 'http'},
-    {name: 'yjaf-dev',      apiOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/yjafapi/health', method: 'http'},
+    {name: 'newnomisapi-dev', apiOnly: true, versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/health', method: 'http'},
+    {name: 'oauth2-dev',      apiOnly: true, versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/health', method: 'http'},
+    {name: 'yjaf-dev',        apiOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/yjafapi/health', method: 'http'},
 
     {name: 'notm-stage',       singleBackend: false,multiBackend: false, url: 'https://notm-stage.hmpps.dsd.io/health', method: 'http'},
     {name: 'omic-ui-stage',    singleBackend: false,multiBackend: true, url: 'https://omic-stage.hmpps.dsd.io/health', method: 'http'},
     {name: 'psh-stage',        singleBackend: true,  multiBackend: false, url: 'https://prisonstaffhub-stage.hmpps.dsd.io/health', method: 'http'},
     {name: 'nomis-api-stage',  apiOnly: true,  textOnly: true, url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/nomisapi/health', method: 'http'},
-    {name: 'newnomisapi-stage', apiOnly: true, url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/custodyapi/health', method: 'http'},
-    {name: 'oauth2-stage',      apiOnly: true, url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/auth/health', method: 'http'},
+    {name: 'newnomisapi-stage', apiOnly: true, versionUrl: 'https://gateway.t2.nomis-api.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/custodyapi/health', method: 'http'},
+    {name: 'oauth2-stage',      apiOnly: true, versionUrl: 'https://gateway.t2.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/auth/health', method: 'http'},
     {name: 'yjaf-stage',      apiOnly: true, url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/yjafapi/health', method: 'http'},
 
     {name: 'notm-preprod',     singleBackend: false,multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
     {name: 'omic-ui-preprod',  singleBackend: false, multiBackend: true, url: 'https://health-kick.hmpps.dsd.io/https/omic-preprod.service.hmpps.dsd.io', method: 'http'},
     {name: 'psh-preprod',      singleBackend: true,  multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/prisonstaffhub-preprod.service.hmpps.dsd.io', method: 'http'},
     {name: 'nomis-api-preprod',  apiOnly: true,  textOnly: true, url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/nomisapi/health', method: 'http'},
-    {name: 'newnomisapi-preprod', apiOnly: true, url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/custodyapi/health', method: 'http'},
-    {name: 'oauth2-preprod',      apiOnly: true, url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/health', method: 'http'},
+    {name: 'newnomisapi-preprod', apiOnly: true, versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/custodyapi/health', method: 'http'},
+    {name: 'oauth2-preprod',      apiOnly: true, versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/health', method: 'http'},
     {name: 'yjaf-preprod',      apiOnly: true, url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/yjafapi/health', method: 'http'}
 
 ]
@@ -73,15 +73,19 @@ def valid_json?(string)
   end
 end
 
+def getVersion(version_data)
+  api_version = 'UNKNOWN'
+  unless version_data.nil?
+    api_version = version_data['version']
+  end
+  api_version
+end
+
 
 def checkHealth(api_data)
-  # api_data = JSON.parse(jsonStr)
-  api_version = 'UNKNOWN'
   status = api_data['status'] == 'UP'
   health_json = api_data['healthInfo']
-  unless health_json.nil?
-    api_version = health_json['version']
-  end
+  api_version = getVersion(health_json)
   [api_version, status]
 end
 
@@ -110,14 +114,22 @@ def gather_health_data(server)
     if server[:apiOnly]
       if server[:textOnly]
         status = server_response.body == 'DB Up'
+        elite2_version = status ? 'UP' : 'DOWN'
       else
         if valid_json?(server_response.body)
           result_json = JSON.parse(server_response.body)
-          status = result_json['status'] == 'UP'
+
+          unless server[:versionUrl]
+            elite2_version, status = checkHealth(result_json)
+          else
+            status = result_json['status'] == 'UP'
+            version_response = HTTParty.get(server[:versionUrl], headers: { 'Accept' => 'application/json' })
+            version_json = JSON.parse(version_response.body)
+            elite2_version = getVersion(version_json['build'])
+          end
         end
       end
       elite2_status = status
-      elite2_version = status ? 'UP' : 'DOWN'
     else
       result_json = JSON.parse(server_response.body)
       api_data = result_json['api']
