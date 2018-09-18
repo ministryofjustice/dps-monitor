@@ -5,20 +5,47 @@ $(function() {
 });
 </script>
 
-<% content_for :title do %>OMIC Health<% end %>
+<% content_for :title do %>Health<% end %>
 <div class="gridster">
     <ul>
-        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-          <div data-id="omic-ui-dev" data-view="ServerStatusSquares" data-title="Health Keyworker - Dev"></div>
-        </li>
-        <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
-          <div data-id="omic-ui-stage" data-view="ServerStatusSquares" data-title="Health Keyworker - Stage"></div>
-        </li>
-        <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
-          <div data-id="omic-ui-preprod" data-view="ServerStatusSquares" data-title="Health Keyworker - Preprod"></div>
-        </li>
-        <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
-          <div data-id="omic-ui-prod" data-view="ServerStatusSquares" data-title="Health Keyworker - Prod"></div>
-        </li>
+      <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+        <div data-id="notm-prod" data-view="ServerStatusSquares" data-title="Health New Nomis - Prod"></div>
+      </li>
+      <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+        <div data-id="omic-ui-prod" data-view="ServerStatusSquares" data-title="Health Omic - Prod"></div>
+      </li>
+      <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+        <div data-id="psh-prod" data-view="ServerStatusSquares" data-title="Health Prison Staff Hub - Prod"></div>
+      </li>
+
+      <li data-row="2" data-col="4" data-sizex="1" data-sizey="1">
+        <div data-id="notm-preprod" data-view="ServerStatusSquares" data-title="Health New Nomis - Preprod"></div>
+      </li>
+      <li data-row="2" data-col="5" data-sizex="1" data-sizey="1">
+        <div data-id="omic-ui-preprod" data-view="ServerStatusSquares" data-title="Health Omic - Preprod"></div>
+      </li>
+      <li data-row="2" data-col="6" data-sizex="1" data-sizey="1">
+        <div data-id="psh-preprod" data-view="ServerStatusSquares" data-title="Health Prison Staff Hub - Preprod"></div>
+      </li>
+
+      <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
+        <div data-id="notm-dev" data-view="ServerStatusSquares" data-title="Health New Nomis - Dev"></div>
+      </li>
+      <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
+        <div data-id="omic-ui-dev" data-view="ServerStatusSquares" data-title="Health Omic - Dev"></div>
+      </li>
+      <li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
+        <div data-id="psh-dev" data-view="ServerStatusSquares" data-title="Health Prison Staff Hub - Dev"></div>
+      </li>
+
+      <li data-row="3" data-col="4" data-sizex="1" data-sizey="1">
+        <div data-id="notm-stage" data-view="ServerStatusSquares" data-title="Health New Nomis - Stage"></div>
+      </li>
+      <li data-row="3" data-col="5" data-sizex="1" data-sizey="1">
+        <div data-id="omic-ui-stage" data-view="ServerStatusSquares" data-title="Health Omic - Stage"></div>
+      </li>
+      <li data-row="3" data-col="6" data-sizex="1" data-sizey="1">
+        <div data-id="psh-stage" data-view="ServerStatusSquares" data-title="Health Prison Staff Hub - Stage"></div>
+      </li>
     </ul>
 </div>

@@ -8,7 +8,9 @@ projects = [
   { vcs: 'github', user: 'ministryofjustice', repo: 'prisonstaffhub', branch: 'master'},
   { vcs: 'bitbucket', user: 'cool_syscon_team', repo: 'mobile', branch: 'nomis-api'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'new-nomis-ui', branch: 'master'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'nomis-oauth2-server', branch: 'master'}
+  { vcs: 'github', user: 'ministryofjustice', repo: 'nomis-oauth2-server', branch: 'master'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'nomis-api', branch: 'dev'},
+  { vcs: 'github', user: 'noms-digital-studio', repo: 'new-nomis-api', branch: 'master'}
 ]
 
 def duration(time)

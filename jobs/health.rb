@@ -30,12 +30,19 @@ ping_count = 10
 #      the check will return false
 #
 servers = [
+
     {name: 'notm-prod',       singleBackend: false, multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io', method: 'http'},
     {name: 'omic-ui-prod',    singleBackend: false, multiBackend: true, url: 'https://health-kick.hmpps.dsd.io/https/omic.service.hmpps.dsd.io', method: 'http'},
+    # {name: 'nomis-api-prod',  apiOnly: true,  url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/nomisapi/health', method: 'http'},
+    {name: 'newnomisapi-prod', apiOnly: true, url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/custodyapi/health', method: 'http'},
+    # {name: 'oauth2-prod',      apiOnly: true, url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/health', method: 'http'},
 
     {name: 'notm-dev',        singleBackend: false, multiBackend: false, url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
-    {name: 'omic-ui-dev',     singleBackend: false,  multiBackend: true, url: 'https://omic-dev.hmpps.dsd.io/health', method: 'http'},
+    {name: 'omic-ui-dev',     singleBackend: false, multiBackend: true, url: 'https://omic-dev.hmpps.dsd.io/health', method: 'http'},
     {name: 'psh-dev',         singleBackend: true,  multiBackend: false, url: 'https://prisonstaffhub-dev.hmpps.dsd.io/health', method: 'http'},
+    # {name: 'nomis-api-dev',   apiOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/nomisapi/health', method: 'http'},
+    {name: 'newnomisapi-dev', apiOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/health', method: 'http'},
+    {name: 'oauth2-dev',      apiOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/health', method: 'http'},
 
     {name: 'notm-stage',       singleBackend: false,multiBackend: false, url: 'https://notm-stage.hmpps.dsd.io/health', method: 'http'},
     {name: 'omic-ui-stage',    singleBackend: false,multiBackend: true, url: 'https://omic-stage.hmpps.dsd.io/health', method: 'http'},
@@ -78,33 +85,43 @@ def gather_health_data(server)
     checks = []
     api = []
 
-    api_data = result_json['api']
-    unless api_data == 'DOWN'
-      ui_version = "#{result_json['version']}"
-      api.push( 'ui')
-      checks.push( 'ui' => ui_version)
-      unless ui_version.nil? || ui_version == 0
-        status = true
-      end
+    if server[:apiOnly]
+      return
+      {
+          status: result_json['status'] == 'UP',
+          api: {
+              API: result_json['status'] == 'UP',
+          }
+      }
+    else
+      api_data = result_json['api']
+      unless api_data == 'DOWN'
+        ui_version = "#{result_json['version']}"
+        api.push( 'ui')
+        checks.push( 'ui' => ui_version)
+        unless ui_version.nil? || ui_version == 0
+          status = true
+        end
 
-      if server[:multiBackend]
-        kw_version, kw_status = checkHealth(api_data['keyworkerApi'])
-        api.push( 'kw')
-        checks.push( 'kw' => kw_version)
+        if server[:multiBackend]
+          kw_version, kw_status = checkHealth(api_data['keyworkerApi'])
+          api.push( 'kw')
+          checks.push( 'kw' => kw_version)
 
-        elite2_version, elite2_status = checkHealth(api_data['elite2Api'])
-      else
-        if server[:singleBackend]
           elite2_version, elite2_status = checkHealth(api_data['elite2Api'])
         else
-          elite2_version, elite2_status = checkHealth(api_data)
+          if server[:singleBackend]
+            elite2_version, elite2_status = checkHealth(api_data['elite2Api'])
+          else
+            elite2_version, elite2_status = checkHealth(api_data)
+          end
         end
+        api.push( 'api')
+        checks.push( 'api' => elite2_version)
       end
-      api.push( 'api')
-      checks.push( 'api' => elite2_version)
-    end
 
 
+      return
       {
         status: status && elite2_status && kw_status,
         api: {
@@ -118,6 +135,7 @@ def gather_health_data(server)
             KW_API: kw_version
         }
     }
+    end
 end
 
 SCHEDULER.every '60s', first_in: 0 do |_job|
