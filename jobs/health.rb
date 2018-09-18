@@ -36,6 +36,8 @@ servers = [
     {name: 'nomis-api-prod',  apiOnly: true,  textOnly: true, url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/nomisapi/health', method: 'http'},
     {name: 'newnomisapi-prod', apiOnly: true, url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/custodyapi/health', method: 'http'},
     {name: 'oauth2-prod',      apiOnly: true, url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/health', method: 'http'},
+    {name: 'yjaf-prod',      apiOnly: true, url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/yjafapi/health', method: 'http'},
+    {name: 'psh-prod',        singleBackend: true,  multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/prisonstaffhub.service.hmpps.dsd.io', method: 'http'},
 
     {name: 'notm-dev',        singleBackend: false, multiBackend: false, url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
     {name: 'omic-ui-dev',     singleBackend: false, multiBackend: true, url: 'https://omic-dev.hmpps.dsd.io/health', method: 'http'},
@@ -43,15 +45,23 @@ servers = [
     {name: 'nomis-api-dev',   apiOnly: true, textOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/nomisapi/health', method: 'http'},
     {name: 'newnomisapi-dev', apiOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/health', method: 'http'},
     {name: 'oauth2-dev',      apiOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/health', method: 'http'},
+    {name: 'yjaf-dev',      apiOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/yjafapi/health', method: 'http'},
 
     {name: 'notm-stage',       singleBackend: false,multiBackend: false, url: 'https://notm-stage.hmpps.dsd.io/health', method: 'http'},
     {name: 'omic-ui-stage',    singleBackend: false,multiBackend: true, url: 'https://omic-stage.hmpps.dsd.io/health', method: 'http'},
     {name: 'psh-stage',        singleBackend: true,  multiBackend: false, url: 'https://prisonstaffhub-stage.hmpps.dsd.io/health', method: 'http'},
+    {name: 'nomis-api-stage',  apiOnly: true,  textOnly: true, url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/nomisapi/health', method: 'http'},
+    {name: 'newnomisapi-stage', apiOnly: true, url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/custodyapi/health', method: 'http'},
+    {name: 'oauth2-stage',      apiOnly: true, url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/auth/health', method: 'http'},
+    {name: 'yjaf-stage',      apiOnly: true, url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/yjafapi/health', method: 'http'},
 
     {name: 'notm-preprod',     singleBackend: false,multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
     {name: 'omic-ui-preprod',  singleBackend: false, multiBackend: true, url: 'https://health-kick.hmpps.dsd.io/https/omic-preprod.service.hmpps.dsd.io', method: 'http'},
     {name: 'psh-preprod',      singleBackend: true,  multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/prisonstaffhub-preprod.service.hmpps.dsd.io', method: 'http'},
-    {name: 'psh-prod',        singleBackend: true,  multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/prisonstaffhub.service.hmpps.dsd.io', method: 'http'},
+    {name: 'nomis-api-preprod',  apiOnly: true,  textOnly: true, url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/nomisapi/health', method: 'http'},
+    {name: 'newnomisapi-preprod', apiOnly: true, url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/custodyapi/health', method: 'http'},
+    {name: 'oauth2-preprod',      apiOnly: true, url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/health', method: 'http'},
+    {name: 'yjaf-preprod',      apiOnly: true, url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/yjafapi/health', method: 'http'}
 
 ]
 
