@@ -55,7 +55,7 @@ def build_data(project, auth_token)
   email_hash = nil
 
   latest_build = api_json.select{ |build| build['status'] != 'queued' }.first
-  unless latest_build.nil? or latest_build.any?
+  unless (latest_build.nil? or latest_build.empty?)
     email = latest_build['author_email']
     unless email.nil?
        email_hash = Digest::MD5.hexdigest(email)
