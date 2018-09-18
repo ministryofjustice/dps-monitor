@@ -33,14 +33,14 @@ servers = [
 
     {name: 'notm-prod',       singleBackend: false, multiBackend: false, url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io', method: 'http'},
     {name: 'omic-ui-prod',    singleBackend: false, multiBackend: true, url: 'https://health-kick.hmpps.dsd.io/https/omic.service.hmpps.dsd.io', method: 'http'},
-    # {name: 'nomis-api-prod',  apiOnly: true,  url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/nomisapi/health', method: 'http'},
+    {name: 'nomis-api-prod',  apiOnly: true,  textOnly: true, url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/nomisapi/health', method: 'http'},
     {name: 'newnomisapi-prod', apiOnly: true, url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/custodyapi/health', method: 'http'},
-    # {name: 'oauth2-prod',      apiOnly: true, url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/health', method: 'http'},
+    {name: 'oauth2-prod',      apiOnly: true, url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/health', method: 'http'},
 
     {name: 'notm-dev',        singleBackend: false, multiBackend: false, url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
     {name: 'omic-ui-dev',     singleBackend: false, multiBackend: true, url: 'https://omic-dev.hmpps.dsd.io/health', method: 'http'},
     {name: 'psh-dev',         singleBackend: true,  multiBackend: false, url: 'https://prisonstaffhub-dev.hmpps.dsd.io/health', method: 'http'},
-    # {name: 'nomis-api-dev',   apiOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/nomisapi/health', method: 'http'},
+    {name: 'nomis-api-dev',   apiOnly: true, textOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/nomisapi/health', method: 'http'},
     {name: 'newnomisapi-dev', apiOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/health', method: 'http'},
     {name: 'oauth2-dev',      apiOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/health', method: 'http'},
 
@@ -55,6 +55,15 @@ servers = [
 
 ]
 
+def valid_json?(string)
+  begin
+    !!JSON.parse(string)
+  rescue JSON::ParserError
+    false
+  end
+end
+
+
 def checkHealth(api_data)
   # api_data = JSON.parse(jsonStr)
   api_version = 'UNKNOWN'
@@ -68,8 +77,12 @@ end
 
 def gather_health_data(server)
     puts "requesting #{server[:url]}..."
-
-    server_response = HTTParty.get(server[:url], headers: { 'Accept' => 'application/json' })
+    server_response = nil
+    unless server[:textOnly]
+      server_response = HTTParty.get(server[:url], headers: { 'Accept' => 'application/json' })
+    else
+      server_response = HTTParty.get(server[:url], headers: { 'Accept' => 'text/html' })
+    end
 
     puts server_response
     puts "Result from #{server[:url]} is #{server_response}"
@@ -78,7 +91,6 @@ def gather_health_data(server)
     kw_version = nil
     kw_status = true
     elite2_status = true
-    result_json = JSON.parse(server_response.body)
     status = false
     ui_version = nil
 
@@ -86,14 +98,18 @@ def gather_health_data(server)
     api = []
 
     if server[:apiOnly]
-      return
-      {
-          status: result_json['status'] == 'UP',
-          api: {
-              API: result_json['status'] == 'UP',
-          }
-      }
+      if server[:textOnly]
+        status = server_response.body == 'DB Up'
+      else
+        if valid_json?(server_response.body)
+          result_json = JSON.parse(server_response.body)
+          status = result_json['status'] == 'UP'
+        end
+      end
+      elite2_status = status
+      elite2_version = status ? 'UP' : 'DOWN'
     else
+      result_json = JSON.parse(server_response.body)
       api_data = result_json['api']
       unless api_data == 'DOWN'
         ui_version = "#{result_json['version']}"
@@ -119,9 +135,8 @@ def gather_health_data(server)
         api.push( 'api')
         checks.push( 'api' => elite2_version)
       end
+    end
 
-
-      return
       {
         status: status && elite2_status && kw_status,
         api: {
@@ -135,7 +150,7 @@ def gather_health_data(server)
             KW_API: kw_version
         }
     }
-    end
+
 end
 
 SCHEDULER.every '60s', first_in: 0 do |_job|

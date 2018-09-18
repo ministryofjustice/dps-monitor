@@ -55,8 +55,12 @@ def build_data(project, auth_token)
   email_hash = nil
 
   latest_build = api_json.select{ |build| build['status'] != 'queued' }.first
-  unless latest_build.nil?
-    email_hash = Digest::MD5.hexdigest(latest_build['author_email'])
+  unless latest_build.nil? or latest_build.any?
+    email = latest_build['author_email']
+    unless email.nil?
+       email_hash = Digest::MD5.hexdigest(email)
+    end
+
     build_id = "#{latest_build['branch']}, build ##{latest_build['build_num']}"
 
     data = {
@@ -79,6 +83,6 @@ SCHEDULER.every '10s', :first_in => 0  do
   projects.each do |project|
     data_id = "circle-ci-#{project[:user]}-#{project[:repo]}-#{project[:branch]}"
     data = build_data(project, ENV['CIRCLE_CI_TOKEN'])
-    send_event(data_id, data) unless data.empty?
+    send_event(data_id, data) unless (data.nil? or data.empty?)
   end
 end
