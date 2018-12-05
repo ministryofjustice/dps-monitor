@@ -41,15 +41,14 @@ servers = [
     {name: 'yjaf-prod',                 url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/yjafapi/health', method: 'http'},
     {name: 'psh-prod',                  url: 'https://health-kick.hmpps.dsd.io/https/prisonstaffhub.service.hmpps.dsd.io', method: 'http'},
 
-    {name: 'elite2-dev',                url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api/health', method: 'http'},
-    {name: 'keyworker-api-dev',         url: 'https://keyworker-api-dev.hmpps.dsd.io/health', method: 'http'},
-    {name: 'notm-dev',                  url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
-    {name: 'omic-ui-dev',               url: 'https://omic-dev.hmpps.dsd.io/health', method: 'http'},
-    {name: 'psh-dev',                   url: 'https://prisonstaffhub-dev.hmpps.dsd.io/health', method: 'http'},
-    {name: 'nomis-api-dev',             textOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/nomisapi/health', method: 'http'},
-    {name: 'newnomisapi-dev',           versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/health', method: 'http'},
-    {name: 'oauth2-dev',                versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/health', method: 'http'},
-    {name: 'yjaf-dev',                  url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/yjafapi/health', method: 'http'},
+    {name: 'elite2-preprod',            url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api/health', method: 'http'},
+    {name: 'keyworker-api-preprod',     url: 'https://keyworker-api-preprod.service.hmpps.dsd.io/health', method: 'http'},
+    {name: 'notm-preprod',              url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
+    {name: 'omic-ui-preprod',           url: 'https://health-kick.hmpps.dsd.io/https/omic-preprod.service.hmpps.dsd.io', method: 'http'},
+    {name: 'psh-preprod',               url: 'https://health-kick.hmpps.dsd.io/https/prisonstaffhub-preprod.service.hmpps.dsd.io', method: 'http'},
+    {name: 'nomis-api-preprod',         textOnly: true, url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/nomisapi/health', method: 'http'},
+    {name: 'newnomisapi-preprod',       versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/custodyapi/health', method: 'http'},
+    {name: 'oauth2-preprod',            versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/health', method: 'http'},
 
     {name: 'elite2-stage',              url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/elite2api/health', method: 'http'},
     {name: 'keyworker-api-stage',       url: 'https://keyworker-api-stage.hmpps.dsd.io/health', method: 'http'},
@@ -59,18 +58,15 @@ servers = [
     {name: 'nomis-api-stage',           textOnly: true, url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/nomisapi/health', method: 'http'},
     {name: 'newnomisapi-stage',         versionUrl: 'https://gateway.t2.nomis-api.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/custodyapi/health', method: 'http'},
     {name: 'oauth2-stage',              versionUrl: 'https://gateway.t2.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/auth/health', method: 'http'},
-    {name: 'yjaf-stage',                url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/yjafapi/health', method: 'http'},
 
-    {name: 'elite2-preprod',            url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api/health', method: 'http'},
-    {name: 'keyworker-api-preprod',     url: 'https://keyworker-api-preprod.service.hmpps.dsd.io/health', method: 'http'},
-    {name: 'notm-preprod',              url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
-    {name: 'omic-ui-preprod',           url: 'https://health-kick.hmpps.dsd.io/https/omic-preprod.service.hmpps.dsd.io', method: 'http'},
-    {name: 'psh-preprod',               url: 'https://health-kick.hmpps.dsd.io/https/prisonstaffhub-preprod.service.hmpps.dsd.io', method: 'http'},
-    {name: 'nomis-api-preprod',         textOnly: true, url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/nomisapi/health', method: 'http'},
-    {name: 'newnomisapi-preprod',       versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/custodyapi/health', method: 'http'},
-    {name: 'oauth2-preprod',            versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/health', method: 'http'},
-    {name: 'yjaf-preprod',              url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/yjafapi/health', method: 'http'}
-
+    {name: 'elite2-dev',                url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api/health', method: 'http'},
+    {name: 'keyworker-api-dev',         url: 'https://keyworker-api-dev.hmpps.dsd.io/health', method: 'http'},
+    {name: 'notm-dev',                  url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
+    {name: 'omic-ui-dev',               url: 'https://omic-dev.hmpps.dsd.io/health', method: 'http'},
+    {name: 'psh-dev',                   url: 'https://prisonstaffhub-dev.hmpps.dsd.io/health', method: 'http'},
+    {name: 'nomis-api-dev',             textOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/nomisapi/health', method: 'http'},
+    {name: 'newnomisapi-dev',           versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/health', method: 'http'},
+    {name: 'oauth2-dev',                versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/health', method: 'http'},
 ]
 
 def valid_json?(string)
