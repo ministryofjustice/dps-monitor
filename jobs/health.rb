@@ -31,7 +31,7 @@ ping_count = 10
 #
 servers = [
 
-    {name: 'elite2-prod',               url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/health', method: 'http'},
+    {name: 'elite2-prod',               versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/health', method: 'http'},
     {name: 'notm-prod',                 url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io', method: 'http'},
     {name: 'omic-ui-prod',              url: 'https://health-kick.hmpps.dsd.io/https/omic.service.hmpps.dsd.io', method: 'http'},
     {name: 'keyworker-api-prod',        url: 'https://keyworker-api.service.hmpps.dsd.io/health', method: 'http'},
