@@ -31,7 +31,7 @@ ping_count = 10
 #
 servers = [
 
-    {name: 'elite2-prod',               url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/health', method: 'http'},
+    {name: 'elite2-prod',               versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/health', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/health', method: 'http'},
     {name: 'notm-prod',                 url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io', method: 'http'},
     {name: 'omic-ui-prod',              url: 'https://health-kick.hmpps.dsd.io/https/omic.service.hmpps.dsd.io', method: 'http'},
     {name: 'keyworker-api-prod',        url: 'https://keyworker-api.service.hmpps.dsd.io/health', method: 'http'},
@@ -40,7 +40,7 @@ servers = [
     {name: 'oauth2-prod',               versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/health', method: 'http'},
     {name: 'psh-prod',                  url: 'https://health-kick.hmpps.dsd.io/https/prisonstaffhub.service.hmpps.dsd.io', method: 'http'},
 
-    {name: 'elite2-preprod',            url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api/health', method: 'http'},
+    {name: 'elite2-preprod',            versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api/health', method: 'http'},
     {name: 'keyworker-api-preprod',     url: 'https://keyworker-api-preprod.service.hmpps.dsd.io/health', method: 'http'},
     {name: 'notm-preprod',              url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io', method: 'http'},
     {name: 'omic-ui-preprod',           url: 'https://health-kick.hmpps.dsd.io/https/omic-preprod.service.hmpps.dsd.io', method: 'http'},
@@ -49,7 +49,7 @@ servers = [
     {name: 'newnomisapi-preprod',       versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/custodyapi/health', method: 'http'},
     {name: 'oauth2-preprod',            versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/health', method: 'http'},
 
-    {name: 'elite2-stage',              url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/elite2api/health', method: 'http'},
+    {name: 'elite2-stage',              versionUrl: 'https://gateway.t2.nomis-api.hmpps.dsd.io/elite2api/info', url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/elite2api/health', method: 'http'},
     {name: 'keyworker-api-stage',       url: 'https://keyworker-api-stage.hmpps.dsd.io/health', method: 'http'},
     {name: 'notm-stage',                url: 'https://notm-stage.hmpps.dsd.io/health', method: 'http'},
     {name: 'omic-ui-stage',             url: 'https://omic-stage.hmpps.dsd.io/health', method: 'http'},
