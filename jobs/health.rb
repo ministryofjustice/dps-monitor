@@ -59,7 +59,7 @@ servers = [
     {name: 'oauth2-stage',              versionUrl: 'https://gateway.t2.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/auth/health', method: 'http'},
 
     {name: 'elite2-dev',                versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api/health', method: 'http'},
-    {name: 'keyworker-api-dev',         url: 'https://keyworker-api-dev.hmpps.dsd.io/health', method: 'http'},
+    {name: 'keyworker-api-dev',         versionUrl: 'https://keyworker-api-dev.hmpps.dsd.io/info', url: 'https://keyworker-api-dev.hmpps.dsd.io/health', method: 'http'},
     {name: 'notm-dev',                  url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
     {name: 'omic-ui-dev',               url: 'https://omic-dev.hmpps.dsd.io/health', method: 'http'},
     {name: 'psh-dev',                   url: 'https://prisonstaffhub-dev.hmpps.dsd.io/health', method: 'http'},
