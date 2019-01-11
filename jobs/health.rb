@@ -34,7 +34,7 @@ servers = [
     {name: 'elite2-prod',               versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/health', method: 'http'},
     {name: 'notm-prod',                 url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io', method: 'http'},
     {name: 'omic-ui-prod',              url: 'https://health-kick.hmpps.dsd.io/https/omic.service.hmpps.dsd.io', method: 'http'},
-    {name: 'keyworker-api-prod',        versionUrl: 'https://keyworker-api.service.hmpps.dsd.io/info', url: 'https://keyworker-api.service.hmpps.dsd.io/health', method: 'http'},
+    {name: 'keyworker-api-prod',        url: 'https://keyworker-api.service.hmpps.dsd.io/health', method: 'http'},
     {name: 'nomis-api-prod',            textOnly: true, url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/nomisapi/health', method: 'http'},
     {name: 'newnomisapi-prod',          versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/custodyapi/health', method: 'http'},
     {name: 'oauth2-prod',               versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/health', method: 'http'},
