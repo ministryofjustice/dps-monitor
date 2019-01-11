@@ -63,6 +63,7 @@ servers = [
     {name: 'notm-dev',                  url: 'https://notm-dev.hmpps.dsd.io/health', method: 'http'},
     {name: 'omic-ui-dev',               url: 'https://omic-dev.hmpps.dsd.io/health', method: 'http'},
     {name: 'psh-dev',                   url: 'https://prisonstaffhub-dev.hmpps.dsd.io/health', method: 'http'},
+    {name: 'cat-tool-dev',              url: 'https://categorisation-tool.apps.cloud-platform-live-0.k8s.integration.dsd.io/health', method: 'http'},
     {name: 'nomis-api-dev',             textOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/nomisapi/health', method: 'http'},
     {name: 'newnomisapi-dev',           versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/health', method: 'http'},
     {name: 'oauth2-dev',                versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/health', method: 'http'},
