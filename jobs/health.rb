@@ -67,7 +67,7 @@ servers = [
     {name: 'newnomisapi-dev',           versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/health', method: 'http'},
     {name: 'oauth2-dev',                versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/health', method: 'http'},
     {name: 'cat-tool-dev',              url: 'https://categorisation-tool.apps.cloud-platform-live-0.k8s.integration.dsd.io/health', method: 'http'},
-    {name: 'risk-profiler-dev',         versionUrl: 'https://offender-risk-profiler.herokuapp.com/info', url: 'https://offender-risk-profiler.herokuapp.com/health', method: 'http'},
+    {name: 'risk-profiler-dev',         versionUrl: 'https://offender-risk-profiler.apps.cloud-platform-live-0.k8s.integration.dsd.io/info', url: 'https://offender-risk-profiler.apps.cloud-platform-live-0.k8s.integration.dsd.io/health', method: 'http'},
 ]
 
 def valid_json?(string)
