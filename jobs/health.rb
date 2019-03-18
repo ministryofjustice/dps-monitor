@@ -48,6 +48,7 @@ servers = [
     {name: 'nomis-api-preprod',         textOnly: true, url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/nomisapi/health', method: 'http'},
     {name: 'newnomisapi-preprod',       versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/custodyapi/health', method: 'http'},
     {name: 'oauth2-preprod',            versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/health', method: 'http'},
+    {name: 'cat-tool-preprod',          url: 'https://categorisation-tool-preprod.apps.cloud-platform-live-0.k8s.integration.dsd.io/health', method: 'http'},
 
     {name: 'elite2-stage',              versionUrl: 'https://gateway.t2.nomis-api.hmpps.dsd.io/elite2api/info', url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/elite2api/health', method: 'http'},
     {name: 'keyworker-api-stage',       versionUrl: 'https://keyworker-api-stage.hmpps.dsd.io/info', url: 'https://keyworker-api-stage.hmpps.dsd.io/health', method: 'http'},
@@ -66,7 +67,7 @@ servers = [
     {name: 'nomis-api-dev',             textOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/nomisapi/health', method: 'http'},
     {name: 'newnomisapi-dev',           versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/health', method: 'http'},
     {name: 'oauth2-dev',                versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/health', method: 'http'},
-    {name: 'cat-tool-dev',              url: 'https://categorisation-tool.apps.cloud-platform-live-0.k8s.integration.dsd.io/health', method: 'http'},
+    {name: 'cat-tool-dev',              url: 'https://categorisation-tool-dev.apps.cloud-platform-live-0.k8s.integration.dsd.io/health', method: 'http'},
 ]
 
 def valid_json?(string)
