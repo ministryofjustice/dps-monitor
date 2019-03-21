@@ -39,6 +39,7 @@ servers = [
     {name: 'newnomisapi-prod',          versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/custodyapi/health', method: 'http'},
     {name: 'oauth2-prod',               versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/health', method: 'http'},
     {name: 'psh-prod',                  url: 'https://health-kick.hmpps.dsd.io/https/prisonstaffhub.service.hmpps.dsd.io', method: 'http'},
+    {name: 'cat-tool-prod',             url: 'https://health-kick.hmpps.dsd.io/https/categorisation-tool.apps.cloud-platform-live-0.k8s.integration.dsd.io', method: 'http'},
 
     {name: 'elite2-preprod',            versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api/health', method: 'http'},
     {name: 'keyworker-api-preprod',     versionUrl: 'https://keyworker-api-preprod.service.hmpps.dsd.io/info', url: 'https://keyworker-api-preprod.service.hmpps.dsd.io/health', method: 'http'},
