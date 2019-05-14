@@ -53,7 +53,6 @@ servers = [
 
     {name: 'elite2-stage',              versionUrl: 'https://gateway.t2.nomis-api.hmpps.dsd.io/elite2api/info', url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/elite2api/health', method: 'http'},
     {name: 'keyworker-api-stage',       versionUrl: 'https://keyworker-api-stage.hmpps.dsd.io/info', url: 'https://keyworker-api-stage.hmpps.dsd.io/health', method: 'http'},
-    {name: 'notm-stage',                url: 'https://health-kick.hmpps.dsd.io/https/notm-stage.hmpps.dsd.io', method: 'http'},
     {name: 'omic-ui-stage',             url: 'https://health-kick.hmpps.dsd.io/https/omic-stage.hmpps.dsd.io', method: 'http'},
     {name: 'psh-stage',                 url: 'https://health-kick.hmpps.dsd.io/https/prisonstaffhub-stage.hmpps.dsd.io', method: 'http'},
     {name: 'nomis-api-stage',           textOnly: true, url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/nomisapi/health', method: 'http'},
@@ -70,6 +69,7 @@ servers = [
     {name: 'oauth2-dev',                versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/health', method: 'http'},
     {name: 'cat-tool-dev',              url: 'https://categorisation-tool-dev.apps.cloud-platform-live-0.k8s.integration.dsd.io/health', method: 'http'},
     {name: 'whereabouts-dev',           versionUrl: 'https://whereabouts-api.apps.cloud-platform-live-0.k8s.integration.dsd.io/info', url: 'https://whereabouts-api.apps.cloud-platform-live-0.k8s.integration.dsd.io/health', method: 'http'},
+    {name: 'notm-stage',                url: 'https://health-kick.hmpps.dsd.io/https/notm-stage.hmpps.dsd.io', method: 'http'},
 ]
 
 def valid_json?(string)
