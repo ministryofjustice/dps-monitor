@@ -1,7 +1,7 @@
 <script type='text/javascript'>
     $(function() {
         Dashing.widget_base_dimensions = [300, 350]
-        Dashing.numColumns = 9
+        Dashing.numColumns = 6
     });
 </script>
 
@@ -9,81 +9,62 @@
 <div class="gridster">
   <ul>
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="circle-ci-ministryofjustice-nomis-oauth2-server-master" data-view="CircleCi" data-title="Auth Server"></div>
+      <div data-id="oauth2-prod" data-view="ServerStatusSquares" data-title="Auth Server"></div>
     </li>
     <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
-      <div data-id="circle-ci-ministryofjustice-elite2-api-master" data-view="CircleCi" data-title="Elite2 API"></div>
+      <div data-id="elite2-prod" data-view="ServerStatusSquares" data-title="Elite2 Api"></div>
     </li>
     <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
-      <div data-id="circle-ci-ministryofjustice-new-nomis-ui-master" data-view="CircleCi" data-title="New Nomis"></div>
+      <div data-id="newnomisapi-prod" data-view="ServerStatusSquares" data-title="Custody Api"></div>
     </li>
     <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
-      <div data-id="circle-ci-ministryofjustice-keyworker-ui-master" data-view="CircleCi" data-title="Omic UI"></div>
+      <div data-id="keyworker-api-prod" data-view="ServerStatusSquares" data-title="Keyworker Api"></div>
     </li>
-    <li data-row="1" data-col="5" data-sizex="1" data-sizey="1">
-      <div data-id="circle-ci-ministryofjustice-keyworker-service-master" data-view="CircleCi" data-title="Keyworker Api"></div>
-    </li>
-    <li data-row="1" data-col="6" data-sizex="1" data-sizey="1">
-      <div data-id="circle-ci-ministryofjustice-prisonstaffhub-master" data-view="CircleCi" data-title="Prison Staff Hub"></div>
-    </li>
-    <li data-row="1" data-col="7" data-sizex="1" data-sizey="1">
-      <div data-id="circle-ci-ministryofjustice-custody-api-master" data-view="CircleCi" data-title="Custody API"></div>
-    </li>
-    <li data-row="1" data-col="8" data-sizex="1" data-sizey="1">
-      <div data-id="circle-ci-ministryofjustice-categorisation-tool-master" data-view="CircleCi" data-title="Categorisation Tool"></div>
-    </li>
-    <li data-row="1" data-col="9" data-sizex="1" data-sizey="1">
-      <div data-id="circle-ci-ministryofjustice-offender-risk-profiler-master" data-view="CircleCi" data-title="Risk Profiler"></div>
-    </li>
-
     <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="oauth2-prod" data-view="ServerStatusSquares" data-title="Auth Server - Prod"></div>
+      <div data-id="notm-prod" data-view="ServerStatusSquares" data-title="New Nomis UI"></div>
     </li>
     <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
-      <div data-id="elite2-prod" data-view="ServerStatusSquares" data-title="Elite2 API - Prod"></div>
+      <div data-id="omic-ui-prod" data-view="ServerStatusSquares" data-title="Keyworker UI"></div>
     </li>
     <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
-      <div data-id="notm-prod" data-view="ServerStatusSquares" data-title="New Nomis - Prod"></div>
+      <div data-id="psh-prod" data-view="ServerStatusSquares" data-title="PSH UI"></div>
     </li>
     <li data-row="2" data-col="4" data-sizex="1" data-sizey="1">
-      <div data-id="omic-ui-prod" data-view="ServerStatusSquares" data-title="Omic - Prod"></div>
-    </li>
-    <li data-row="2" data-col="5" data-sizex="1" data-sizey="1">
-      <div data-id="keyworker-api-prod" data-view="ServerStatusSquares" data-title="Keyworker API - Prod"></div>
-    </li>
-    <li data-row="2" data-col="6" data-sizex="1" data-sizey="1">
-      <div data-id="psh-prod" data-view="ServerStatusSquares" data-title="Prison Staff Hub - Prod"></div>
-    </li>
-    <li data-row="2" data-col="7" data-sizex="1" data-sizey="1">
-      <div data-id="newnomisapi-prod" data-view="ServerStatusSquares" data-title="Custody Api - Prod"></div>
-    </li>
-    <li data-row="2" data-col="8" data-sizex="1" data-sizey="1">
-      <div data-id="cat-tool-prod" data-view="ServerStatusSquares" data-title="Categorisation Tool - Prod"></div>
+      <div data-id="cat-tool-prod" data-view="ServerStatusSquares" data-title="Dig Cat Tool"></div>
     </li>
 
+
+
     <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="oauth2-dev" data-view="ServerStatusSquares" data-title="Auth Server - Dev"></div>
+      <div data-id="circle-ci-ministryofjustice-new-nomis-ui-master" data-view="CircleCi" data-title="New Nomis UI"></div>
     </li>
     <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
-      <div data-id="elite2-dev" data-view="ServerStatusSquares" data-title="Elite2 API - Dev"></div>
+      <div data-id="circle-ci-ministryofjustice-keyworker-ui-master" data-view="CircleCi" data-title="Keyworker UI"></div>
     </li>
     <li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
-      <div data-id="notm-dev" data-view="ServerStatusSquares" data-title="New Nomis - Dev"></div>
+      <div data-id="circle-ci-ministryofjustice-prisonstaffhub-master" data-view="CircleCi" data-title="PSH UI"></div>
     </li>
     <li data-row="3" data-col="4" data-sizex="1" data-sizey="1">
-      <div data-id="omic-ui-dev" data-view="ServerStatusSquares" data-title="Omic - Dev"></div>
+      <div data-id="circle-ci-ministryofjustice-categorisation-tool-master" data-view="CircleCi" data-title="Dig Cat Tool"></div>
     </li>
-    <li data-row="3" data-col="5" data-sizex="1" data-sizey="1">
-      <div data-id="keyworker-api-dev" data-view="ServerStatusSquares" data-title="Keyworker API - Dev"></div>
+
+    <li data-row="4" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-nomis-oauth2-server-master" data-view="CircleCi" data-title="Auth Server"></div>
     </li>
-    <li data-row="3" data-col="6" data-sizex="1" data-sizey="1">
-      <div data-id="psh-dev" data-view="ServerStatusSquares" data-title="Prison Staff Hub - Dev"></div>
+    <li data-row="4" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-elite2-api-master" data-view="CircleCi" data-title="Elite2 Api"></div>
     </li>
-    <li data-row="3" data-col="7" data-sizex="1" data-sizey="1">
-      <div data-id="newnomisapi-dev" data-view="ServerStatusSquares" data-title="Custody Api - Dev"></div>
+    <li data-row="4" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-custody-api-master" data-view="CircleCi" data-title="Custody Api"></div>
     </li>
-    <li data-row="3" data-col="8" data-sizex="1" data-sizey="1">
-      <div data-id="cat-tool-dev" data-view="ServerStatusSquares" data-title="Categorisation Tool - Dev"></div>
+    <li data-row="4" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-keyworker-service-master" data-view="CircleCi" data-title="Keyworker Api"></div>
+    </li>
+    <li data-row="4" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-offender-risk-profiler-master" data-view="CircleCi" data-title="Offender Risk Profiler Api"></div>
+    </li>
+    <li data-row="4" data-col="6" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-whereabouts-api-master" data-view="CircleCi" data-title="Whereabouts Api"></div>
     </li>
 
   </ul>
