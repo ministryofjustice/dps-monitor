@@ -53,7 +53,7 @@ preprod_servers = [
 stage_servers = [
     {name: 'elite2', versionUrl: 'https://gateway.t2.nomis-api.hmpps.dsd.io/elite2api/info', url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/elite2api/health'},
     {name: 'keyworker-api', versionUrl: 'https://keyworker-api-stage.hmpps.dsd.io/info', url: 'https://keyworker-api-stage.hmpps.dsd.io/health'},
-    {name: 'notm-stage', url: 'https://health-kick.hmpps.dsd.io/https/notm-stage.hmpps.dsd.io'},
+    {name: 'notm', url: 'https://health-kick.hmpps.dsd.io/https/notm-stage.hmpps.dsd.io'},
     {name: 'omic-ui', url: 'https://health-kick.hmpps.dsd.io/https/omic-stage.hmpps.dsd.io'},
     {name: 'psh', url: 'https://health-kick.hmpps.dsd.io/https/prisonstaffhub-stage.hmpps.dsd.io'},
     {name: 'nomis-api', textOnly: true, url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/nomisapi/health'},
