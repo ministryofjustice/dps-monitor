@@ -72,7 +72,6 @@ dev_servers = [
     {name: 'oauth2', versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/health'},
     {name: 'cat-tool', url: 'https://categorisation-tool-dev.apps.cloud-platform-live-0.k8s.integration.dsd.io/health'},
     {name: 'whereabouts', versionUrl: 'https://whereabouts-api.apps.cloud-platform-live-0.k8s.integration.dsd.io/info', url: 'https://whereabouts-api.apps.cloud-platform-live-0.k8s.integration.dsd.io/health'},
-    {name: 'notm', url: 'https://health-kick.hmpps.dsd.io/https/notm-stage.hmpps.dsd.io'},
 ]
 
 def valid_json?(string)
