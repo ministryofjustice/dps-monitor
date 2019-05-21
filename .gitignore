@@ -4,3 +4,4 @@ history.yml
 *.iml
 *.ipr
 *.iws
+.bundle
