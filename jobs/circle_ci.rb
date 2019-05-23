@@ -65,6 +65,12 @@ def build_data(project, auth_token)
 
     build_id = "#{latest_build['branch']}, build ##{latest_build['build_num']}"
 
+    build_url = latest_build['build_url']
+    workflow_id = latest_build.dig('workflows', 'workflow_id')
+    if workflow_id
+      build_url = 'https://circleci.com/workflow-run/%s' % [workflow_id]
+    end
+
     data = {
       build_id: build_id,
       repo: "#{project[:repo]}",
@@ -74,6 +80,7 @@ def build_data(project, auth_token)
       widget_class: "#{translate_status_to_class(latest_build['status'])}",
       committer_name: latest_build['committer_name'],
       commit_body: latest_build['subject'],
+      build_url: build_url,
       avatar_url: "http://www.gravatar.com/avatar/#{email_hash}"
     }
     return data
