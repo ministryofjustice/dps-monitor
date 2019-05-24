@@ -3,9 +3,11 @@
 <p class="api-version" data-bind="result.api_version"></p>
 <p class="kw-version" data-bind="result.kw_version"></p>
 <ul class="services">
-    <li data-foreach-check="result.api">
-        <span class="label" data-bind="check"></span>
-        <span class="value" data-bind="result.checks[check]"></span>
-    </li>
+  <li data-foreach-check="result.api">
+    <span class="label" data-bind="check"></span>
+    <a data-bind-href="result.url">
+      <span class="value" data-bind="result.checks[check]"></span>
+    </a>
+  </li>
 </ul>
 <p class="updated-at" data-bind="updatedAtMessage"></p>
