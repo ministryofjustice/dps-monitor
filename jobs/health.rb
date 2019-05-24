@@ -120,13 +120,13 @@ def gather_health_data(server)
     if valid_json?(server_response.body)
       result_json = JSON.parse(server_response.body)
 
-      unless server[:versionUrl]
-        version, status = checkHealth(result_json)
-      else
+      if server[:versionUrl]
         status = result_json['status'] == 'UP'
         version_response = HTTParty.get(server[:versionUrl], headers: {Accept: 'application/json'})
         version_json = JSON.parse(version_response.body)
         version = getVersion(version_json['build'])
+      else
+        version, status = checkHealth(result_json)
       end
     end
   end
@@ -138,7 +138,8 @@ def gather_health_data(server)
       },
       checks: {
           VERSION: version
-      }
+      },
+      url: server[:versionUrl] || server[:url]
   }
 
 end
