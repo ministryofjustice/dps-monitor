@@ -36,6 +36,7 @@ prod_servers = [
     {name: 'oauth2', versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/health'},
     {name: 'psh', url: 'https://health-kick.hmpps.dsd.io/https/prisonstaffhub.service.hmpps.dsd.io'},
     {name: 'cat-tool', url: 'https://health-kick.hmpps.dsd.io/https/categorisation-tool.apps.cloud-platform-live-0.k8s.integration.dsd.io'},
+    {name: 'whereabouts', url: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api.service.justice.gov.uk'},
 ]
 
 preprod_servers = [
@@ -48,6 +49,7 @@ preprod_servers = [
     {name: 'newnomisapi', versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/custodyapi/health'},
     {name: 'oauth2', versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/health'},
     {name: 'cat-tool', url: 'https://health-kick.hmpps.dsd.io/https/categorisation-tool-preprod.apps.cloud-platform-live-0.k8s.integration.dsd.io'},
+    {name: 'whereabouts', url: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api-preprod.service.justice.gov.uk'},
 ]
 
 stage_servers = [
@@ -71,7 +73,7 @@ dev_servers = [
     {name: 'newnomisapi', versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/health'},
     {name: 'oauth2', versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/health'},
     {name: 'cat-tool', url: 'https://categorisation-tool-dev.apps.cloud-platform-live-0.k8s.integration.dsd.io/health'},
-    {name: 'whereabouts', versionUrl: 'https://whereabouts-api.apps.cloud-platform-live-0.k8s.integration.dsd.io/info', url: 'https://whereabouts-api.apps.cloud-platform-live-0.k8s.integration.dsd.io/health'},
+    {name: 'whereabouts', versionUrl: 'https://whereabouts-api-dev.service.justice.gov.uk/info', url: 'https://whereabouts-api-dev.service.justice.gov.uk/health'},
 ]
 
 def valid_json?(string)
