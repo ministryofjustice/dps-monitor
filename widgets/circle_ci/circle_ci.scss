@@ -21,6 +21,12 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
     opacity: 0.05;
   }
 
+  .commit-body {
+    word-break: break-word;
+    overflow-y: scroll;
+    height: 80px;
+  }
+
   .committer-info {
     margin: 10px 0px;
     padding: 5px;
