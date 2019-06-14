@@ -11,18 +11,25 @@ Packages needed
 ----
 ```
 ruby
-rub-dev
+ruby-dev
 build-essential
 nodejs
 (or equivalent for your platform)
+```
+
+e.g. For Ubuntu this was:
+
+```
+$ sudo apt-get install ruby ruby-dev build-essential nodejs
+
 ```
 
 
 Build
 ----
 ```
-$ gem install bundler
-$ gem install smashing
+$ sudo gem install bundler
+$ sudo gem install smashing
 $ cd notm-monitor/
 $ rm Gemfile.lock   (will not build on some platforms without this - Ubuntu)
 $ bundle install
