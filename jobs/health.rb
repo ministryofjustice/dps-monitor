@@ -61,6 +61,7 @@ stage_servers = [
     {name: 'nomis-api', textOnly: true, url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/nomisapi/health'},
     {name: 'newnomisapi', versionUrl: 'https://gateway.t2.nomis-api.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/custodyapi/health'},
     {name: 'oauth2', versionUrl: 'https://gateway.t2.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/auth/health'},
+    {name: 'community-proxy', versionUrl: 'https://community-api-t2.hmpps.dsd.io/communityapi/info', url: 'https://community-api-t2.hmpps.dsd.io/communityapi/health'},
 ]
 
 dev_servers = [
