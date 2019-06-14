@@ -48,5 +48,6 @@ Dashboard Configuration
 ----
 
 1. Edit dashboards/circle.erb to add projects to the build monitor
+2. Edit dashboards/overview.erb to add to the overview page (for production services)
 3. Edit the projects element in jobs/circle_ci.rb to match your changes to CI statuses shown in circle.erb
 4. Edit the projects element in jobs/health.rb
