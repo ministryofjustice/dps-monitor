@@ -12,6 +12,7 @@ projects = [
   { vcs: 'github', user: 'ministryofjustice', repo: 'nomis-oauth2-server', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'elite2-api', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'custody-api', branch: 'master'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'community-proxy', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'whereabouts-api', branch: 'master'}
 ]
 
