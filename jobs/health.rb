@@ -26,6 +26,10 @@ ping_count = 10
 #   => If the server you're checking redirects (from http to https for example)
 #      the check will return false
 #
+#   => Where the path to the health or info endpoint is more than one folder deep (eg.. /communityapi/health) we need to convert
+#      to a single path string which makes these endpoints /communityapi-health and /communityapi-info. These are converted 
+#      back to the 'proper' URI within the health-kick proxying application.
+#
 prod_servers = [
     {name: 'elite2', versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/health'},
     {name: 'notm', url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io'},
@@ -61,7 +65,7 @@ stage_servers = [
     {name: 'nomis-api', textOnly: true, url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/nomisapi/health'},
     {name: 'newnomisapi', versionUrl: 'https://gateway.t2.nomis-api.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/custodyapi/health'},
     {name: 'oauth2', versionUrl: 'https://gateway.t2.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/auth/health'},
-    {name: 'community-proxy', versionUrl: 'https://health-kick.hmpps.dsd.io/https/community-api-t2.hmpps.dsd.io/communityapi/info', url: 'https://health-kick.hmpps.dsd.io/https/community-api-t2.hmpps.dsd.io/communityapi'},
+    {name: 'community-proxy', versionUrl: 'https://health-kick.hmpps.dsd.io/https/community-api-t2.hmpps.dsd.io/communityapi-info', url: 'https://health-kick.hmpps.dsd.io/https/community-api-t2.hmpps.dsd.io/communityapi-health'},
 ]
 
 dev_servers = [
