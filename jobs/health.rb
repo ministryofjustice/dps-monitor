@@ -81,6 +81,12 @@ dev_servers = [
     {name: 'whereabouts', versionUrl: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api-dev.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api-dev.service.justice.gov.uk'},
 ]
 
+#
+# Any service which does not have a development instance should be placed in this list.
+# As a result the out-of-date version check will not be applied for them and will report GREEN in stage.
+#
+no_dev_servers = [ 'community-proxy' ] 
+
 def valid_json?(string)
   begin
     !!JSON.parse(string)
@@ -99,7 +105,6 @@ def getVersion(version_data)
   end
   version
 end
-
 
 def checkHealth(data)
   version = getVersion(data)
@@ -165,7 +170,13 @@ SCHEDULER.every '60s', first_in: 0 do |_job|
   stage_servers.each do |server|
     result = gather_health_data(server)
     result_with_colour = result.merge(add_outofdate(result[:checks][:VERSION], dev_versions[server[:name]]))
-    send_event("#{server[:name]}-stage", result: result_with_colour)
+
+    # Do not use the out-of-date warning colour for services with no development instances present
+    if no_dev_servers.include?(server[:name])
+       send_event("#{server[:name]}-stage", result: result)
+    else
+       send_event("#{server[:name]}-stage", result: result_with_colour)
+    end
   end
 
   preprod_versions = preprod_servers.map do |server|
