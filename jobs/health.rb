@@ -34,7 +34,7 @@ prod_servers = [
     {name: 'elite2', versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/health'},
     {name: 'notm', url: 'https://health-kick.hmpps.dsd.io/https/notm.service.hmpps.dsd.io'},
     {name: 'omic-ui', url: 'https://health-kick.hmpps.dsd.io/https/omic.service.hmpps.dsd.io'},
-    {name: 'keyworker-api', versionUrl: 'https://keyworker-api.service.hmpps.dsd.io/info', url: 'https://keyworker-api.service.hmpps.dsd.io/health'},
+    {name: 'keyworker-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/keyworker-api.service.hmpps.dsd.io/info', url: 'https://health-kick.hmpps.dsd.io/https/keyworker-api.service.hmpps.dsd.io/health'},
     {name: 'nomis-api', textOnly: true, url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/nomisapi/health'},
     {name: 'newnomisapi', versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/custodyapi/health'},
     {name: 'oauth2', versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/health'},
@@ -45,7 +45,7 @@ prod_servers = [
 
 preprod_servers = [
     {name: 'elite2', versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api/health'},
-    {name: 'keyworker-api', versionUrl: 'https://keyworker-api-preprod.service.hmpps.dsd.io/info', url: 'https://keyworker-api-preprod.service.hmpps.dsd.io/health'},
+    {name: 'keyworker-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/keyworker-api-preprod.service.hmpps.dsd.io/info', url: 'https://health-kick.hmpps.dsd.io/https/keyworker-api-preprod.service.hmpps.dsd.io/health'},
     {name: 'notm', url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io'},
     {name: 'omic-ui', url: 'https://health-kick.hmpps.dsd.io/https/omic-preprod.service.hmpps.dsd.io'},
     {name: 'psh', url: 'https://health-kick.hmpps.dsd.io/https/prisonstaffhub-preprod.service.hmpps.dsd.io'},
