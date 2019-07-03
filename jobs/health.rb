@@ -85,7 +85,7 @@ dev_servers = [
 # Any service which does not have a development instance should be placed in this list.
 # As a result the out-of-date version check will not be applied for them and will report GREEN in stage.
 #
-no_dev_servers = [ 'community-proxy' ] 
+no_dev_servers = ['community-proxy']
 
 def valid_json?(string)
   begin
@@ -113,32 +113,38 @@ end
 
 def gather_health_data(server)
   puts "requesting #{server[:url]}..."
-  unless server[:textOnly]
-    server_response = HTTParty.get(server[:url], headers: {'Accept' => 'application/json'})
-  else
-    server_response = HTTParty.get(server[:url], headers: {'Accept' => 'text/html'})
+  begin
+    if server[:textOnly]
+      server_response = HTTParty.get(server[:url], headers: {Accept: 'text/html'})
+    else
+      server_response = HTTParty.get(server[:url], headers: {Accept: 'application/json'})
+    end
+  rescue => e
+    puts "Caught #{e.inspect} whilst reading health for #{server[:url]}"
+    server_response = false
   end
 
-  puts server_response
   puts "Result from #{server[:url]} is #{server_response}"
 
   status = false
   version = nil
 
-  if server[:textOnly]
-    status = server_response.body == 'DB Up'
-    version = status ? 'UP' : 'DOWN'
-  else
-    if valid_json?(server_response.body)
-      result_json = JSON.parse(server_response.body)
+  if server_response
+    if server[:textOnly]
+      status = server_response.body == 'DB Up'
+      version = status ? 'UP' : 'DOWN'
+    else
+      if valid_json?(server_response.body)
+        result_json = JSON.parse(server_response.body)
 
-      if server[:versionUrl]
-        status = result_json['status'] == 'UP'
-        version_response = HTTParty.get(server[:versionUrl], headers: {Accept: 'application/json'})
-        version_json = JSON.parse(version_response.body)
-        version = getVersion(version_json['build'])
-      else
-        version, status = checkHealth(result_json)
+        if server[:versionUrl]
+          status = result_json['status'] == 'UP'
+          version_response = HTTParty.get(server[:versionUrl], headers: {Accept: 'application/json'})
+          version_json = JSON.parse(version_response.body)
+          version = getVersion(version_json['build'])
+        else
+          version, status = checkHealth(result_json)
+        end
       end
     end
   end
@@ -173,9 +179,9 @@ SCHEDULER.every '60s', first_in: 0 do |_job|
 
     # Do not use the out-of-date warning colour for services with no development instances present
     if no_dev_servers.include?(server[:name])
-       send_event("#{server[:name]}-stage", result: result)
+      send_event("#{server[:name]}-stage", result: result)
     else
-       send_event("#{server[:name]}-stage", result: result_with_colour)
+      send_event("#{server[:name]}-stage", result: result_with_colour)
     end
   end
 
