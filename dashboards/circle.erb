@@ -1,7 +1,7 @@
 <script type='text/javascript'>
     $(function() {
         Dashing.widget_base_dimensions = [400, 400]
-        Dashing.numColumns = 3
+        Dashing.numColumns = 4
     });
 </script>
 <% content_for(:title) { "Build Status" } %>
@@ -12,19 +12,25 @@
       <div data-id="circle-ci-ministryofjustice-elite2-api-master" data-view="CircleCi" data-title="Elite2 API"></div>
     </li>
     <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
-      <div data-id="circle-ci-ministryofjustice-new-nomis-ui-master" data-view="CircleCi" data-title="New Nomis"></div>
+      <div data-id="circle-ci-ministryofjustice-nomis-oauth2-server-master" data-view="CircleCi" data-title="Auth Server"></div>
     </li>
     <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
-      <div data-id="circle-ci-ministryofjustice-keyworker-ui-master" data-view="CircleCi" data-title="Omic UI"></div>
-    </li>
-    <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="circle-ci-ministryofjustice-keyworker-service-master" data-view="CircleCi" data-title="Keyworker Api"></div>
     </li>
+    <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-offender-risk-profiler-master" data-view="CircleCi" data-title="Risk Profiler"></div>
+    </li>
+    <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-new-nomis-ui-master" data-view="CircleCi" data-title="New Nomis"></div>
+    </li>
     <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
-      <div data-id="circle-ci-ministryofjustice-prisonstaffhub-master" data-view="CircleCi" data-title="Prison Staff Hub"></div>
+      <div data-id="circle-ci-ministryofjustice-keyworker-ui-master" data-view="CircleCi" data-title="Omic UI"></div>
     </li>
     <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
-      <div data-id="circle-ci-ministryofjustice-nomis-oauth2-server-master" data-view="CircleCi" data-title="Auth Server"></div>
+      <div data-id="circle-ci-ministryofjustice-prisonstaffhub-master" data-view="CircleCi" data-title="Prison Staff Hub"></div>
+    </li>
+    <li data-row="2" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-categorisation-tool-master" data-view="CircleCi" data-title="Categorisation Tool"></div>
     </li>
     <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="circle-ci-ministryofjustice-nomis-api-dev" data-view="CircleCi" data-title="Old Nomis API"></div>
@@ -35,14 +41,11 @@
     <li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
       <div data-id="circle-ci-ministryofjustice-community-proxy-master" data-view="CircleCi" data-title="Community Proxy"></div>
     </li>
-    <li data-row="4" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="circle-ci-ministryofjustice-categorisation-tool-master" data-view="CircleCi" data-title="Categorisation Tool"></div>
-    </li>
-    <li data-row="4" data-col="2" data-sizex="1" data-sizey="1">
-      <div data-id="circle-ci-ministryofjustice-offender-risk-profiler-master" data-view="CircleCi" data-title="Risk Profiler"></div>
-    </li>
-    <li data-row="4" data-col="3" data-sizex="1" data-sizey="1">
+    <li data-row="3" data-col="4" data-sizex="1" data-sizey="1">
       <div data-id="circle-ci-ministryofjustice-whereabouts-api-master" data-view="CircleCi" data-title="Whereabouts Api"></div>
+    </li>
+    <li data-row="4" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-dps-welcome-master" data-view="CircleCi" data-title="DPS Welcome"></div>
     </li>
   </ul>
 </div>

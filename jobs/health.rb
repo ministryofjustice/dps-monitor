@@ -41,6 +41,7 @@ prod_servers = [
     {name: 'psh', url: 'https://health-kick.hmpps.dsd.io/https/prisonstaffhub.service.hmpps.dsd.io'},
     {name: 'cat-tool', url: 'https://health-kick.hmpps.dsd.io/https/categorisation-tool.apps.cloud-platform-live-0.k8s.integration.dsd.io'},
     {name: 'whereabouts', versionUrl: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api.service.justice.gov.uk'},
+    {name: 'dps-welcome', versionUrl: 'https://health-kick.hmpps.dsd.io/https/dps-welcome.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/dps-welcome.service.justice.gov.uk'},
 ]
 
 preprod_servers = [
@@ -79,6 +80,7 @@ dev_servers = [
     {name: 'oauth2', versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/health'},
     {name: 'cat-tool', url: 'https://categorisation-tool-dev.apps.cloud-platform-live-0.k8s.integration.dsd.io/health'},
     {name: 'whereabouts', versionUrl: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api-dev.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api-dev.service.justice.gov.uk'},
+    {name: 'dps-welcome', versionUrl: 'https://health-kick.hmpps.dsd.io/https/dev.dps-welcome.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/dev.dps-welcome.service.justice.gov.uk'},
 ]
 
 #
