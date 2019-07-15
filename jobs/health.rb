@@ -43,6 +43,8 @@ prod_servers = [
     {name: 'whereabouts', versionUrl: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api.service.justice.gov.uk'},
     {name: 'dps-welcome', versionUrl: 'https://health-kick.hmpps.dsd.io/https/dps-welcome.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/dps-welcome.service.justice.gov.uk'},
     {name: 'offender-case-notes', versionUrl: 'https://health-kick.hmpps.dsd.io/https/offender-case-notes.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/offender-case-notes.service.justice.gov.uk'},
+    {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences.service.hmpps.dsd.io'},
+    {name: 'batchload', url: 'https://health-kick.hmpps.dsd.io/https/nomis-batchload.service.hmpps.dsd.io'},
 ]
 
 preprod_servers = [
@@ -57,6 +59,8 @@ preprod_servers = [
     {name: 'cat-tool', url: 'https://health-kick.hmpps.dsd.io/https/categorisation-tool-preprod.apps.cloud-platform-live-0.k8s.integration.dsd.io'},
     {name: 'whereabouts', versionUrl: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api-preprod.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api-preprod.service.justice.gov.uk'},
     {name: 'offender-case-notes', versionUrl: 'https://health-kick.hmpps.dsd.io/https/preprod.offender-case-notes.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/preprod.offender-case-notes.service.justice.gov.uk'},
+    {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences-preprod.service.hmpps.dsd.io'},
+    {name: 'batchload', url: 'https://health-kick.hmpps.dsd.io/https/nomis-batchload-preprod.service.hmpps.dsd.io'},
 ]
 
 stage_servers = [
@@ -69,6 +73,8 @@ stage_servers = [
     {name: 'newnomisapi', versionUrl: 'https://gateway.t2.nomis-api.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/custodyapi/health'},
     {name: 'oauth2', versionUrl: 'https://gateway.t2.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/auth/health'},
     {name: 'community-proxy', versionUrl: 'https://health-kick.hmpps.dsd.io/https/community-api-t2.hmpps.dsd.io/communityapi-info', url: 'https://health-kick.hmpps.dsd.io/https/community-api-t2.hmpps.dsd.io/communityapi-health'},
+    {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences-stage.hmpps.dsd.io'},
+    {name: 'batchload', url: 'https://health-kick.hmpps.dsd.io/https/nomis-batchload-stage.hmpps.dsd.io'},
 ]
 
 dev_servers = [
@@ -90,7 +96,7 @@ dev_servers = [
 # Any service which does not have a development instance should be placed in this list.
 # As a result the out-of-date version check will not be applied for them and will report GREEN in stage.
 #
-no_dev_servers = ['community-proxy']
+no_dev_servers = ['community-proxy', 'licences', 'batchload']
 
 def valid_json?(string)
   begin
