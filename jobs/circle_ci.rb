@@ -16,6 +16,8 @@ projects = [
   { vcs: 'github', user: 'ministryofjustice', repo: 'whereabouts-api', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'dps-welcome', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'offender-case-notes', branch: 'master'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'licences', branch: 'master'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'nomis-batchload', branch: 'master'},
 ]
 
 def duration(time)
