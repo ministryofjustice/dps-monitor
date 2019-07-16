@@ -1,0 +1,84 @@
+<script type='text/javascript'>
+    $(function () {
+        Dashing.widget_base_dimensions = [300, 300]
+        Dashing.numColumns = 6
+    });
+</script>
+
+<% content_for :title do %>HDC Overview
+<% end %>
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="oauth2-prod" data-view="ServerStatusSquares" data-title="OAUTH2 Server - Prod"></div>
+    </li>
+    <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="elite2-prod" data-view="ServerStatusSquares" data-title="Elite2 API - Prod"></div>
+    </li>
+    <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="psh-prod" data-view="ServerStatusSquares" data-title="Prison Staff Hub - Prod"></div>
+    </li>
+    <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="licences-prod" data-view="ServerStatusSquares" data-title="Licences - Prod"></div>
+    </li>
+    <li data-row="1" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-id="batchload-prod" data-view="ServerStatusSquares" data-title="Batchload - Prod"></div>
+    </li>
+
+    <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="oauth2-preprod" data-view="ServerStatusSquares" data-title="OAUTH2 Server - PreProd"></div>
+    </li>
+    <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="elite2-preprod" data-view="ServerStatusSquares" data-title="Elite2 API - PreProd"></div>
+    </li>
+    <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="psh-preprod" data-view="ServerStatusSquares" data-title="Prison Staff Hub - PreProd"></div>
+    </li>
+    <li data-row="2" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="licences-preprod" data-view="ServerStatusSquares" data-title="Licences - PreProd"></div>
+    </li>
+    <li data-row="2" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-id="batchload-preprod" data-view="ServerStatusSquares" data-title="Batchload - PreProd"></div>
+    </li>
+
+
+    <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="oauth2-stage" data-view="ServerStatusSquares" data-title="OAUTH2 Server - Stage"></div>
+    </li>
+    <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="elite2-stage" data-view="ServerStatusSquares" data-title="Elite2 API - Stage"></div>
+    </li>
+    <li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="psh-stage" data-view="ServerStatusSquares" data-title="Prison Staff Hub - Stage"></div>
+    </li>
+    <li data-row="3" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="licences-stage" data-view="ServerStatusSquares" data-title="Licences - Stage"></div>
+    </li>
+    <li data-row="3" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-id="batchload-stage" data-view="ServerStatusSquares" data-title="Batchload - Stage"></div>
+    </li>
+    <li data-row="3" data-col="6" data-sizex="1" data-sizey="1">
+      <div data-id="community-proxy-stage" data-view="ServerStatusSquares" data-title="Community Proxy - Stage"></div>
+    </li>
+
+    <li data-row="4" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-nomis-oauth2-server-master" data-view="CircleCi" data-title="Auth Server"></div>
+    </li>
+    <li data-row="4" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-elite2-api-master" data-view="CircleCi" data-title="Elite2 API"></div>
+    </li>
+    <li data-row="4" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-prisonstaffhub-master" data-view="CircleCi" data-title="Prison Staff Hub"></div>
+    </li>
+    <li data-row="4" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-licences-master" data-view="CircleCi" data-title="Licences"></div>
+    </li>
+    <li data-row="4" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-nomis-batchload-master" data-view="CircleCi" data-title="Batchload"></div>
+    </li>
+    <li data-row="4" data-col="6" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-community-proxy-master" data-view="CircleCi" data-title="Community Proxy"></div>
+    </li>
+
+  </ul>
+</div>
