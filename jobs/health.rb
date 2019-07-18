@@ -90,6 +90,7 @@ dev_servers = [
     {name: 'whereabouts', versionUrl: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api-dev.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api-dev.service.justice.gov.uk'},
     {name: 'dps-welcome', versionUrl: 'https://health-kick.hmpps.dsd.io/https/dev.dps-welcome.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/dev.dps-welcome.service.justice.gov.uk'},
     {name: 'offender-case-notes', versionUrl: 'https://health-kick.hmpps.dsd.io/https/dev.offender-case-notes.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/dev.offender-case-notes.service.justice.gov.uk'},
+    {name: 'offender-assessments-api', versionUrl: 'https://dev.devtest.assessment-api.hmpps.dsd.io/info', url: 'https://dev.devtest.assessment-api.hmpps.dsd.io/health'},
 ]
 
 #
