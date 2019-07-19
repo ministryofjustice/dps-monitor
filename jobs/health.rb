@@ -56,7 +56,7 @@ preprod_servers = [
     {name: 'nomis-api', textOnly: true, url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/nomisapi/health'},
     {name: 'newnomisapi', versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/custodyapi/health'},
     {name: 'oauth2', versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/health'},
-    {name: 'cat-tool', url: 'https://health-kick.hmpps.dsd.io/https/categorisation-tool-preprod.apps.cloud-platform-live-0.k8s.integration.dsd.io'},
+    {name: 'cat-tool', url: 'https://health-kick.hmpps.dsd.io/https/preprod.offender-categorisation.service.justice.gov.uk'},
     {name: 'whereabouts', versionUrl: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api-preprod.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api-preprod.service.justice.gov.uk'},
     {name: 'offender-case-notes', versionUrl: 'https://health-kick.hmpps.dsd.io/https/preprod.offender-case-notes.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/preprod.offender-case-notes.service.justice.gov.uk'},
     {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences-preprod.service.hmpps.dsd.io'},
