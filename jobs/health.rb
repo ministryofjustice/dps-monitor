@@ -43,6 +43,7 @@ prod_servers = [
     {name: 'whereabouts', versionUrl: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api.service.justice.gov.uk'},
     {name: 'dps-welcome', versionUrl: 'https://health-kick.hmpps.dsd.io/https/dps-welcome.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/dps-welcome.service.justice.gov.uk'},
     {name: 'offender-case-notes', versionUrl: 'https://health-kick.hmpps.dsd.io/https/offender-case-notes.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/offender-case-notes.service.justice.gov.uk'},
+    {name: 'community-proxy', versionUrl: 'https://health-kick.hmpps.dsd.io/https/community-api.service.hmpps.dsd.io/communityapi-info', url: 'https://health-kick.hmpps.dsd.io/https/community-api.service.hmpps.dsd.io/communityapi-health'},
     {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences.service.hmpps.dsd.io'},
     {name: 'batchload', url: 'https://health-kick.hmpps.dsd.io/https/nomis-batchload.service.hmpps.dsd.io'},
 ]
@@ -93,11 +94,16 @@ dev_servers = [
     {name: 'offender-assessments-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/dev.devtest.assessment-api.hmpps.dsd.io/info', url: 'https://health-kick.hmpps.dsd.io/https/dev.devtest.assessment-api.hmpps.dsd.io/health'},
 ]
 
-#
 # Any service which does not have a development instance should be placed in this list.
 # As a result the out-of-date version check will not be applied for them and will report GREEN in stage.
-#
+
 no_dev_servers = ['community-proxy', 'licences', 'batchload']
+
+# Any service which does not have a preprod instance should be placed in this list.
+# As a result the out-of-date version check will not be applied to them and they will report GREEN in preprod.
+
+no_preprod_servers = ['community-proxy']
+
 
 def valid_json?(string)
   begin
@@ -207,6 +213,12 @@ SCHEDULER.every '60s', first_in: 0 do |_job|
   prod_servers.each do |server|
     result = gather_health_data(server)
     result_with_colour = result.merge(add_outofdate(result[:checks][:VERSION], preprod_versions[server[:name]]))
-    send_event("#{server[:name]}-prod", result: result_with_colour)
+
+    # Do not use the out-of-date warning colour for services with no pre-prod instances
+    if no_preprod_servers.include?(server[:name])
+       send_event("#{server[:name]}-prod", result: result)
+    else
+       send_event("#{server[:name]}-prod", result: result_with_colour)
+    end
   end
 end
