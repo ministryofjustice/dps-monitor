@@ -92,6 +92,7 @@ dev_servers = [
     {name: 'dps-welcome', versionUrl: 'https://health-kick.hmpps.dsd.io/https/dev.dps-welcome.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/dev.dps-welcome.service.justice.gov.uk'},
     {name: 'offender-case-notes', versionUrl: 'https://health-kick.hmpps.dsd.io/https/dev.offender-case-notes.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/dev.offender-case-notes.service.justice.gov.uk'},
     {name: 'offender-assessments-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/dev.devtest.assessment-api.hmpps.dsd.io/info', url: 'https://health-kick.hmpps.dsd.io/https/dev.devtest.assessment-api.hmpps.dsd.io/health'},
+    {name: 'sentence-planning', versionUrl: 'https://health-kick.hmpps.dsd.io/https/sentence-planning-development.apps.live-1.cloud-platform.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/sentence-planning-development.apps.live-1.cloud-platform.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a development instance should be placed in this list.
@@ -142,7 +143,7 @@ def gather_health_data(server)
     server_response = false
   end
 
-  puts "Result from #{server[:url]} is #{server_response}"
+  # puts "Result from health check #{server[:url]} is #{server_response}"
 
   status = false
   version = nil
@@ -158,6 +159,9 @@ def gather_health_data(server)
         if server[:versionUrl]
           status = result_json['status'] == 'UP'
           version_response = HTTParty.get(server[:versionUrl], headers: {Accept: 'application/json'})
+
+          # puts "Result from version check #server[:versionUrl] is #{version_response}"
+
           version_json = JSON.parse(version_response.body)
           version = getVersion(version_json['build'])
         else
