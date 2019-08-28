@@ -125,11 +125,6 @@ def getVersion(version_data)
   version
 end
 
-def checkHealth(data)
-  version = getVersion(data)
-  [version, !version.nil?]
-end
-
 def gather_health_data(server)
   puts "requesting #{server[:url]}..."
   begin
@@ -143,10 +138,8 @@ def gather_health_data(server)
     server_response = false
   end
 
-  # puts "Result from health check #{server[:url]} is #{server_response}"
-
   status = false
-  version = nil
+  version = 'UNKNOWN'
 
   if server_response
     if server[:textOnly]
@@ -156,8 +149,9 @@ def gather_health_data(server)
       if valid_json?(server_response.body)
         result_json = JSON.parse(server_response.body)
 
+        status = result_json['status'] == 'UP' || result_json['healthy']
+
         if server[:versionUrl]
-          status = result_json['status'] == 'UP'
           version_response = HTTParty.get(server[:versionUrl], headers: {Accept: 'application/json'})
 
           # puts "Result from version check #server[:versionUrl] is #{version_response}"
@@ -165,10 +159,11 @@ def gather_health_data(server)
           version_json = JSON.parse(version_response.body)
           version = getVersion(version_json['build'])
         else
-          version, status = checkHealth(result_json)
+          version = getVersion(result_json)
         end
       end
     end
+    status = server_response.code == 200 && status
   end
 
   {
