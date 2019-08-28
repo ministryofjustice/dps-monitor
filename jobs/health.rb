@@ -103,7 +103,7 @@ no_dev_servers = ['community-proxy', 'licences', 'batchload']
 # Any service which does not have a preprod instance should be placed in this list.
 # As a result the out-of-date version check will not be applied to them and they will report GREEN in preprod.
 
-no_preprod_servers = ['community-proxy']
+no_preprod_servers = ['community-proxy', 'dps-welcome']
 
 
 def valid_json?(string)
