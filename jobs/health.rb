@@ -74,8 +74,6 @@ stage_servers = [
     {name: 'newnomisapi', versionUrl: 'https://gateway.t2.nomis-api.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/custodyapi/health'},
     {name: 'oauth2', versionUrl: 'https://gateway.t2.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t2.nomis-api.hmpps.dsd.io/auth/health'},
     {name: 'community-proxy', versionUrl: 'https://health-kick.hmpps.dsd.io/https/community-api-t2.hmpps.dsd.io/communityapi-info', url: 'https://health-kick.hmpps.dsd.io/https/community-api-t2.hmpps.dsd.io/communityapi-health'},
-    {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences-stage.hmpps.dsd.io'},
-    {name: 'batchload', url: 'https://health-kick.hmpps.dsd.io/https/nomis-batchload-stage.hmpps.dsd.io'},
 ]
 
 dev_servers = [
@@ -93,12 +91,15 @@ dev_servers = [
     {name: 'offender-case-notes', versionUrl: 'https://health-kick.hmpps.dsd.io/https/dev.offender-case-notes.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/dev.offender-case-notes.service.justice.gov.uk'},
     {name: 'offender-assessments-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/dev.devtest.assessment-api.hmpps.dsd.io/info', url: 'https://health-kick.hmpps.dsd.io/https/dev.devtest.assessment-api.hmpps.dsd.io/health'},
     {name: 'sentence-planning', versionUrl: 'https://health-kick.hmpps.dsd.io/https/sentence-planning-development.apps.live-1.cloud-platform.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/sentence-planning-development.apps.live-1.cloud-platform.service.justice.gov.uk/health'},
+    {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences-stage.hmpps.dsd.io'},
+    {name: 'batchload', url: 'https://health-kick.hmpps.dsd.io/https/nomis-batchload-stage.hmpps.dsd.io'},
+    {name: 'community-proxy', versionUrl: 'https://community-proxy.apps.live-1.cloud-platform.service.justice.gov.uk/communityapi/info', url: 'https://community-proxy.apps.live-1.cloud-platform.service.justice.gov.uk/communityapi/health'},
 ]
 
 # Any service which does not have a development instance should be placed in this list.
 # As a result the out-of-date version check will not be applied for them and will report GREEN in stage.
 
-no_dev_servers = ['community-proxy', 'licences', 'batchload']
+no_dev_servers = []
 
 # Any service which does not have a preprod instance should be placed in this list.
 # As a result the out-of-date version check will not be applied to them and they will report GREEN in preprod.
