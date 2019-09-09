@@ -62,9 +62,6 @@ preprod_servers = [
     {name: 'offender-case-notes', versionUrl: 'https://health-kick.hmpps.dsd.io/https/preprod.offender-case-notes.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/preprod.offender-case-notes.service.justice.gov.uk'},
     {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences-preprod.service.hmpps.dsd.io'},
     {name: 'batchload', url: 'https://health-kick.hmpps.dsd.io/https/nomis-batchload-preprod.service.hmpps.dsd.io'},
-]
-
-stage_servers = [
     {name: 'community-proxy', versionUrl: 'https://health-kick.hmpps.dsd.io/https/community-api-t2.hmpps.dsd.io/communityapi-info', url: 'https://health-kick.hmpps.dsd.io/https/community-api-t2.hmpps.dsd.io/communityapi-health'},
 ]
 
@@ -182,18 +179,6 @@ SCHEDULER.every '60s', first_in: 0 do |_job|
     send_event("#{server[:name]}-dev", result: result)
     {server[:name] => result[:checks][:VERSION]}
   end.reduce Hash.new, :merge
-
-  stage_servers.each do |server|
-    result = gather_health_data(server)
-    result_with_colour = result.merge(add_outofdate(result[:checks][:VERSION], dev_versions[server[:name]]))
-
-    # Do not use the out-of-date warning colour for services with no development instances present
-    if no_dev_servers.include?(server[:name])
-      send_event("#{server[:name]}-stage", result: result)
-    else
-      send_event("#{server[:name]}-stage", result: result_with_colour)
-    end
-  end
 
   preprod_versions = preprod_servers.map do |server|
     result = gather_health_data(server)
