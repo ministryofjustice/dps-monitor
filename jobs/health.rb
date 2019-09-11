@@ -46,6 +46,7 @@ prod_servers = [
     {name: 'community-proxy', versionUrl: 'https://health-kick.hmpps.dsd.io/https/community-api.service.hmpps.dsd.io/communityapi-info', url: 'https://health-kick.hmpps.dsd.io/https/community-api.service.hmpps.dsd.io/communityapi-health'},
     {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences.service.hmpps.dsd.io'},
     {name: 'batchload', url: 'https://health-kick.hmpps.dsd.io/https/nomis-batchload.service.hmpps.dsd.io'},
+    {name: 'pathfinder', url: 'https://health-kick.hmpps.dsd.io/https/pathfinder.service.justice.gov.uk/health'},
 ]
 
 preprod_servers = [
@@ -63,11 +64,12 @@ preprod_servers = [
     {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences-preprod.service.hmpps.dsd.io'},
     {name: 'batchload', url: 'https://health-kick.hmpps.dsd.io/https/nomis-batchload-preprod.service.hmpps.dsd.io'},
     {name: 'community-proxy', versionUrl: 'https://health-kick.hmpps.dsd.io/https/community-api-t2.hmpps.dsd.io/communityapi-info', url: 'https://health-kick.hmpps.dsd.io/https/community-api-t2.hmpps.dsd.io/communityapi-health'},
+    {name: 'pathfinder', url: 'https://health-kick.hmpps.dsd.io/https/preprod.pathfinder.service.justice.gov.uk/health'},
 ]
 
 dev_servers = [
     {name: 'elite2', versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api/health'},
-    {name: 'keyworker-api', versionUrl: 'https://keyworker-api-dev.hmpps.dsd.io/info', url: 'https://keyworker-api-dev.hmpps.dsd.io/health'},
+    {name: 'keyworker-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/keyworker-api-dev.hmpps.dsd.io/info', url: 'https://health-kick.hmpps.dsd.io/https/keyworker-api-dev.hmpps.dsd.io/health'},
     {name: 'notm', url: 'https://notm-dev.hmpps.dsd.io/health'},
     {name: 'omic-ui', url: 'https://dev.manage-key-workers.service.justice.gov.uk/health'},
     {name: 'psh', url: 'https://prisonstaffhub-dev.hmpps.dsd.io/health'},
@@ -83,6 +85,8 @@ dev_servers = [
     {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences-stage.hmpps.dsd.io'},
     {name: 'batchload', url: 'https://health-kick.hmpps.dsd.io/https/nomis-batchload-stage.hmpps.dsd.io'},
     {name: 'community-proxy', versionUrl: 'https://community-proxy.apps.live-1.cloud-platform.service.justice.gov.uk/communityapi/info', url: 'https://community-proxy.apps.live-1.cloud-platform.service.justice.gov.uk/communityapi/health'},
+    {name: 'use-of-force', url: 'https://health-kick.hmpps.dsd.io/https/dev.use-of-force.service.justice.gov.uk/health'},
+    {name: 'pathfinder', url: 'https://health-kick.hmpps.dsd.io/https/dev.pathfinder.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a development instance should be placed in this list.
@@ -106,12 +110,36 @@ end
 
 def getVersion(version_data)
   version = nil
+
   unless version_data.nil?
-    version = version_data['version']
+
+    # Try a top-level key called 'version'
+    if version_data.key?("version")
+      version = version_data['version']
+    end
+
+    # Try ['healthInfo]['version']
     if version.nil?
-      version = version_data['healthInfo']['version']
+      if version_data.key?("healthInfo")
+         version = version_data['healthInfo']['version']
+      end
+    end
+
+    # Try ['build']['buildNumber']
+    if version.nil?
+      if version_data.key?("buildNumber")
+        version = version_data['build']['buildNumber']
+      end
+    end
+
+    # Try ['build']['status']
+    if version.nil?
+      if version_data.key?("build")
+        version = version_data['build']['status']
+      end
     end
   end
+
   version
 end
 
@@ -123,6 +151,7 @@ def gather_health_data(server)
     else
       server_response = HTTParty.get(server[:url], headers: {Accept: 'application/json'})
     end
+
   rescue => e
     puts "Caught #{e.inspect} whilst reading health for #{server[:url]}"
     server_response = false
@@ -131,11 +160,16 @@ def gather_health_data(server)
   status = false
   version = 'UNKNOWN'
 
+  # Useful debugging line
+  # puts "Result from health check #{server[:url]} is #{server_response}"
+
+
   if server_response
     if server[:textOnly]
       status = server_response.body == 'DB Up'
       version = status ? 'UP' : 'DOWN'
     else
+
       if valid_json?(server_response.body)
         result_json = JSON.parse(server_response.body)
 
@@ -144,11 +178,13 @@ def gather_health_data(server)
         if server[:versionUrl]
           version_response = HTTParty.get(server[:versionUrl], headers: {Accept: 'application/json'})
 
+          # Useful debugging line
           # puts "Result from version check #server[:versionUrl] is #{version_response}"
 
           version_json = JSON.parse(version_response.body)
           version = getVersion(version_json['build'])
         else
+          # Use the health data to gather version information too
           version = getVersion(result_json)
         end
       end
