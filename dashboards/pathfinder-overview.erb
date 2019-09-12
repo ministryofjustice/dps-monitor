@@ -1,0 +1,78 @@
+<script type='text/javascript'>
+    $(function () {
+        Dashing.widget_base_dimensions = [300, 300]
+        Dashing.numColumns = 6
+    });
+</script>
+
+<% content_for :title do %>Pathfinder Overview
+<% end %>
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="pathfinder-prod" data-view="ServerStatusSquares" data-title="Pathfinder - Prod"></div>
+    </li>
+    <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="oauth2-prod" data-view="ServerStatusSquares" data-title="OAUTH2 Server - Prod"></div>
+    </li>
+    <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="elite2-prod" data-view="ServerStatusSquares" data-title="Elite2 API - Prod"></div>
+    </li>
+    <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="psh-prod" data-view="ServerStatusSquares" data-title="Prison Staff Hub - Prod"></div>
+    </li>
+    <li data-row="1" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-id="notm-prod" data-view="ServerStatusSquares" data-title="New Nomis - Prod"></div>
+    </li>
+
+    <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="pathfinder-preprod" data-view="ServerStatusSquares" data-title="Pathfinder - PreProd"></div>
+    </li>
+    <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="oauth2-preprod" data-view="ServerStatusSquares" data-title="OAUTH2 Server - PreProd"></div>
+    </li>
+    <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="elite2-preprod" data-view="ServerStatusSquares" data-title="Elite2 API - PreProd"></div>
+    </li>
+    <li data-row="2" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="psh-preprod" data-view="ServerStatusSquares" data-title="Prison Staff Hub - PreProd"></div>
+    </li>
+    <li data-row="2" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-id="notm-preprod" data-view="ServerStatusSquares" data-title="New Nomis - PreProd"></div>
+    </li>
+
+    <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="pathfinder-dev" data-view="ServerStatusSquares" data-title="Pathfinder - Dev"></div>
+    </li>
+    <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="oauth2-dev" data-view="ServerStatusSquares" data-title="Auth Server - Dev"></div>
+    </li>
+    <li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="elite2-dev" data-view="ServerStatusSquares" data-title="Elite2 Api - Dev"></div>
+    </li>
+    <li data-row="3" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="psh-dev" data-view="ServerStatusSquares" data-title="Prison Staff Hub - Dev"></div>
+    </li>
+    <li data-row="3" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-id="notm-dev" data-view="ServerStatusSquares" data-title="New Nomis - Dev"></div>
+    </li>
+
+
+    <li data-row="4" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-pathfinder-master" data-view="CircleCi" data-title="Pathfinder"></div>
+    </li>
+    <li data-row="4" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-nomis-oauth2-server-master" data-view="CircleCi" data-title="Auth Server"></div>
+    </li>
+    <li data-row="4" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-elite2-api-master" data-view="CircleCi" data-title="Elite2 API"></div>
+    </li>
+    <li data-row="4" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-prisonstaffhub-master" data-view="CircleCi" data-title="Prison Staff Hub"></div>
+    </li>
+    <li data-row="4" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-ministryofjustice-new-nomis-ui-master" data-view="CircleCi" data-title="New Nomis"></div>
+    </li>
+
+  </ul>
+</div>

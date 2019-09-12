@@ -20,6 +20,8 @@ projects = [
   { vcs: 'github', user: 'ministryofjustice', repo: 'nomis-batchload', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'offender-assessments-api', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'sentence-planning', branch: 'master'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'use-of-force', branch: 'master'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'pathfinder', branch: 'master'},
 ]
 
 def duration(time)
@@ -52,7 +54,6 @@ def translate_status_to_class(status)
   }
   statuses[status] || 'pending'
 end
-
 
 
 def build_data(project, auth_token)
@@ -102,3 +103,4 @@ SCHEDULER.every '10s', :first_in => 0  do
     send_event(data_id, data) unless (data.nil? or data.empty?)
   end
 end
+
