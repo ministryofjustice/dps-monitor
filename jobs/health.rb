@@ -47,6 +47,7 @@ prod_servers = [
     {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences.service.hmpps.dsd.io'},
     {name: 'batchload', url: 'https://health-kick.hmpps.dsd.io/https/nomis-batchload.service.hmpps.dsd.io'},
     {name: 'pathfinder', url: 'https://health-kick.hmpps.dsd.io/https/pathfinder.service.justice.gov.uk/health'},
+    {name: 'use-of-force', url: 'https://health-kick.hmpps.dsd.io/https/use-of-force.service.justice.gov.uk/health'},
 ]
 
 preprod_servers = [
@@ -65,6 +66,7 @@ preprod_servers = [
     {name: 'batchload', url: 'https://health-kick.hmpps.dsd.io/https/nomis-batchload-preprod.service.hmpps.dsd.io'},
     {name: 'community-proxy', versionUrl: 'https://health-kick.hmpps.dsd.io/https/community-api-t2.hmpps.dsd.io/communityapi-info', url: 'https://health-kick.hmpps.dsd.io/https/community-api-t2.hmpps.dsd.io/communityapi-health'},
     {name: 'pathfinder', url: 'https://health-kick.hmpps.dsd.io/https/preprod.pathfinder.service.justice.gov.uk/health'},
+    {name: 'use-of-force', url: 'https://health-kick.hmpps.dsd.io/https/preprod.use-of-force.service.justice.gov.uk/health'},
 ]
 
 dev_servers = [
