@@ -53,9 +53,9 @@ prod_servers = [
 preprod_servers = [
     {name: 'elite2', versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api/health'},
     {name: 'keyworker-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/keyworker-api-preprod.service.hmpps.dsd.io/info', url: 'https://health-kick.hmpps.dsd.io/https/keyworker-api-preprod.service.hmpps.dsd.io/health'},
-    {name: 'notm', url: 'https://health-kick.hmpps.dsd.io/https/notm-preprod.service.hmpps.dsd.io'},
+    {name: 'notm', url: 'https://health-kick.hmpps.dsd.io/https/digital-preprod.prison.service.justice.gov.uk'},
     {name: 'omic-ui', url: 'https://health-kick.hmpps.dsd.io/https/preprod.manage-key-workers.service.justice.gov.uk'},
-    {name: 'psh', url: 'https://health-kick.hmpps.dsd.io/https/prisonstaffhub-preprod.service.hmpps.dsd.io'},
+    {name: 'psh', url: 'https://health-kick.hmpps.dsd.io/https/whereabouts-preprod.prison.service.justice.gov.uk'},
     {name: 'nomis-api', textOnly: true, url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/nomisapi/health'},
     {name: 'newnomisapi', versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/custodyapi/health'},
     {name: 'oauth2', versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/health'},
@@ -72,9 +72,9 @@ preprod_servers = [
 dev_servers = [
     {name: 'elite2', versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api/health'},
     {name: 'keyworker-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/keyworker-api-dev.hmpps.dsd.io/info', url: 'https://health-kick.hmpps.dsd.io/https/keyworker-api-dev.hmpps.dsd.io/health'},
-    {name: 'notm', url: 'https://notm-dev.hmpps.dsd.io/health'},
+    {name: 'notm', url: 'https://digital-dev.prison.service.justice.gov.uk/health'},
     {name: 'omic-ui', url: 'https://dev.manage-key-workers.service.justice.gov.uk/health'},
-    {name: 'psh', url: 'https://prisonstaffhub-dev.hmpps.dsd.io/health'},
+    {name: 'psh', url: 'https://whereabouts-dev.prison.service.justice.gov.uk/health'},
     {name: 'nomis-api', textOnly: true, url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/nomisapi/health'},
     {name: 'newnomisapi', versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/custodyapi/health'},
     {name: 'oauth2', versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/health'},
