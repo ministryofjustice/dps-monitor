@@ -89,6 +89,7 @@ dev_servers = [
     {name: 'community-proxy', versionUrl: 'https://community-proxy.apps.live-1.cloud-platform.service.justice.gov.uk/communityapi/info', url: 'https://community-proxy.apps.live-1.cloud-platform.service.justice.gov.uk/communityapi/health'},
     {name: 'use-of-force', url: 'https://health-kick.hmpps.dsd.io/https/dev.use-of-force.service.justice.gov.uk/health'},
     {name: 'pathfinder', url: 'https://health-kick.hmpps.dsd.io/https/dev.pathfinder.service.justice.gov.uk/health'},
+    {name: 'offender-events', versionUrl: 'https://health-kick.hmpps.dsd.io/https/offender-events-dev.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/offender-events-dev.prison.service.justice.gov.uk'},
 ]
 
 # Any service which does not have a development instance should be placed in this list.
