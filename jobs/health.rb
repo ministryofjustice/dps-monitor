@@ -53,7 +53,7 @@ prod_servers = [
 
 preprod_servers = [
     {name: 'elite2', versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api/health'},
-    {name: 'keyworker-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/keyworker-api-preprod.service.hmpps.dsd.io/info', url: 'https://health-kick.hmpps.dsd.io/https/keyworker-api-preprod.service.hmpps.dsd.io/health'},
+    {name: 'keyworker-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/keyworker-api-preprod.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/keyworker-api-preprod.prison.service.justice.gov.uk/health'},
     {name: 'dps-core', url: 'https://health-kick.hmpps.dsd.io/https/digital-preprod.prison.service.justice.gov.uk'},
     {name: 'omic-ui', url: 'https://health-kick.hmpps.dsd.io/https/preprod.manage-key-workers.service.justice.gov.uk'},
     {name: 'whereabouts', url: 'https://health-kick.hmpps.dsd.io/https/whereabouts-preprod.prison.service.justice.gov.uk'},
@@ -73,7 +73,7 @@ preprod_servers = [
 
 dev_servers = [
     {name: 'elite2', versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api/health'},
-    {name: 'keyworker-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/keyworker-api-dev.hmpps.dsd.io/info', url: 'https://health-kick.hmpps.dsd.io/https/keyworker-api-dev.hmpps.dsd.io/health'},
+    {name: 'keyworker-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/keyworker-api-dev.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/keyworker-api-dev.prison.service.justice.gov.uk/health'},
     {name: 'dps-core', url: 'https://digital-dev.prison.service.justice.gov.uk/health'},
     {name: 'omic-ui', url: 'https://dev.manage-key-workers.service.justice.gov.uk/health'},
     {name: 'whereabouts', url: 'https://whereabouts-dev.prison.service.justice.gov.uk/health'},
