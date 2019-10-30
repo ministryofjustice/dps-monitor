@@ -34,7 +34,7 @@ prod_servers = [
     {name: 'elite2', versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/health'},
     {name: 'dps-core', url: 'https://health-kick.hmpps.dsd.io/https/digital.prison.service.justice.gov.uk'},
     {name: 'omic-ui', url: 'https://health-kick.hmpps.dsd.io/https/manage-key-workers.service.justice.gov.uk'},
-    {name: 'keyworker-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/keyworker-api.service.hmpps.dsd.io/info', url: 'https://health-kick.hmpps.dsd.io/https/keyworker-api.service.hmpps.dsd.io/health'},
+    {name: 'keyworker-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/keyworker-api.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/keyworker-api.prison.service.justice.gov.uk/health'},
     {name: 'nomis-api', textOnly: true, url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/nomisapi/health'},
     {name: 'newnomisapi', versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/custodyapi/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/custodyapi/health'},
     {name: 'oauth2', versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/health'},
