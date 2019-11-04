@@ -85,7 +85,7 @@ dev_servers = [
     {name: 'dps-welcome', versionUrl: 'https://health-kick.hmpps.dsd.io/https/welcome-dev.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/welcome-dev.prison.service.justice.gov.uk'},
     {name: 'offender-case-notes', versionUrl: 'https://health-kick.hmpps.dsd.io/https/dev.offender-case-notes.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/dev.offender-case-notes.service.justice.gov.uk'},
     {name: 'offender-assessments-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/dev.devtest.assessment-api.hmpps.dsd.io/info', url: 'https://health-kick.hmpps.dsd.io/https/dev.devtest.assessment-api.hmpps.dsd.io/health'},
-    {name: 'sentence-planning', versionUrl: 'https://health-kick.hmpps.dsd.io/https/sentence-planning-development.apps.live-1.cloud-platform.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/sentence-planning-development.apps.live-1.cloud-platform.service.justice.gov.uk/health'},
+    {name: 'sentence-planning', url: 'https://health-kick.hmpps.dsd.io/https/sentence-planning-development.apps.live-1.cloud-platform.service.justice.gov.uk/health'},
     {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences-dev.prison.service.justice.gov.uk'},
     {name: 'batchload', url: 'https://health-kick.hmpps.dsd.io/https/nomis-batchload-stage.hmpps.dsd.io'},
     {name: 'community-proxy', versionUrl: 'https://community-proxy.apps.live-1.cloud-platform.service.justice.gov.uk/communityapi/info', url: 'https://community-proxy.apps.live-1.cloud-platform.service.justice.gov.uk/communityapi/health'},
@@ -132,7 +132,7 @@ def getVersion(version_data)
 
     # Try ['build']['buildNumber']
     if version.nil?
-      if version_data.key?("buildNumber")
+      if version_data.key?("build")
         version = version_data['build']['buildNumber']
       end
     end
