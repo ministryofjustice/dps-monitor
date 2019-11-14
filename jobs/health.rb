@@ -44,6 +44,7 @@ prod_servers = [
     {name: 'dps-welcome', versionUrl: 'https://health-kick.hmpps.dsd.io/https/welcome.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/welcome.prison.service.justice.gov.uk'},
     {name: 'offender-case-notes', versionUrl: 'https://health-kick.hmpps.dsd.io/https/offender-case-notes.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/offender-case-notes.service.justice.gov.uk'},
     {name: 'community-proxy', versionUrl: 'https://health-kick.hmpps.dsd.io/https/community-api.service.hmpps.dsd.io/communityapi-info', url: 'https://health-kick.hmpps.dsd.io/https/community-api.service.hmpps.dsd.io/communityapi-health'},
+    {name: 'community-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/community-api-secure.probation.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/community-api-secure.probation.service.justice.gov.uk/health'},
     {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences.service.hmpps.dsd.io'},
     {name: 'batchload', url: 'https://health-kick.hmpps.dsd.io/https/nomis-batchload.service.hmpps.dsd.io'},
     {name: 'pathfinder', url: 'https://health-kick.hmpps.dsd.io/https/pathfinder.service.justice.gov.uk/health'},
@@ -65,7 +66,7 @@ preprod_servers = [
     {name: 'offender-case-notes', versionUrl: 'https://health-kick.hmpps.dsd.io/https/preprod.offender-case-notes.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/preprod.offender-case-notes.service.justice.gov.uk'},
     {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences-preprod.prison.service.justice.gov.uk'},
     {name: 'batchload', url: 'https://health-kick.hmpps.dsd.io/https/nomis-batchload-preprod.service.hmpps.dsd.io'},
-    {name: 'community-proxy', versionUrl: 'https://health-kick.hmpps.dsd.io/https/community-api-t2.hmpps.dsd.io/communityapi-info', url: 'https://health-kick.hmpps.dsd.io/https/community-api-t2.hmpps.dsd.io/communityapi-health'},
+    {name: 'community-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/community-api-secure.pre-prod.delius.probation.hmpps.dsd.io/info', url: 'https://health-kick.hmpps.dsd.io/https/community-api-secure.pre-prod.delius.probation.hmpps.dsd.io/health'},
     {name: 'pathfinder', url: 'https://health-kick.hmpps.dsd.io/https/preprod.pathfinder.service.justice.gov.uk/health'},
     {name: 'use-of-force', url: 'https://health-kick.hmpps.dsd.io/https/preprod.use-of-force.service.justice.gov.uk/health'},
     {name: 'offender-events', versionUrl: 'https://health-kick.hmpps.dsd.io/https/offender-events-preprod.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/offender-events-preprod.prison.service.justice.gov.uk'},
@@ -88,7 +89,7 @@ dev_servers = [
     {name: 'sentence-planning', url: 'https://health-kick.hmpps.dsd.io/https/sentence-planning-development.apps.live-1.cloud-platform.service.justice.gov.uk/health'},
     {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences-dev.prison.service.justice.gov.uk'},
     {name: 'batchload', url: 'https://health-kick.hmpps.dsd.io/https/nomis-batchload-stage.hmpps.dsd.io'},
-    {name: 'community-proxy', versionUrl: 'https://community-proxy.apps.live-1.cloud-platform.service.justice.gov.uk/communityapi/info', url: 'https://community-proxy.apps.live-1.cloud-platform.service.justice.gov.uk/communityapi/health'},
+    {name: 'community-api', versionUrl: 'https://community-api-secure.test.delius.probation.hmpps.dsd.io/info', url: 'https://community-api-secure.test.delius.probation.hmpps.dsd.io/health'},
     {name: 'use-of-force', url: 'https://health-kick.hmpps.dsd.io/https/dev.use-of-force.service.justice.gov.uk/health'},
     {name: 'pathfinder', url: 'https://health-kick.hmpps.dsd.io/https/dev.pathfinder.service.justice.gov.uk/health'},
     {name: 'offender-events', versionUrl: 'https://health-kick.hmpps.dsd.io/https/offender-events-dev.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/offender-events-dev.prison.service.justice.gov.uk'},
@@ -152,9 +153,9 @@ def gather_health_data(server)
   puts "requesting #{server[:url]}..."
   begin
     if server[:textOnly]
-      server_response = HTTParty.get(server[:url], headers: {Accept: 'text/html'})
+      server_response = HTTParty.get(server[:url], headers: {Accept: 'text/html'}, timeout: 2)
     else
-      server_response = HTTParty.get(server[:url], headers: {Accept: 'application/json'})
+      server_response = HTTParty.get(server[:url], headers: {Accept: 'application/json'}, timeout: 2)
     end
 
   rescue => e
@@ -168,7 +169,6 @@ def gather_health_data(server)
   # Useful debugging line
   # puts "Result from health check #{server[:url]} is #{server_response}"
 
-
   if server_response
     if server[:textOnly]
       status = server_response.body == 'DB Up'
@@ -181,13 +181,17 @@ def gather_health_data(server)
         status = result_json['status'] == 'UP' || result_json['healthy']
 
         if server[:versionUrl]
-          version_response = HTTParty.get(server[:versionUrl], headers: {Accept: 'application/json'})
+          begin
+            version_response = HTTParty.get(server[:versionUrl], headers: {Accept: 'application/json'}, timeout: 2)
 
-          # Useful debugging line
-          # puts "Result from version check #server[:versionUrl] is #{version_response}"
+            # Useful debugging line
+            # puts "Result from version check #server[:versionUrl] is #{version_response}"
 
-          version_json = JSON.parse(version_response.body)
-          version = getVersion(version_json['build'])
+            version_json = JSON.parse(version_response.body)
+            version = getVersion(version_json['build'])
+          rescue => e
+            puts "Caught #{e.inspect} whilst reading version for #{server[:versionUrl]}"
+          end
         else
           # Use the health data to gather version information too
           version = getVersion(result_json)
