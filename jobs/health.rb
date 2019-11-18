@@ -89,7 +89,7 @@ dev_servers = [
     {name: 'sentence-planning', url: 'https://health-kick.hmpps.dsd.io/https/sentence-planning-development.apps.live-1.cloud-platform.service.justice.gov.uk/health'},
     {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences-dev.prison.service.justice.gov.uk'},
     {name: 'batchload', url: 'https://health-kick.hmpps.dsd.io/https/nomis-batchload-stage.hmpps.dsd.io'},
-    {name: 'community-api', versionUrl: 'https://community-api-secure.test.delius.probation.hmpps.dsd.io/info', url: 'https://community-api-secure.test.delius.probation.hmpps.dsd.io/health'},
+    {name: 'community-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/community-api-secure.test.delius.probation.hmpps.dsd.io/info', url: 'https://health-kick.hmpps.dsd.io/https/community-api-secure.test.delius.probation.hmpps.dsd.io/health'},
     {name: 'use-of-force', url: 'https://health-kick.hmpps.dsd.io/https/dev.use-of-force.service.justice.gov.uk/health'},
     {name: 'pathfinder', url: 'https://health-kick.hmpps.dsd.io/https/dev.pathfinder.service.justice.gov.uk/health'},
     {name: 'offender-events', versionUrl: 'https://health-kick.hmpps.dsd.io/https/offender-events-dev.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/offender-events-dev.prison.service.justice.gov.uk'},
