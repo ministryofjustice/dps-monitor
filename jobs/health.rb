@@ -43,7 +43,6 @@ prod_servers = [
     {name: 'whereabouts-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api.service.justice.gov.uk'},
     {name: 'dps-welcome', versionUrl: 'https://health-kick.hmpps.dsd.io/https/welcome.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/welcome.prison.service.justice.gov.uk'},
     {name: 'offender-case-notes', versionUrl: 'https://health-kick.hmpps.dsd.io/https/offender-case-notes.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/offender-case-notes.service.justice.gov.uk'},
-    {name: 'community-proxy', versionUrl: 'https://health-kick.hmpps.dsd.io/https/community-api.service.hmpps.dsd.io/communityapi-info', url: 'https://health-kick.hmpps.dsd.io/https/community-api.service.hmpps.dsd.io/communityapi-health'},
     {name: 'community-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/community-api-secure.probation.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/community-api-secure.probation.service.justice.gov.uk/health'},
     {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences.service.hmpps.dsd.io'},
     {name: 'batchload', url: 'https://health-kick.hmpps.dsd.io/https/nomis-batchload.service.hmpps.dsd.io'},
@@ -103,7 +102,7 @@ no_dev_servers = []
 # Any service which does not have a preprod instance should be placed in this list.
 # As a result the out-of-date version check will not be applied to them and they will report GREEN in preprod.
 
-no_preprod_servers = ['community-proxy', 'dps-welcome']
+no_preprod_servers = ['dps-welcome']
 
 
 def valid_json?(string)
