@@ -1,6 +1,6 @@
-NOTM Monitoring
+DPS Monitoring
 ====
-Monitoring for the Nomis Elite API and NOTM projects.
+Monitoring for the DPS Services and Projects
 
 The project is based on Smashing.
 
