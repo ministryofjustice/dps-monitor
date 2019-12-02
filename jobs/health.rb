@@ -44,7 +44,7 @@ prod_servers = [
     {name: 'dps-welcome', versionUrl: 'https://health-kick.hmpps.dsd.io/https/welcome.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/welcome.prison.service.justice.gov.uk'},
     {name: 'offender-case-notes', versionUrl: 'https://health-kick.hmpps.dsd.io/https/offender-case-notes.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/offender-case-notes.service.justice.gov.uk'},
     {name: 'community-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/community-api-secure.probation.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/community-api-secure.probation.service.justice.gov.uk/health'},
-    {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences.service.hmpps.dsd.io'},
+    {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences.prison.service.justice.gov.uk'},
     {name: 'batchload', url: 'https://health-kick.hmpps.dsd.io/https/nomis-batchload.service.hmpps.dsd.io'},
     {name: 'pathfinder', url: 'https://health-kick.hmpps.dsd.io/https/pathfinder.service.justice.gov.uk/health'},
     {name: 'use-of-force', url: 'https://health-kick.hmpps.dsd.io/https/use-of-force.service.justice.gov.uk/health'},
