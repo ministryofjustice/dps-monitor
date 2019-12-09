@@ -69,6 +69,7 @@ preprod_servers = [
     {name: 'pathfinder', url: 'https://health-kick.hmpps.dsd.io/https/preprod.pathfinder.service.justice.gov.uk/health'},
     {name: 'use-of-force', url: 'https://health-kick.hmpps.dsd.io/https/preprod.use-of-force.service.justice.gov.uk/health'},
     {name: 'offender-events', versionUrl: 'https://health-kick.hmpps.dsd.io/https/offender-events-preprod.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/offender-events-preprod.prison.service.justice.gov.uk'},
+    {name: 'case-notes-to-probation', versionUrl: 'https://health-kick.hmpps.dsd.io/https/case-notes-to-probation-preprod.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/case-notes-to-probation-preprod.prison.service.justice.gov.uk'},
 ]
 
 dev_servers = [
@@ -93,6 +94,7 @@ dev_servers = [
     {name: 'pathfinder', url: 'https://health-kick.hmpps.dsd.io/https/dev.pathfinder.service.justice.gov.uk/health'},
     {name: 'offender-events', versionUrl: 'https://health-kick.hmpps.dsd.io/https/offender-events-dev.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/offender-events-dev.prison.service.justice.gov.uk'},
     {name: 'dps-data-compliance', versionUrl: 'https://health-kick.hmpps.dsd.io/https/prison-data-compliance-dev.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/prison-data-compliance-dev.prison.service.justice.gov.uk/health'},
+    {name: 'case-notes-to-probation', versionUrl: 'https://health-kick.hmpps.dsd.io/https/case-notes-to-probation-dev.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/case-notes-to-probation-dev.prison.service.justice.gov.uk'},
 ]
 
 # Any service which does not have a development instance should be placed in this list.
