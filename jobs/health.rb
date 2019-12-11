@@ -49,6 +49,7 @@ prod_servers = [
     {name: 'pathfinder', url: 'https://health-kick.hmpps.dsd.io/https/pathfinder.service.justice.gov.uk/health'},
     {name: 'use-of-force', url: 'https://health-kick.hmpps.dsd.io/https/use-of-force.service.justice.gov.uk/health'},
     {name: 'offender-events', versionUrl: 'https://health-kick.hmpps.dsd.io/https/offender-events.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/offender-events.prison.service.justice.gov.uk'},
+    {name: 'case-notes-to-probation', versionUrl: 'https://health-kick.hmpps.dsd.io/https/case-notes-to-probation.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/case-notes-to-probation.prison.service.justice.gov.uk'},
     {name: 'probation-teams', versionUrl: 'https://health-kick.hmpps.dsd.io/https/probation-teams.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/probation-teams.prison.service.justice.gov.uk'},
 ]
 
