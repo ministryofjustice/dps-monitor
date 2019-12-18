@@ -104,13 +104,13 @@ jobs:
             # Copy build-info.json from image
             docker run -it --rm mojdigitalstudio/dps-monitor:$APP_VERSION cat /app/build-info.json > build-info.json
 
-            if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
+            #if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
               #publish to docker hub as the tag
               docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
               docker tag mojdigitalstudio/dps-monitor:$APP_VERSION mojdigitalstudio/dps-monitor:latest
               docker push mojdigitalstudio/dps-monitor:$APP_VERSION
               docker push mojdigitalstudio/dps-monitor:latest
-            fi
+            #fi
       - persist_to_workspace:
           root: .
           paths:
@@ -130,10 +130,10 @@ workflows:
           filters:
             tags:
               ignore: /.*/
-      - build:
-          filters:
-            branches:
-              only: master
+      - build
+          #filters:
+            #branches:
+              #only: master
       - deploy_prod:
           requires:
             - validate
