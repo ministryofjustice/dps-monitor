@@ -128,10 +128,7 @@ workflows:
           filters:
             tags:
               ignore: /.*/
-      - build:
-          filters:
-            branches:
-              only: master
+      - build
       - deploy_prod:
           requires:
             - validate
