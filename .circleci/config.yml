@@ -52,11 +52,7 @@ executors:
     working_directory: ~/app
   builder:
     docker:
-      - image: circleci/node:10-browsers
-    working_directory: ~/app
-  test:
-    docker:
-      - image: circleci/node:10-browsers
+      - image: circleci/ruby:2.6.5-stretch-node-browsers-legacy
     working_directory: ~/app
 
 orbs:
