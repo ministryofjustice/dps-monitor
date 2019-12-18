@@ -98,13 +98,13 @@ jobs:
               --label "build.url=$CIRCLE_BUILD_URL" \
               --label "build.gitref=$CIRCLE_SHA1"
 
-            if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
+            #if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
               #publish to docker hub as the tag
               docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
               docker tag mojdigitalstudio/dps-monitor:$APP_VERSION mojdigitalstudio/dps-monitor:latest
               docker push mojdigitalstudio/dps-monitor:$APP_VERSION
               docker push mojdigitalstudio/dps-monitor:latest
-            fi
+            #fi
       - persist_to_workspace:
           root: .
           paths:
@@ -129,6 +129,6 @@ workflows:
           requires:
             - validate
             - build
-          filters:
-            branches:
-              only: master
+          #filters:
+            #branches:
+              #only: master
