@@ -35,7 +35,7 @@ commands:
       - deploy:
           name: Deploy to << parameters.env >>
           command: |
-            APP_VERSION=$(egrep buildNumber build-info.json  | awk -F"\"" '{print $4}')
+            APP_VERSION=$(cat app-version.txt)
             sed -i "s/appVersion: \".*\"/appVersion: \"${APP_VERSION}\"/g" ~/git/helm_deploy/dps-monitor/Chart.yaml
             aws secretsmanager get-secret-value --secret-id ${AWS_SECRET_NAME} | jq -r .SecretString | \
             helm upgrade dps-monitor ~/git/helm_deploy/dps-monitor/  \
@@ -89,6 +89,7 @@ jobs:
           command: |
             DATE=$(date '+%Y-%m-%d')
             APP_VERSION=${DATE}.${CIRCLE_BUILD_NUM}
+            echo $APP_VERSION > app-version.txt
 
             docker build --rm=false . \
               --build-arg BUILD_NUMBER=$APP_VERSION \
@@ -101,9 +102,6 @@ jobs:
               --label "build.url=$CIRCLE_BUILD_URL" \
               --label "build.gitref=$CIRCLE_SHA1"
 
-            # Copy build-info.json from image
-            docker run -it --rm mojdigitalstudio/dps-monitor:$APP_VERSION cat /app/build-info.json > build-info.json
-
             #if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
               #publish to docker hub as the tag
               docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
@@ -114,7 +112,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - build-info.json
+            - app-version.txt
 
   deploy_prod:
     executor: deployer
