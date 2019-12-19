@@ -41,7 +41,6 @@ prod_servers = [
     {name: 'whereabouts', url: 'https://whereabouts.prison.service.justice.gov.uk/health'},
     {name: 'cat-tool', url: 'https://offender-categorisation.service.justice.gov.uk/health'},
     {name: 'whereabouts-api', versionUrl: 'https://whereabouts-api.service.justice.gov.uk/info', url: 'https://whereabouts-api.service.justice.gov.uk/health'},
-    {name: 'dps-welcome', versionUrl: 'https://welcome.prison.service.justice.gov.uk/info', url: 'https://welcome.prison.service.justice.gov.uk/health'},
     {name: 'offender-case-notes', versionUrl: 'https://offender-case-notes.service.justice.gov.uk/info', url: 'https://offender-case-notes.service.justice.gov.uk/health'},
     {name: 'community-api', versionUrl: 'https://community-api-secure.probation.service.justice.gov.uk/info', url: 'https://community-api-secure.probation.service.justice.gov.uk/health'},
     {name: 'licences', url: 'https://licences.prison.service.justice.gov.uk/health'},
@@ -86,7 +85,6 @@ dev_servers = [
     {name: 'oauth2', versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/health'},
     {name: 'cat-tool', url: 'https://dev.offender-categorisation.service.justice.gov.uk/health'},
     {name: 'whereabouts-api', versionUrl: 'https://whereabouts-api-dev.service.justice.gov.uk/info', url: 'https://whereabouts-api-dev.service.justice.gov.uk/health'},
-    {name: 'dps-welcome', versionUrl: 'https://welcome-dev.prison.service.justice.gov.uk/info', url: 'https://welcome-dev.prison.service.justice.gov.uk/health'},
     {name: 'offender-case-notes', versionUrl: 'https://dev.offender-case-notes.service.justice.gov.uk/info', url: 'https://dev.offender-case-notes.service.justice.gov.uk/health'},
     {name: 'offender-assessments-api', versionUrl: 'https://dev.devtest.assessment-api.hmpps.dsd.io/info', url: 'https://dev.devtest.assessment-api.hmpps.dsd.io/health'},
     {name: 'sentence-planning', url: 'https://sentence-planning-development.apps.live-1.cloud-platform.service.justice.gov.uk/health'},
@@ -109,7 +107,7 @@ no_dev_servers = []
 # Any service which does not have a preprod instance should be placed in this list.
 # As a result the out-of-date version check will not be applied to them and they will report GREEN in preprod.
 
-no_preprod_servers = ['dps-welcome']
+no_preprod_servers = []
 
 
 def valid_json?(string)
