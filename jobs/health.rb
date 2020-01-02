@@ -99,11 +99,6 @@ dev_servers = [
     {name: 'probation-teams', versionUrl: 'https://probation-teams-dev.prison.service.justice.gov.uk/info', url: 'https://probation-teams-dev.prison.service.justice.gov.uk/health'},
 ]
 
-# Any service which does not have a development instance should be placed in this list.
-# As a result the out-of-date version check will not be applied for them and will report GREEN in stage.
-
-no_dev_servers = []
-
 # Any service which does not have a preprod instance should be placed in this list.
 # As a result the out-of-date version check will not be applied to them and they will report GREEN in preprod.
 
