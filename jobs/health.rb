@@ -41,7 +41,6 @@ prod_servers = [
     {name: 'whereabouts', url: 'https://health-kick.hmpps.dsd.io/https/whereabouts.prison.service.justice.gov.uk'},
     {name: 'cat-tool', url: 'https://health-kick.hmpps.dsd.io/https/offender-categorisation.service.justice.gov.uk'},
     {name: 'whereabouts-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api.service.justice.gov.uk'},
-    {name: 'dps-welcome', versionUrl: 'https://health-kick.hmpps.dsd.io/https/welcome.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/welcome.prison.service.justice.gov.uk'},
     {name: 'offender-case-notes', versionUrl: 'https://health-kick.hmpps.dsd.io/https/offender-case-notes.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/offender-case-notes.service.justice.gov.uk'},
     {name: 'community-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/community-api-secure.probation.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/community-api-secure.probation.service.justice.gov.uk/health'},
     {name: 'licences', url: 'https://health-kick.hmpps.dsd.io/https/licences.prison.service.justice.gov.uk'},
@@ -86,7 +85,6 @@ dev_servers = [
     {name: 'oauth2', versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/auth/health'},
     {name: 'cat-tool', url: 'https://health-kick.hmpps.dsd.io/https/dev.offender-categorisation.service.justice.gov.uk'},
     {name: 'whereabouts-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api-dev.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/whereabouts-api-dev.service.justice.gov.uk'},
-    {name: 'dps-welcome', versionUrl: 'https://health-kick.hmpps.dsd.io/https/welcome-dev.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/welcome-dev.prison.service.justice.gov.uk'},
     {name: 'offender-case-notes', versionUrl: 'https://health-kick.hmpps.dsd.io/https/dev.offender-case-notes.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/dev.offender-case-notes.service.justice.gov.uk'},
     {name: 'offender-assessments-api', versionUrl: 'https://health-kick.hmpps.dsd.io/https/dev.devtest.assessment-api.hmpps.dsd.io/info', url: 'https://health-kick.hmpps.dsd.io/https/dev.devtest.assessment-api.hmpps.dsd.io/health'},
     {name: 'sentence-planning', url: 'https://health-kick.hmpps.dsd.io/https/sentence-planning-development.apps.live-1.cloud-platform.service.justice.gov.uk/health'},
@@ -101,15 +99,10 @@ dev_servers = [
     {name: 'probation-teams', versionUrl: 'https://health-kick.hmpps.dsd.io/https/probation-teams-dev.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/probation-teams-dev.prison.service.justice.gov.uk'},
 ]
 
-# Any service which does not have a development instance should be placed in this list.
-# As a result the out-of-date version check will not be applied for them and will report GREEN in stage.
-
-no_dev_servers = []
-
 # Any service which does not have a preprod instance should be placed in this list.
 # As a result the out-of-date version check will not be applied to them and they will report GREEN in preprod.
 
-no_preprod_servers = ['dps-welcome']
+no_preprod_servers = []
 
 
 def valid_json?(string)
