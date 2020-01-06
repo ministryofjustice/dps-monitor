@@ -48,7 +48,7 @@ prod_servers = [
     {name: 'pathfinder', url: 'https://health-kick.hmpps.dsd.io/https/pathfinder.service.justice.gov.uk/health'},
     {name: 'use-of-force', url: 'https://health-kick.hmpps.dsd.io/https/use-of-force.service.justice.gov.uk/health'},
     {name: 'offender-events', versionUrl: 'https://offender-events.prison.service.justice.gov.uk/info', url: 'https://offender-events.prison.service.justice.gov.uk/health'},
-    {name: 'case-notes-to-probation', versionUrl: 'https://health-kick.hmpps.dsd.io/https/case-notes-to-probation-preprod.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/case-notes-to-probation-preprod.prison.service.justice.gov.uk'},
+    {name: 'case-notes-to-probation', versionUrl: 'https://health-kick.hmpps.dsd.io/https/case-notes-to-probation.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/case-notes-to-probation.prison.service.justice.gov.uk'},
     {name: 'probation-teams', versionUrl: 'https://probation-teams.prison.service.justice.gov.uk/info', url: 'https://probation-teams.prison.service.justice.gov.uk/health'},
 ]
 
@@ -70,7 +70,7 @@ preprod_servers = [
     {name: 'pathfinder', url: 'https://health-kick.hmpps.dsd.io/https/preprod.pathfinder.service.justice.gov.uk/health'},
     {name: 'use-of-force', url: 'https://health-kick.hmpps.dsd.io/https/preprod.use-of-force.service.justice.gov.uk/health'},
     {name: 'offender-events', versionUrl: 'https://offender-events-preprod.prison.service.justice.gov.uk/info', url: 'https://offender-events-preprod.prison.service.justice.gov.uk/health'},
-    {name: 'case-notes-to-probation', versionUrl: 'https://health-kick.hmpps.dsd.io/https/case-notes-to-probation-dev.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/case-notes-to-probation-dev.prison.service.justice.gov.uk'},
+    {name: 'case-notes-to-probation', versionUrl: 'https://health-kick.hmpps.dsd.io/https/case-notes-to-probation-preprod.prison.service.justice.gov.uk/info', url: 'https://health-kick.hmpps.dsd.io/https/case-notes-to-probation-preprod.prison.service.justice.gov.uk'},
     {name: 'probation-teams', versionUrl: 'https://probation-teams-preprod.prison.service.justice.gov.uk/info', url: 'https://probation-teams-preprod.prison.service.justice.gov.uk/health'},
 ]
 
