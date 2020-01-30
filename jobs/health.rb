@@ -74,6 +74,7 @@ preprod_servers = [
     {name: 'case-notes-to-probation', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/case-notes-to-probation-preprod.prison.service.justice.gov.uk/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/case-notes-to-probation-preprod.prison.service.justice.gov.uk'},
     {name: 'probation-teams', versionUrl: 'https://probation-teams-preprod.prison.service.justice.gov.uk/info', url: 'https://probation-teams-preprod.prison.service.justice.gov.uk/health'},
     {name: 'prison-to-probation-update', versionUrl: 'https://prison-to-probation-update-preprod.prison.service.justice.gov.uk/info', url: 'https://prison-to-probation-update-preprod.prison.service.justice.gov.uk/health'},
+    {name: 'dps-data-compliance', versionUrl: 'https://prison-data-compliance-preprod.prison.service.justice.gov.uk/info', url: 'https://prison-data-compliance-preprod.prison.service.justice.gov.uk/health'},
 ]
 
 dev_servers = [
