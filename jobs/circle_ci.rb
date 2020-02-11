@@ -16,7 +16,6 @@ projects = [
   { vcs: 'github', user: 'ministryofjustice', repo: 'whereabouts-api', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'offender-case-notes', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'licences', branch: 'master'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'nomis-batchload', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'offender-assessments-api', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'sentence-planning', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'use-of-force', branch: 'master'},
