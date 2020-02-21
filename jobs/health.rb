@@ -98,6 +98,7 @@ dev_servers = [
     {name: 'case-notes-to-probation', versionUrl: 'https://case-notes-to-probation-dev.prison.service.justice.gov.uk/info', url: 'https://case-notes-to-probation-dev.prison.service.justice.gov.uk/health'},
     {name: 'probation-teams', versionUrl: 'https://probation-teams-dev.prison.service.justice.gov.uk/info', url: 'https://probation-teams-dev.prison.service.justice.gov.uk/health'},
     {name: 'prison-to-probation-update', versionUrl: 'https://prison-to-probation-update-dev.prison.service.justice.gov.uk/info', url: 'https://prison-to-probation-update-dev.prison.service.justice.gov.uk/health'},
+    {name: 'prison-to-nhs-update', versionUrl: 'https://prison-to-nhs-update-dev.prison.service.justice.gov.uk/info', url: 'https://prison-to-nhs-update-dev.prison.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
