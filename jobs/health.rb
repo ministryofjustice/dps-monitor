@@ -50,6 +50,7 @@ prod_servers = [
     {name: 'case-notes-to-probation', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/case-notes-to-probation.prison.service.justice.gov.uk/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/case-notes-to-probation.prison.service.justice.gov.uk'},
     {name: 'probation-teams', versionUrl: 'https://probation-teams.prison.service.justice.gov.uk/info', url: 'https://probation-teams.prison.service.justice.gov.uk/health'},
     {name: 'prison-to-probation-update', versionUrl: 'https://prison-to-probation-update.prison.service.justice.gov.uk/info', url: 'https://prison-to-probation-update.prison.service.justice.gov.uk/health'},
+    {name: 'prison-estate', versionUrl: 'https://estate.prison.service.justice.gov.uk/info', url: 'https://estate.prison.service.justice.gov.uk/health'},
 ]
 
 preprod_servers = [
@@ -72,6 +73,7 @@ preprod_servers = [
     {name: 'case-notes-to-probation', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/case-notes-to-probation-preprod.prison.service.justice.gov.uk/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/case-notes-to-probation-preprod.prison.service.justice.gov.uk'},
     {name: 'probation-teams', versionUrl: 'https://probation-teams-preprod.prison.service.justice.gov.uk/info', url: 'https://probation-teams-preprod.prison.service.justice.gov.uk/health'},
     {name: 'prison-to-probation-update', versionUrl: 'https://prison-to-probation-update-preprod.prison.service.justice.gov.uk/info', url: 'https://prison-to-probation-update-preprod.prison.service.justice.gov.uk/health'},
+    {name: 'prison-estate', versionUrl: 'https://estate-preprod.prison.service.justice.gov.uk/info', url: 'https://estate-preprod.prison.service.justice.gov.uk/health'},
     {name: 'dps-data-compliance', versionUrl: 'https://prison-data-compliance-preprod.prison.service.justice.gov.uk/info', url: 'https://prison-data-compliance-preprod.prison.service.justice.gov.uk/health'},
 ]
 
@@ -99,6 +101,7 @@ dev_servers = [
     {name: 'probation-teams', versionUrl: 'https://probation-teams-dev.prison.service.justice.gov.uk/info', url: 'https://probation-teams-dev.prison.service.justice.gov.uk/health'},
     {name: 'prison-to-probation-update', versionUrl: 'https://prison-to-probation-update-dev.prison.service.justice.gov.uk/info', url: 'https://prison-to-probation-update-dev.prison.service.justice.gov.uk/health'},
     {name: 'prison-to-nhs-update', versionUrl: 'https://prison-to-nhs-update-dev.prison.service.justice.gov.uk/info', url: 'https://prison-to-nhs-update-dev.prison.service.justice.gov.uk/health'},
+    {name: 'prison-estate', versionUrl: 'https://estate-dev.prison.service.justice.gov.uk/info', url: 'https://estate-dev.prison.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
