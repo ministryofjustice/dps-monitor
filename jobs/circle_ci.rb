@@ -27,6 +27,7 @@ projects = [
   { vcs: 'github', user: 'ministryofjustice', repo: 'prison-to-probation-update', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'prison-to-nhs-update', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'prison-estate', branch: 'master'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'offender-search', branch: 'master'},
 ]
 
 def duration(time)
