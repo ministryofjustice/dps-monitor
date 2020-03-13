@@ -222,7 +222,18 @@ def gather_health_data(server)
 end
 
 def add_outofdate(version, check_version)
-  {outofdate: version != check_version}
+  if version == check_version
+    {outofdate: 0}
+    else
+      begin
+        version_as_date = Date.parse(version)
+        check_version_as_date = Date.parse(check_version)
+        days_out_of_date = (check_version_as_date - version_as_date).to_i
+        {outofdate: (days_out_of_date + 3) * 8 }
+      rescue
+        {outofdate: 70 }
+      end
+  end
 end
 
 SCHEDULER.every '60s', first_in: 0 do |_job|
