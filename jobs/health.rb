@@ -53,6 +53,7 @@ prod_servers = [
     {name: 'prison-estate', versionUrl: 'https://estate.prison.service.justice.gov.uk/info', url: 'https://estate.prison.service.justice.gov.uk/health'},
     {name: 'offender-search', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.probation.service.justice.gov.uk/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.probation.service.justice.gov.uk/health'},
     {name: 'check-my-diary', url: 'https://checkmydiary.service.justice.gov.uk/health'},
+    {name: 'token-verification-api', versionUrl: 'https://token-verification-api.prison.service.justice.gov.uk/info', url: 'https://token-verification-api.prison.service.justice.gov.uk/health'},
 ]
 
 preprod_servers = [
@@ -79,6 +80,7 @@ preprod_servers = [
     {name: 'dps-data-compliance', versionUrl: 'https://prison-data-compliance-preprod.prison.service.justice.gov.uk/info', url: 'https://prison-data-compliance-preprod.prison.service.justice.gov.uk/health'},
     {name: 'check-my-diary', url: 'https://check-my-diary-preprod.prison.service.justice.gov.uk/health'},
     {name: 'offender-search', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.pre-prod.delius.probation.hmpps.dsd.io/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.pre-prod.delius.probation.hmpps.dsd.io/health'},
+    {name: 'token-verification-api', versionUrl: 'https://token-verification-api-preprod.prison.service.justice.gov.uk/info', url: 'https://token-verification-api-preprod.prison.service.justice.gov.uk/health'},
 ]
 
 dev_servers = [
@@ -108,6 +110,7 @@ dev_servers = [
     {name: 'prison-estate', versionUrl: 'https://estate-dev.prison.service.justice.gov.uk/info', url: 'https://estate-dev.prison.service.justice.gov.uk/health'},
     {name: 'offender-search', versionUrl: 'https://offender-search.test.delius.probation.hmpps.dsd.io/info', url: 'https://offender-search.test.delius.probation.hmpps.dsd.io/health'},
     {name: 'check-my-diary', url: 'https://check-my-diary-dev.prison.service.justice.gov.uk/health'},
+    {name: 'token-verification-api', versionUrl: 'https://token-verification-api-dev.prison.service.justice.gov.uk/info', url: 'https://token-verification-api-dev.prison.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
