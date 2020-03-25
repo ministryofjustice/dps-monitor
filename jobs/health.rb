@@ -50,6 +50,8 @@ prod_servers = [
     {name: 'case-notes-to-probation', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/case-notes-to-probation.prison.service.justice.gov.uk/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/case-notes-to-probation.prison.service.justice.gov.uk'},
     {name: 'probation-teams', versionUrl: 'https://probation-teams.prison.service.justice.gov.uk/info', url: 'https://probation-teams.prison.service.justice.gov.uk/health'},
     {name: 'prison-to-probation-update', versionUrl: 'https://prison-to-probation-update.prison.service.justice.gov.uk/info', url: 'https://prison-to-probation-update.prison.service.justice.gov.uk/health'},
+    {name: 'prison-estate', versionUrl: 'https://estate.prison.service.justice.gov.uk/info', url: 'https://estate.prison.service.justice.gov.uk/health'},
+    {name: 'offender-search', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.probation.service.justice.gov.uk/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.probation.service.justice.gov.uk/health'},
     {name: 'check-my-diary', url: 'https://checkmydiary.service.justice.gov.uk/health'},
 ]
 
@@ -73,8 +75,10 @@ preprod_servers = [
     {name: 'case-notes-to-probation', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/case-notes-to-probation-preprod.prison.service.justice.gov.uk/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/case-notes-to-probation-preprod.prison.service.justice.gov.uk'},
     {name: 'probation-teams', versionUrl: 'https://probation-teams-preprod.prison.service.justice.gov.uk/info', url: 'https://probation-teams-preprod.prison.service.justice.gov.uk/health'},
     {name: 'prison-to-probation-update', versionUrl: 'https://prison-to-probation-update-preprod.prison.service.justice.gov.uk/info', url: 'https://prison-to-probation-update-preprod.prison.service.justice.gov.uk/health'},
+    {name: 'prison-estate', versionUrl: 'https://estate-preprod.prison.service.justice.gov.uk/info', url: 'https://estate-preprod.prison.service.justice.gov.uk/health'},
     {name: 'dps-data-compliance', versionUrl: 'https://prison-data-compliance-preprod.prison.service.justice.gov.uk/info', url: 'https://prison-data-compliance-preprod.prison.service.justice.gov.uk/health'},
     {name: 'check-my-diary', url: 'https://check-my-diary-preprod.prison.service.justice.gov.uk/health'},
+    {name: 'offender-search', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.pre-prod.delius.probation.hmpps.dsd.io/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.pre-prod.delius.probation.hmpps.dsd.io/health'},
 ]
 
 dev_servers = [
@@ -101,6 +105,8 @@ dev_servers = [
     {name: 'probation-teams', versionUrl: 'https://probation-teams-dev.prison.service.justice.gov.uk/info', url: 'https://probation-teams-dev.prison.service.justice.gov.uk/health'},
     {name: 'prison-to-probation-update', versionUrl: 'https://prison-to-probation-update-dev.prison.service.justice.gov.uk/info', url: 'https://prison-to-probation-update-dev.prison.service.justice.gov.uk/health'},
     {name: 'prison-to-nhs-update', versionUrl: 'https://prison-to-nhs-update-dev.prison.service.justice.gov.uk/info', url: 'https://prison-to-nhs-update-dev.prison.service.justice.gov.uk/health'},
+    {name: 'prison-estate', versionUrl: 'https://estate-dev.prison.service.justice.gov.uk/info', url: 'https://estate-dev.prison.service.justice.gov.uk/health'},
+    {name: 'offender-search', versionUrl: 'https://offender-search.test.delius.probation.hmpps.dsd.io/info', url: 'https://offender-search.test.delius.probation.hmpps.dsd.io/health'},
     {name: 'check-my-diary', url: 'https://check-my-diary-dev.prison.service.justice.gov.uk/health'},
 ]
 
@@ -219,7 +225,18 @@ def gather_health_data(server)
 end
 
 def add_outofdate(version, check_version)
-  {outofdate: version != check_version}
+  if version == check_version
+    {outofdate: 0}
+    else
+      begin
+        version_as_date = Date.parse(version)
+        check_version_as_date = Date.parse(check_version)
+        days_out_of_date = (check_version_as_date - version_as_date).to_i
+        {outofdate: (days_out_of_date + 3) * 8 }
+      rescue
+        {outofdate: 70 }
+      end
+  end
 end
 
 SCHEDULER.every '60s', first_in: 0 do |_job|
