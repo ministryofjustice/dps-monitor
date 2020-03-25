@@ -52,6 +52,7 @@ prod_servers = [
     {name: 'prison-to-probation-update', versionUrl: 'https://prison-to-probation-update.prison.service.justice.gov.uk/info', url: 'https://prison-to-probation-update.prison.service.justice.gov.uk/health'},
     {name: 'prison-estate', versionUrl: 'https://estate.prison.service.justice.gov.uk/info', url: 'https://estate.prison.service.justice.gov.uk/health'},
     {name: 'offender-search', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.probation.service.justice.gov.uk/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.probation.service.justice.gov.uk/health'},
+    {name: 'check-my-diary', url: 'https://checkmydiary.service.justice.gov.uk/health'},
 ]
 
 preprod_servers = [
@@ -76,6 +77,7 @@ preprod_servers = [
     {name: 'prison-to-probation-update', versionUrl: 'https://prison-to-probation-update-preprod.prison.service.justice.gov.uk/info', url: 'https://prison-to-probation-update-preprod.prison.service.justice.gov.uk/health'},
     {name: 'prison-estate', versionUrl: 'https://estate-preprod.prison.service.justice.gov.uk/info', url: 'https://estate-preprod.prison.service.justice.gov.uk/health'},
     {name: 'dps-data-compliance', versionUrl: 'https://prison-data-compliance-preprod.prison.service.justice.gov.uk/info', url: 'https://prison-data-compliance-preprod.prison.service.justice.gov.uk/health'},
+    {name: 'check-my-diary', url: 'https://check-my-diary-preprod.prison.service.justice.gov.uk/health'},
     {name: 'offender-search', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.pre-prod.delius.probation.hmpps.dsd.io/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.pre-prod.delius.probation.hmpps.dsd.io/health'},
 ]
 
@@ -105,6 +107,7 @@ dev_servers = [
     {name: 'prison-to-nhs-update', versionUrl: 'https://prison-to-nhs-update-dev.prison.service.justice.gov.uk/info', url: 'https://prison-to-nhs-update-dev.prison.service.justice.gov.uk/health'},
     {name: 'prison-estate', versionUrl: 'https://estate-dev.prison.service.justice.gov.uk/info', url: 'https://estate-dev.prison.service.justice.gov.uk/health'},
     {name: 'offender-search', versionUrl: 'https://offender-search.test.delius.probation.hmpps.dsd.io/info', url: 'https://offender-search.test.delius.probation.hmpps.dsd.io/health'},
+    {name: 'check-my-diary', url: 'https://check-my-diary-dev.prison.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
