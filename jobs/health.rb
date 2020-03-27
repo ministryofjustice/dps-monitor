@@ -242,7 +242,7 @@ def add_outofdate(version, check_version)
   end
 end
 
-SCHEDULER.every '60s', first_in: 0 do |_job|
+SCHEDULER.every '2m', first_in: 0 do |_job|
   dev_versions = dev_servers.map do |server|
     result = gather_health_data(server)
     send_event("#{server[:name]}-dev", result: result)
