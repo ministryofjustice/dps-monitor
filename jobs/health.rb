@@ -54,6 +54,7 @@ prod_servers = [
     {name: 'offender-search', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.probation.service.justice.gov.uk/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.probation.service.justice.gov.uk/health'},
     {name: 'check-my-diary', url: 'https://checkmydiary.service.justice.gov.uk/health'},
     {name: 'token-verification-api', versionUrl: 'https://token-verification-api.prison.service.justice.gov.uk/info', url: 'https://token-verification-api.prison.service.justice.gov.uk/health'},
+    {name: 'prison-to-nhs-update', versionUrl: 'https://prison-to-nhs-update.prison.service.justice.gov.uk/info', url: 'https://prison-to-nhs-update.prison.service.justice.gov.uk/health'},
 ]
 
 preprod_servers = [
@@ -81,6 +82,7 @@ preprod_servers = [
     {name: 'check-my-diary', url: 'https://check-my-diary-preprod.prison.service.justice.gov.uk/health'},
     {name: 'offender-search', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.pre-prod.delius.probation.hmpps.dsd.io/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.pre-prod.delius.probation.hmpps.dsd.io/health'},
     {name: 'token-verification-api', versionUrl: 'https://token-verification-api-preprod.prison.service.justice.gov.uk/info', url: 'https://token-verification-api-preprod.prison.service.justice.gov.uk/health'},
+    {name: 'prison-to-nhs-update', versionUrl: 'https://prison-to-nhs-update-preprod.prison.service.justice.gov.uk/info', url: 'https://prison-to-nhs-update-preprod.prison.service.justice.gov.uk/health'},
 ]
 
 dev_servers = [
