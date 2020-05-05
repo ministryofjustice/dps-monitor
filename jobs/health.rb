@@ -55,6 +55,7 @@ prod_servers = [
     {name: 'check-my-diary', url: 'https://checkmydiary.service.justice.gov.uk/health'},
     {name: 'token-verification-api', versionUrl: 'https://token-verification-api.prison.service.justice.gov.uk/info', url: 'https://token-verification-api.prison.service.justice.gov.uk/health'},
     {name: 'prison-to-nhs-update', versionUrl: 'https://prison-to-nhs-update.prison.service.justice.gov.uk/info', url: 'https://prison-to-nhs-update.prison.service.justice.gov.uk/health'},
+    {name: 'prisoner-offender-search', versionUrl: 'https://prisoner-offender-search.prison.service.justice.gov.uk/info', url: 'https://prisoner-offender-search.prison.service.justice.gov.uk/health'},
 ]
 
 preprod_servers = [
@@ -83,6 +84,7 @@ preprod_servers = [
     {name: 'offender-search', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.pre-prod.delius.probation.hmpps.dsd.io/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.pre-prod.delius.probation.hmpps.dsd.io/health'},
     {name: 'token-verification-api', versionUrl: 'https://token-verification-api-preprod.prison.service.justice.gov.uk/info', url: 'https://token-verification-api-preprod.prison.service.justice.gov.uk/health'},
     {name: 'prison-to-nhs-update', versionUrl: 'https://prison-to-nhs-update-preprod.prison.service.justice.gov.uk/info', url: 'https://prison-to-nhs-update-preprod.prison.service.justice.gov.uk/health'},
+    {name: 'prisoner-offender-search', versionUrl: 'https://prisoner-offender-search-preprod.prison.service.justice.gov.uk/info', url: 'https://prisoner-offender-search-preprod.prison.service.justice.gov.uk/health'},
 ]
 
 dev_servers = [
@@ -113,6 +115,7 @@ dev_servers = [
     {name: 'offender-search', versionUrl: 'https://offender-search.test.delius.probation.hmpps.dsd.io/info', url: 'https://offender-search.test.delius.probation.hmpps.dsd.io/health'},
     {name: 'check-my-diary', url: 'https://check-my-diary-dev.prison.service.justice.gov.uk/health'},
     {name: 'token-verification-api', versionUrl: 'https://token-verification-api-dev.prison.service.justice.gov.uk/info', url: 'https://token-verification-api-dev.prison.service.justice.gov.uk/health'},
+    {name: 'prisoner-offender-search', versionUrl: 'https://prisoner-offender-search-dev.prison.service.justice.gov.uk/info', url: 'https://prisoner-offender-search-dev.prison.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
