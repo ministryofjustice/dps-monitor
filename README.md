@@ -82,3 +82,25 @@ Dashboard Configuration
 3. Edit the projects element in jobs/circle_ci.rb to match your changes to CI statuses shown in circle.erb
 4. Edit the projects element in jobs/health.rb
 5. Edit dashboards/overview.erb to add production service info
+
+
+## Running Locally
+To test the application it is best to run using docker
+
+Build first
+```shell script
+docker build -t dps-monitor .
+```
+ Run:
+```shell script
+docker run -p3030:3030 --env CIRCLE_CI_TOKEN=******* --name dps-monitor -d -t dps-monitor
+```
+Test in browser:
+```
+http://localhost:3030
+``` 
+Stop:
+```shell script
+docker stop dps-monitor
+docker rm -vf dps-monitor
+```
