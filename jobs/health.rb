@@ -56,6 +56,7 @@ prod_servers = [
     {name: 'token-verification-api', versionUrl: 'https://token-verification-api.prison.service.justice.gov.uk/info', url: 'https://token-verification-api.prison.service.justice.gov.uk/health'},
     {name: 'prison-to-nhs-update', versionUrl: 'https://prison-to-nhs-update.prison.service.justice.gov.uk/info', url: 'https://prison-to-nhs-update.prison.service.justice.gov.uk/health'},
     {name: 'prisoner-offender-search', versionUrl: 'https://prisoner-offender-search.prison.service.justice.gov.uk/info', url: 'https://prisoner-offender-search.prison.service.justice.gov.uk/health'},
+    {name: 'pathfinder-api', versionUrl: 'https://api.pathfinder.service.justice.gov.uk/info', url: 'https://api.pathfinder.service.justice.gov.uk/health'},
 ]
 
 preprod_servers = [
@@ -85,6 +86,7 @@ preprod_servers = [
     {name: 'token-verification-api', versionUrl: 'https://token-verification-api-preprod.prison.service.justice.gov.uk/info', url: 'https://token-verification-api-preprod.prison.service.justice.gov.uk/health'},
     {name: 'prison-to-nhs-update', versionUrl: 'https://prison-to-nhs-update-preprod.prison.service.justice.gov.uk/info', url: 'https://prison-to-nhs-update-preprod.prison.service.justice.gov.uk/health'},
     {name: 'prisoner-offender-search', versionUrl: 'https://prisoner-offender-search-preprod.prison.service.justice.gov.uk/info', url: 'https://prisoner-offender-search-preprod.prison.service.justice.gov.uk/health'},
+    {name: 'pathfinder-api', versionUrl: 'https://preprod-api.pathfinder.service.justice.gov.uk/info', url: 'https://preprod-api.pathfinder.service.justice.gov.uk/health'},
 ]
 
 dev_servers = [
@@ -116,6 +118,7 @@ dev_servers = [
     {name: 'check-my-diary', url: 'https://check-my-diary-dev.prison.service.justice.gov.uk/health'},
     {name: 'token-verification-api', versionUrl: 'https://token-verification-api-dev.prison.service.justice.gov.uk/info', url: 'https://token-verification-api-dev.prison.service.justice.gov.uk/health'},
     {name: 'prisoner-offender-search', versionUrl: 'https://prisoner-offender-search-dev.prison.service.justice.gov.uk/info', url: 'https://prisoner-offender-search-dev.prison.service.justice.gov.uk/health'},
+    {name: 'pathfinder-api', versionUrl: 'https://dev-api.pathfinder.service.justice.gov.uk/info', url: 'https://dev-api.pathfinder.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
