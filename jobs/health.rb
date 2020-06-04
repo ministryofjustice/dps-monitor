@@ -240,8 +240,10 @@ def add_outofdate(version, check_version)
     {outofdate: 0}
     else
       begin
-        version_as_date = Date.parse(version)
-        check_version_as_date = Date.parse(check_version)
+        version_as_date = Date.parse(version[0..10])
+        puts version_as_date
+        check_version_as_date = Date.parse(check_version[0..10])
+        puts check_version_as_date
         days_out_of_date = (check_version_as_date - version_as_date).to_i
         {outofdate: (days_out_of_date + 3) * 8 }
       rescue
