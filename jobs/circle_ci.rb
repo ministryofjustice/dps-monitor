@@ -6,6 +6,7 @@ projects = [
   { vcs: 'github', user: 'ministryofjustice', repo: 'keyworker-ui', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'keyworker-service', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'prisonstaffhub', branch: 'master'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'manage-hmpps-auth-accounts', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'categorisation-tool', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'offender-risk-profiler', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'new-nomis-ui', branch: 'master'},
