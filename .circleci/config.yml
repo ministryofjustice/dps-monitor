@@ -19,7 +19,7 @@ workflows:
           name: deploy_prod
           env: "prod"
           slack_notification: true
-          context: dps-monitor-prod
+          context: dps-toolkit
           requires:
             - helm_lint
             - build_docker
