@@ -14,7 +14,7 @@ workflows:
           name: build_docker
           filters:
             branches:
-              only: master
+              only: main
       - hmpps/deploy_env:
           name: deploy_prod
           env: "prod"
@@ -25,4 +25,4 @@ workflows:
             - build_docker
           filters:
             branches:
-              only: master
+              only: main

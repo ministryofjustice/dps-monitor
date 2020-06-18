@@ -52,7 +52,7 @@ Deployment
 ----
 
 ```
-All merges to master are built &deployed automatically to Heroku
+All merges to main are built & deployed automatically to cloud platform
 ```
 
 Heroku
