@@ -105,7 +105,6 @@ dev_servers = [
     {name: 'whereabouts-api', versionUrl: 'https://whereabouts-api-dev.service.justice.gov.uk/info', url: 'https://whereabouts-api-dev.service.justice.gov.uk/health'},
     {name: 'offender-case-notes', versionUrl: 'https://dev.offender-case-notes.service.justice.gov.uk/info', url: 'https://dev.offender-case-notes.service.justice.gov.uk/health'},
     {name: 'offender-assessments-api', versionUrl: 'https://dev.devtest.assessment-api.hmpps.dsd.io/info', url: 'https://dev.devtest.assessment-api.hmpps.dsd.io/health'},
-    {name: 'sentence-planning', url: 'https://sentence-planning-development.apps.live-1.cloud-platform.service.justice.gov.uk/health'},
     {name: 'licences', url: 'https://licences-dev.prison.service.justice.gov.uk/health'},
     {name: 'community-api', versionUrl: 'https://community-api-secure.test.delius.probation.hmpps.dsd.io/info', url: 'https://community-api-secure.test.delius.probation.hmpps.dsd.io/health'},
     {name: 'use-of-force', url: 'https://dev.use-of-force.service.justice.gov.uk/health'},
