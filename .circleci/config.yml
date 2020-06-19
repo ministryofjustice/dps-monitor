@@ -3,10 +3,37 @@ version: 2.1
 orbs:
   hmpps: ministryofjustice/hmpps@1.0.0
 
+executors:
+  auditor:
+    docker:
+      - image: circleci/ruby:2-buster
+    working_directory: ~/app
+
+jobs:
+  security_audit:
+    executor: auditor
+    steps:
+      - checkout
+      - restore_cache:
+          key: gem-cache-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: "Install Dependencies"
+          command: |
+            gem install bundler
+            bundle install --path=./.gem
+      - save_cache:
+          key: gem-cache-{{ checksum "Gemfile.lock" }}
+          paths:
+            - ./.gem
+      - run:
+          name: Run security audit
+          command: bundle exec bundle audit check --update
+
 workflows:
   version: 2
   build-test-and-deploy:
     jobs:
+      - security_audit
       - hmpps/helm_lint:
           name: helm_lint
           env: "prod"
@@ -21,8 +48,19 @@ workflows:
           slack_notification: true
           context: dps-toolkit
           requires:
+            - security_audit
             - helm_lint
             - build_docker
           filters:
             branches:
               only: main
+  scheduled:
+    triggers:
+      - schedule:
+          cron: "0 7 * * 1-5"
+          filters:
+            branches:
+              only: main
+    jobs:
+      - security_audit
+
