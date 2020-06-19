@@ -19,7 +19,7 @@ projects = [
   { vcs: 'github', user: 'ministryofjustice', repo: 'licences', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'offender-assessments-api', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'use-of-force', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'pathfinder', branch: 'master'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'pathfinder', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'offender-events', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'dps-data-compliance', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'case-notes-to-probation', branch: 'main'},
@@ -31,7 +31,7 @@ projects = [
   { vcs: 'github', user: 'ministryofjustice', repo: 'check-my-diary', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'token-verification-api', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'prisoner-offender-search', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'pathfinder-api', branch: 'master'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'pathfinder-api', branch: 'main'},
 ]
 
 def duration(time)
