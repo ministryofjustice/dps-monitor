@@ -1,20 +1,20 @@
-FROM ruby:2.6.5-alpine
+FROM ruby:2-alpine
 
 RUN apk add --update git build-base nodejs && \
     gem install bundler:2.0.2
 
-RUN addgroup -g 1000 -S appgroup && \
-    adduser -u 1000 -S appuser -G appgroup
+RUN addgroup -g 2000 -S appgroup && \
+    adduser -u 2000 -S appuser -G appgroup
 
-COPY Gemfile* /app/
+RUN mkdir /app && chown appuser:appgroup /app
+COPY --chown=appuser:appgroup Gemfile* /app/
+USER 2000
 WORKDIR /app
-RUN bundle install
+RUN bundle install --path=/app/.gem
 
-COPY . .
+ADD --chown=appuser:appgroup . .
 
-RUN chown -R appuser:appgroup /app
-
-USER 1000
+USER 2000
 
 CMD ["smashing", "start"]
 
