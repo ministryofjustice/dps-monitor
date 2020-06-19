@@ -16,6 +16,6 @@ ADD --chown=appuser:appgroup . .
 
 USER 2000
 
-CMD ["smashing", "start"]
+CMD ["bundle", "exec", "smashing", "start"]
 
 EXPOSE 3030
