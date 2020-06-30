@@ -121,6 +121,7 @@ dev_servers = [
     {name: 'token-verification-api', versionUrl: 'https://token-verification-api-dev.prison.service.justice.gov.uk/info', url: 'https://token-verification-api-dev.prison.service.justice.gov.uk/health'},
     {name: 'prisoner-offender-search', versionUrl: 'https://prisoner-offender-search-dev.prison.service.justice.gov.uk/info', url: 'https://prisoner-offender-search-dev.prison.service.justice.gov.uk/health'},
     {name: 'pathfinder-api', versionUrl: 'https://dev-api.pathfinder.service.justice.gov.uk/info', url: 'https://dev-api.pathfinder.service.justice.gov.uk/health'},
+    {name: 'manage-soc-cases', versionUrl: 'https://manage-soc-cases-dev.service.justice.gov.uk/health', url: 'https://manage-soc-cases-dev.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
