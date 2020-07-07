@@ -31,7 +31,7 @@ ping_count = 10
 #      back to the 'proper' URI within the health-kick proxying application.
 #
 prod_servers = [
-    {name: 'elite2', versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/health'},
+    {name: 'prison-api', versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/health'},
     {name: 'dps-core', url: 'https://digital.prison.service.justice.gov.uk/health'},
     {name: 'omic-ui', url: 'https://manage-key-workers.service.justice.gov.uk/health'},
     {name: 'manage-hmpps-auth-accounts', url: 'https://manage-hmpps-auth-accounts.prison.service.justice.gov.uk/health'},
@@ -47,7 +47,7 @@ prod_servers = [
     {name: 'licences', url: 'https://licences.prison.service.justice.gov.uk/health'},
     {name: 'pathfinder', url: 'https://health-kick.prison.service.justice.gov.uk/https/pathfinder.service.justice.gov.uk/health'},
     {name: 'use-of-force', url: 'https://use-of-force.service.justice.gov.uk/health'},
-    {name: 'offender-events', versionUrl: 'https://offender-events.prison.service.justice.gov.uk/info', url: 'https://offender-events.prison.service.justice.gov.uk/health'},
+    {name: 'prison-offender-events', versionUrl: 'https://offender-events.prison.service.justice.gov.uk/info', url: 'https://offender-events.prison.service.justice.gov.uk/health'},
     {name: 'case-notes-to-probation', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/case-notes-to-probation.prison.service.justice.gov.uk/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/case-notes-to-probation.prison.service.justice.gov.uk'},
     {name: 'probation-teams', versionUrl: 'https://probation-teams.prison.service.justice.gov.uk/info', url: 'https://probation-teams.prison.service.justice.gov.uk/health'},
     {name: 'prison-to-probation-update', versionUrl: 'https://prison-to-probation-update.prison.service.justice.gov.uk/info', url: 'https://prison-to-probation-update.prison.service.justice.gov.uk/health'},
@@ -62,7 +62,7 @@ prod_servers = [
 ]
 
 preprod_servers = [
-    {name: 'elite2', versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api/health'},
+    {name: 'prison-api', versionUrl: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api/info', url: 'https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api/health'},
     {name: 'keyworker-api', versionUrl: 'https://keyworker-api-preprod.prison.service.justice.gov.uk/info', url: 'https://keyworker-api-preprod.prison.service.justice.gov.uk/health'},
     {name: 'dps-core', url: 'https://digital-preprod.prison.service.justice.gov.uk/health'},
     {name: 'omic-ui', url: 'https://preprod.manage-key-workers.service.justice.gov.uk/health'},
@@ -78,7 +78,7 @@ preprod_servers = [
     {name: 'community-api', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/community-api-secure.pre-prod.delius.probation.hmpps.dsd.io/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/community-api-secure.pre-prod.delius.probation.hmpps.dsd.io/health'},
     {name: 'pathfinder', url: 'https://health-kick.prison.service.justice.gov.uk/https/preprod.pathfinder.service.justice.gov.uk/health'},
     {name: 'use-of-force', url: 'https://preprod.use-of-force.service.justice.gov.uk/health'},
-    {name: 'offender-events', versionUrl: 'https://offender-events-preprod.prison.service.justice.gov.uk/info', url: 'https://offender-events-preprod.prison.service.justice.gov.uk/health'},
+    {name: 'prison-offender-events', versionUrl: 'https://offender-events-preprod.prison.service.justice.gov.uk/info', url: 'https://offender-events-preprod.prison.service.justice.gov.uk/health'},
     {name: 'case-notes-to-probation', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/case-notes-to-probation-preprod.prison.service.justice.gov.uk/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/case-notes-to-probation-preprod.prison.service.justice.gov.uk'},
     {name: 'probation-teams', versionUrl: 'https://probation-teams-preprod.prison.service.justice.gov.uk/info', url: 'https://probation-teams-preprod.prison.service.justice.gov.uk/health'},
     {name: 'prison-to-probation-update', versionUrl: 'https://prison-to-probation-update-preprod.prison.service.justice.gov.uk/info', url: 'https://prison-to-probation-update-preprod.prison.service.justice.gov.uk/health'},
@@ -94,7 +94,7 @@ preprod_servers = [
 ]
 
 dev_servers = [
-    {name: 'elite2', versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api/health'},
+    {name: 'prison-api', versionUrl: 'https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api/info', url: 'https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api/health'},
     {name: 'keyworker-api', versionUrl: 'https://keyworker-api-dev.prison.service.justice.gov.uk/info', url: 'https://keyworker-api-dev.prison.service.justice.gov.uk/health'},
     {name: 'dps-core', url: 'https://digital-dev.prison.service.justice.gov.uk/health'},
     {name: 'omic-ui', url: 'https://dev.manage-key-workers.service.justice.gov.uk/health'},
@@ -111,7 +111,7 @@ dev_servers = [
     {name: 'community-api', versionUrl: 'https://community-api-secure.test.delius.probation.hmpps.dsd.io/info', url: 'https://community-api-secure.test.delius.probation.hmpps.dsd.io/health'},
     {name: 'use-of-force', url: 'https://dev.use-of-force.service.justice.gov.uk/health'},
     {name: 'pathfinder', url: 'https://dev.pathfinder.service.justice.gov.uk/health'},
-    {name: 'offender-events', versionUrl: 'https://offender-events-dev.prison.service.justice.gov.uk/info', url: 'https://offender-events-dev.prison.service.justice.gov.uk/health'},
+    {name: 'prison-offender-events', versionUrl: 'https://offender-events-dev.prison.service.justice.gov.uk/info', url: 'https://offender-events-dev.prison.service.justice.gov.uk/health'},
     {name: 'dps-data-compliance', versionUrl: 'https://prison-data-compliance-dev.prison.service.justice.gov.uk/info', url: 'https://prison-data-compliance-dev.prison.service.justice.gov.uk/health'},
     {name: 'case-notes-to-probation', versionUrl: 'https://case-notes-to-probation-dev.prison.service.justice.gov.uk/info', url: 'https://case-notes-to-probation-dev.prison.service.justice.gov.uk/health'},
     {name: 'probation-teams', versionUrl: 'https://probation-teams-dev.prison.service.justice.gov.uk/info', url: 'https://probation-teams-dev.prison.service.justice.gov.uk/health'},
