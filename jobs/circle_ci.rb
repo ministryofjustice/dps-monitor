@@ -2,7 +2,6 @@ require 'httparty'
 # require 'digest/md5'
 
 projects = [
-  { vcs: 'github', user: 'ministryofjustice', repo: 'nomis-api', branch: 'dev'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'keyworker-ui', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'keyworker-service', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'prisonstaffhub', branch: 'main'},
@@ -12,7 +11,6 @@ projects = [
   { vcs: 'github', user: 'ministryofjustice', repo: 'new-nomis-ui', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-auth', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'prison-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'custody-api', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'community-api', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'whereabouts-api', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'offender-case-notes', branch: 'main'},
