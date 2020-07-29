@@ -25,7 +25,7 @@ projects = [
   { vcs: 'github', user: 'ministryofjustice', repo: 'prison-to-probation-update', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'prison-to-nhs-update', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'prison-estate', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'offender-search', branch: 'master'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'probation-offender-search', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'check-my-diary', branch: 'master'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'token-verification-api', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'prisoner-offender-search', branch: 'main'},
