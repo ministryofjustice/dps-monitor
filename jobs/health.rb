@@ -50,6 +50,7 @@ prod_servers = [
     {name: 'probation-teams', versionUrl: 'https://probation-teams.prison.service.justice.gov.uk/info', url: 'https://probation-teams.prison.service.justice.gov.uk/health'},
     {name: 'prison-to-probation-update', versionUrl: 'https://prison-to-probation-update.prison.service.justice.gov.uk/info', url: 'https://prison-to-probation-update.prison.service.justice.gov.uk/health'},
     {name: 'prison-estate', versionUrl: 'https://estate.prison.service.justice.gov.uk/info', url: 'https://estate.prison.service.justice.gov.uk/health'},
+    {name: 'dps-data-compliance', versionUrl: 'https://prison-data-compliance.prison.service.justice.gov.uk/info', url: 'https://prison-data-compliance.prison.service.justice.gov.uk/health'},
     {name: 'probation-offender-search', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.probation.service.justice.gov.uk/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/offender-search.probation.service.justice.gov.uk/health'},
     {name: 'check-my-diary', url: 'https://checkmydiary.service.justice.gov.uk/health'},
     {name: 'token-verification-api', versionUrl: 'https://token-verification-api.prison.service.justice.gov.uk/info', url: 'https://token-verification-api.prison.service.justice.gov.uk/health'},
