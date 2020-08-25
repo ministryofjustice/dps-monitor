@@ -57,6 +57,7 @@ prod_servers = [
     {name: 'prison-to-nhs-update', versionUrl: 'https://prison-to-nhs-update.prison.service.justice.gov.uk/info', url: 'https://prison-to-nhs-update.prison.service.justice.gov.uk/health'},
     {name: 'prisoner-offender-search', versionUrl: 'https://prisoner-offender-search.prison.service.justice.gov.uk/info', url: 'https://prisoner-offender-search.prison.service.justice.gov.uk/health'},
     {name: 'pathfinder-api', versionUrl: 'https://api.pathfinder.service.justice.gov.uk/info', url: 'https://api.pathfinder.service.justice.gov.uk/health'},
+    {name: 'manage-soc-cases', url: 'https://manage-soc-cases.hmpps.service.justice.gov.uk/health'},
     {name: 'probation-offender-search-indexer', versionUrl: 'https://probation-search-indexer.hmpps.service.justice.gov.uk/info', url: 'https://probation-search-indexer.hmpps.service.justice.gov.uk/health'},
 ]
 
@@ -87,6 +88,7 @@ preprod_servers = [
     {name: 'prison-to-nhs-update', versionUrl: 'https://prison-to-nhs-update-preprod.prison.service.justice.gov.uk/info', url: 'https://prison-to-nhs-update-preprod.prison.service.justice.gov.uk/health'},
     {name: 'prisoner-offender-search', versionUrl: 'https://prisoner-offender-search-preprod.prison.service.justice.gov.uk/info', url: 'https://prisoner-offender-search-preprod.prison.service.justice.gov.uk/health'},
     {name: 'pathfinder-api', versionUrl: 'https://preprod-api.pathfinder.service.justice.gov.uk/info', url: 'https://preprod-api.pathfinder.service.justice.gov.uk/health'},
+    {name: 'manage-soc-cases', url: 'https://manage-soc-cases-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'probation-offender-search-indexer', versionUrl: 'https://probation-search-indexer-preprod.hmpps.service.justice.gov.uk/info', url: 'https://probation-search-indexer-preprod.hmpps.service.justice.gov.uk/health'},
 ]
 
@@ -118,7 +120,7 @@ dev_servers = [
     {name: 'token-verification-api', versionUrl: 'https://token-verification-api-dev.prison.service.justice.gov.uk/info', url: 'https://token-verification-api-dev.prison.service.justice.gov.uk/health'},
     {name: 'prisoner-offender-search', versionUrl: 'https://prisoner-offender-search-dev.prison.service.justice.gov.uk/info', url: 'https://prisoner-offender-search-dev.prison.service.justice.gov.uk/health'},
     {name: 'pathfinder-api', versionUrl: 'https://dev-api.pathfinder.service.justice.gov.uk/info', url: 'https://dev-api.pathfinder.service.justice.gov.uk/health'},
-    {name: 'manage-soc-cases', url: 'https://manage-soc-cases-dev.service.justice.gov.uk/health'},
+    {name: 'manage-soc-cases', url: 'https://manage-soc-cases-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'probation-offender-search-indexer', versionUrl: 'https://probation-search-indexer-dev.hmpps.service.justice.gov.uk/info', url: 'https://probation-search-indexer-dev.hmpps.service.justice.gov.uk/health'},
 ]
 
