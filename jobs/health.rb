@@ -122,6 +122,7 @@ dev_servers = [
     {name: 'pathfinder-api', versionUrl: 'https://dev-api.pathfinder.service.justice.gov.uk/info', url: 'https://dev-api.pathfinder.service.justice.gov.uk/health'},
     {name: 'manage-soc-cases', url: 'https://manage-soc-cases-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'probation-offender-search-indexer', versionUrl: 'https://probation-search-indexer-dev.hmpps.service.justice.gov.uk/info', url: 'https://probation-search-indexer-dev.hmpps.service.justice.gov.uk/health'},
+    {name: 'hmpps-pin-phone-monitor', url: 'https://hmpps-pin-phone-monitor-dev.prison.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
