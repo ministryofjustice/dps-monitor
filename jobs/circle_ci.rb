@@ -32,6 +32,7 @@ projects = [
   { vcs: 'github', user: 'ministryofjustice', repo: 'pathfinder-api', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'manage-soc-cases', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'probation-offender-search-indexer', branch: 'main'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-pin-phone-monitor', branch: 'main'},
 ]
 
 def duration(time)
