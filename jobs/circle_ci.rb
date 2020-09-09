@@ -34,6 +34,7 @@ projects = [
   { vcs: 'github', user: 'ministryofjustice', repo: 'probation-offender-search-indexer', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-pin-phone-monitor', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'probation-offender-events', branch: 'main'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-template-kotlin', branch: 'main'},
 ]
 
 def duration(time)
