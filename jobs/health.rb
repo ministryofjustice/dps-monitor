@@ -60,7 +60,7 @@ prod_servers = [
     {name: 'manage-soc-cases', url: 'https://manage-soc-cases.hmpps.service.justice.gov.uk/health'},
     {name: 'probation-offender-search-indexer', versionUrl: 'https://probation-search-indexer.hmpps.service.justice.gov.uk/info', url: 'https://probation-search-indexer.hmpps.service.justice.gov.uk/health'},
     {name: 'probation-offender-events', versionUrl: 'https://probation-offender-events.hmpps.service.justice.gov.uk/info', url: 'https://probation-offender-events.hmpps.service.justice.gov.uk/health'},
-    {name: 'prison-services-feedback-and-support', url: 'https://support.hmpps.service.justice.gov.uk/feedback-and-support'},
+    {name: 'prison-services-feedback-and-support', url: 'https://support.hmpps.service.justice.gov.uk/health'},
 ]
 
 preprod_servers = [
@@ -93,7 +93,7 @@ preprod_servers = [
     {name: 'manage-soc-cases', url: 'https://manage-soc-cases-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'probation-offender-search-indexer', versionUrl: 'https://probation-search-indexer-preprod.hmpps.service.justice.gov.uk/info', url: 'https://probation-search-indexer-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'probation-offender-events', versionUrl: 'https://probation-offender-events-preprod.hmpps.service.justice.gov.uk/info', url: 'https://probation-offender-events-preprod.hmpps.service.justice.gov.uk/health'},
-    {name: 'prison-services-feedback-and-support', url: 'https://support-preprod.hmpps.service.justice.gov.uk/feedback-and-support'},
+    {name: 'prison-services-feedback-and-support', url: 'https://support-preprod.hmpps.service.justice.gov.uk/health'},
 ]
 
 dev_servers = [
@@ -129,7 +129,7 @@ dev_servers = [
     {name: 'hmpps-pin-phone-monitor', url: 'https://hmpps-pin-phone-monitor-dev.prison.service.justice.gov.uk/health'},
     {name: 'probation-offender-events', versionUrl: 'https://probation-offender-events-dev.hmpps.service.justice.gov.uk/info', url: 'https://probation-offender-events-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-template-kotlin', versionUrl: 'https://hmpps-template-kotlin-dev.hmpps.service.justice.gov.uk/info', url: 'https://hmpps-template-kotlin-dev.hmpps.service.justice.gov.uk/health'},
-    {name: 'prison-services-feedback-and-support', url: 'https://support-dev.hmpps.service.justice.gov.uk/feedback-and-support'},
+    {name: 'prison-services-feedback-and-support', url: 'https://support-dev.hmpps.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
