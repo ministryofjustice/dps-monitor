@@ -31,12 +31,12 @@ ping_count = 10
 #      back to the 'proper' URI within the health-kick proxying application.
 #
 prod_servers = [
-    {name: 'prison-api', versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/elite2api/health'},
+    {name: 'prison-api', versionUrl: 'https://api.prison.service.justice.gov.uk/info', url: 'https://api.prison.service.justice.gov.uk/health'},
     {name: 'dps-core', url: 'https://digital.prison.service.justice.gov.uk/health'},
     {name: 'omic-ui', url: 'https://manage-key-workers.service.justice.gov.uk/health'},
     {name: 'manage-hmpps-auth-accounts', url: 'https://manage-hmpps-auth-accounts.prison.service.justice.gov.uk/health'},
     {name: 'keyworker-api', versionUrl: 'https://keyworker-api.prison.service.justice.gov.uk/info', url: 'https://keyworker-api.prison.service.justice.gov.uk/health'},
-    {name: 'oauth2', versionUrl: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/info', url: 'https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/health'},
+    {name: 'oauth2', versionUrl: 'https://sign-in.hmpps.service.justice.gov.uk/auth/info', url: 'https://sign-in.hmpps.service.justice.gov.uk/auth/health'},
     {name: 'whereabouts', url: 'https://whereabouts.prison.service.justice.gov.uk/health'},
     {name: 'offender-categorisation', url: 'https://health-kick.prison.service.justice.gov.uk/https/offender-categorisation.service.justice.gov.uk'},
     {name: 'whereabouts-api', versionUrl: 'https://whereabouts-api.service.justice.gov.uk/info', url: 'https://whereabouts-api.service.justice.gov.uk/health'},
