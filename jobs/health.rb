@@ -27,7 +27,7 @@ ping_count = 10
 #      the check will return false
 #
 #   => Where the path to the health or info endpoint is more than one folder deep (eg.. /communityapi/health) we need to convert
-#      to a single path string which makes these endpoints /communityapi-health and /communityapi-info. These are converted 
+#      to a single path string which makes these endpoints /communityapi-health and /communityapi-info. These are converted
 #      back to the 'proper' URI within the health-kick proxying application.
 #
 prod_servers = [
@@ -60,6 +60,7 @@ prod_servers = [
     {name: 'manage-soc-cases', url: 'https://manage-soc-cases.hmpps.service.justice.gov.uk/health'},
     {name: 'probation-offender-search-indexer', versionUrl: 'https://probation-search-indexer.hmpps.service.justice.gov.uk/info', url: 'https://probation-search-indexer.hmpps.service.justice.gov.uk/health'},
     {name: 'probation-offender-events', versionUrl: 'https://probation-offender-events.hmpps.service.justice.gov.uk/info', url: 'https://probation-offender-events.hmpps.service.justice.gov.uk/health'},
+    {name: 'prison-services-feedback-and-support', url: 'https://support.hmpps.service.justice.gov.uk/feedback-and-support'},
 ]
 
 preprod_servers = [
@@ -92,6 +93,7 @@ preprod_servers = [
     {name: 'manage-soc-cases', url: 'https://manage-soc-cases-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'probation-offender-search-indexer', versionUrl: 'https://probation-search-indexer-preprod.hmpps.service.justice.gov.uk/info', url: 'https://probation-search-indexer-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'probation-offender-events', versionUrl: 'https://probation-offender-events-preprod.hmpps.service.justice.gov.uk/info', url: 'https://probation-offender-events-preprod.hmpps.service.justice.gov.uk/health'},
+    {name: 'prison-services-feedback-and-support', url: 'https://support-preprod.hmpps.service.justice.gov.uk/feedback-and-support'},
 ]
 
 dev_servers = [
@@ -127,6 +129,7 @@ dev_servers = [
     {name: 'hmpps-pin-phone-monitor', url: 'https://hmpps-pin-phone-monitor-dev.prison.service.justice.gov.uk/health'},
     {name: 'probation-offender-events', versionUrl: 'https://probation-offender-events-dev.hmpps.service.justice.gov.uk/info', url: 'https://probation-offender-events-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-template-kotlin', versionUrl: 'https://hmpps-template-kotlin-dev.hmpps.service.justice.gov.uk/info', url: 'https://hmpps-template-kotlin-dev.hmpps.service.justice.gov.uk/health'},
+    {name: 'prison-services-feedback-and-support', url: 'https://support-dev.hmpps.service.justice.gov.uk/feedback-and-support'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
