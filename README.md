@@ -93,7 +93,7 @@ docker build -t dps-monitor .
 ```
  Run:
 ```shell script
-docker run -p3030:3030 --env CIRCLE_CI_TOKEN=******* --name dps-monitor -d -t dps-monitor
+docker run -p3030:3030 --env CIRCLE_CI_TOKEN=******* --name dps-monitor -d -t dps-monitor:latest
 ```
 Test in browser:
 ```
