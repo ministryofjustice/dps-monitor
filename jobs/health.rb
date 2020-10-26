@@ -96,6 +96,13 @@ preprod_servers = [
     {name: 'prison-services-feedback-and-support', url: 'https://support-preprod.hmpps.service.justice.gov.uk/health'},
 ]
 
+staging_servers = [
+    {name: 'community-api', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/community-api-secure.stage.delius.probation.hmpps.dsd.io/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/community-api-secure.stage.delius.probation.hmpps.dsd.io/health'},
+    {name: 'probation-offender-search', versionUrl: 'https://probation-offender-search-staging.hmpps.service.justice.gov.uk/info', url: 'https://probation-offender-search-staging.hmpps.service.justice.gov.uk/health'},
+    {name: 'probation-offender-search-indexer', versionUrl: 'https://probation-search-indexer-staging.hmpps.service.justice.gov.uk/info', url: 'https://probation-search-indexer-staging.hmpps.service.justice.gov.uk/health'},
+    {name: 'probation-offender-events', versionUrl: 'https://probation-offender-events-staging.hmpps.service.justice.gov.uk/info', url: 'https://probation-offender-events-staging.hmpps.service.justice.gov.uk/health'},
+]
+
 dev_servers = [
     {name: 'prison-api', versionUrl: 'https://api-dev.prison.service.justice.gov.uk/info', url: 'https://api-dev.prison.service.justice.gov.uk/health'},
     {name: 'keyworker-api', versionUrl: 'https://keyworker-api-dev.prison.service.justice.gov.uk/info', url: 'https://keyworker-api-dev.prison.service.justice.gov.uk/health'},
@@ -267,6 +274,13 @@ SCHEDULER.every '2m', first_in: 0 do |_job|
   dev_versions = dev_servers.map do |server|
     result = gather_health_data(server)
     send_event("#{server[:name]}-dev", result: result)
+    {server[:name] => result[:checks][:VERSION]}
+  end.reduce Hash.new, :merge
+
+  staging_versions = staging_servers.map do |server|
+    result = gather_health_data(server)
+    result_with_colour = result.merge(add_outofdate(result[:checks][:VERSION], dev_versions[server[:name]]))
+    send_event("#{server[:name]}-staging", result: result_with_colour)
     {server[:name] => result[:checks][:VERSION]}
   end.reduce Hash.new, :merge
 
