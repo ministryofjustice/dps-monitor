@@ -30,7 +30,7 @@ Build
 ```
 $ sudo gem install bundler
 $ sudo gem install smashing
-$ cd notm-monitor/
+$ cd dps-monitor/
 $ rm Gemfile.lock   (will not build on some platforms without this - Ubuntu)
 $ bundle install
 ```
@@ -55,12 +55,6 @@ Deployment
 All merges to main are built & deployed automatically to cloud platform
 ```
 
-Heroku
-----
-
-https://notm-monitor.herokuapp.com/circle
-
-
 Further Reading on Smashing
 ----
 Check out http://smashing.github.io/ for more information.
@@ -70,10 +64,16 @@ Deployment Configuration
 ----
 
 Requires the following environment variables to be available locally when running:
+Get a Circle CI token from https://app.circleci.com/settings/user/tokens
 
  * CIRCLE_CI_TOKEN - a valid circle API access token
  
- 
+Run
+----
+```
+CIRCLE_CI_TOKEN=************ smashing start
+```
+
 Dashboard Configuration
 ----
 
