@@ -61,6 +61,7 @@ prod_servers = [
     {name: 'probation-offender-search-indexer', versionUrl: 'https://probation-search-indexer.hmpps.service.justice.gov.uk/info', url: 'https://probation-search-indexer.hmpps.service.justice.gov.uk/health'},
     {name: 'probation-offender-events', versionUrl: 'https://probation-offender-events.hmpps.service.justice.gov.uk/info', url: 'https://probation-offender-events.hmpps.service.justice.gov.uk/health'},
     {name: 'prison-services-feedback-and-support', url: 'https://support.hmpps.service.justice.gov.uk/health'},
+    {name: 'hmpps-book-video-link', url: 'https://book-video-link.prison.service.justice.gov.uk/health'},
 ]
 
 preprod_servers = [
@@ -94,6 +95,7 @@ preprod_servers = [
     {name: 'probation-offender-search-indexer', versionUrl: 'https://probation-search-indexer-preprod.hmpps.service.justice.gov.uk/info', url: 'https://probation-search-indexer-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'probation-offender-events', versionUrl: 'https://probation-offender-events-preprod.hmpps.service.justice.gov.uk/info', url: 'https://probation-offender-events-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'prison-services-feedback-and-support', url: 'https://support-preprod.hmpps.service.justice.gov.uk/health'},
+    {name: 'hmpps-book-video-link', url: 'https://book-video-link-preprod.prison.service.justice.gov.uk/health'},
 ]
 
 staging_servers = [
@@ -140,6 +142,7 @@ dev_servers = [
     {name: 'prison-services-feedback-and-support', url: 'https://support-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'manage-intelligence', url: 'https://manage-intelligence-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'manage-intelligence-api', versionUrl: 'https://manage-intelligence-api-dev.hmpps.service.justice.gov.uk/info', url: 'https://manage-intelligence-api-dev.hmpps.service.justice.gov.uk/health'},
+    {name: 'hmpps-book-video-link', url: 'https://book-video-link-dev.prison.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
