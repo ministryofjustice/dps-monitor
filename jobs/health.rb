@@ -140,8 +140,8 @@ dev_servers = [
     {name: 'probation-offender-events', versionUrl: 'https://probation-offender-events-dev.hmpps.service.justice.gov.uk/info', url: 'https://probation-offender-events-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-template-kotlin', versionUrl: 'https://hmpps-template-kotlin-dev.hmpps.service.justice.gov.uk/info', url: 'https://hmpps-template-kotlin-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'prison-services-feedback-and-support', url: 'https://support-dev.hmpps.service.justice.gov.uk/health'},
-    {name: 'manage-intelligence', url: 'https://manage-intelligence-dev.hmpps.service.justice.gov.uk/health'},
-    {name: 'manage-intelligence-api', versionUrl: 'https://manage-intelligence-api-dev.hmpps.service.justice.gov.uk/info', url: 'https://manage-intelligence-api-dev.hmpps.service.justice.gov.uk/health'},
+    {name: 'manage-intelligence', url: 'https://manage-intelligence-dev.prison.service.justice.gov.uk/health'},
+    {name: 'manage-intelligence-api', versionUrl: 'https://manage-intelligence-api-dev.prison.service.justice.gov.uk/info', url: 'https://manage-intelligence-api-dev.prison.service.justice.gov.uk/health'},
     {name: 'hmpps-book-video-link', url: 'https://book-video-link-dev.prison.service.justice.gov.uk/health'},
 ]
 
