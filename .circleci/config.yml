@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  hmpps: ministryofjustice/hmpps@1.0.0
+  hmpps: ministryofjustice/hmpps@2.2
 
 executors:
   auditor:
@@ -46,7 +46,9 @@ workflows:
           name: deploy_prod
           env: "prod"
           slack_notification: true
-          context: dps-toolkit
+          context:
+            - hmpps-common-vars
+            - dps-toolkit
           requires:
             - security_audit
             - helm_lint
