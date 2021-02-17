@@ -38,6 +38,7 @@ projects = [
   { vcs: 'github', user: 'ministryofjustice', repo: 'manage-intelligence', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'manage-intelligence-api', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-book-video-link', branch: 'main'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'court-register', branch: 'main'},
 ]
 
 def duration(time)
