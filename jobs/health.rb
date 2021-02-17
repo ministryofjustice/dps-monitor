@@ -60,6 +60,7 @@ prod_servers = [
     {name: 'prison-services-feedback-and-support', url: 'https://support.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-book-video-link', url: 'https://book-video-link.prison.service.justice.gov.uk/health'},
     {name: 'court-register', versionUrl: 'https://court-register.hmpps.service.justice.gov.uk/info', url: 'https://court-register.hmpps.service.justice.gov.uk/health'},
+    {name: 'prison-register', versionUrl: 'https://prison-register.hmpps.service.justice.gov.uk/info', url: 'https://prison-register.hmpps.service.justice.gov.uk/health'},
 ]
 
 preprod_servers = [
@@ -92,6 +93,7 @@ preprod_servers = [
     {name: 'prison-services-feedback-and-support', url: 'https://support-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-book-video-link', url: 'https://book-video-link-preprod.prison.service.justice.gov.uk/health'},
     {name: 'court-register', versionUrl: 'https://court-register-preprod.hmpps.service.justice.gov.uk/info', url: 'https://court-register-preprod.hmpps.service.justice.gov.uk/health'},
+    {name: 'prison-register', versionUrl: 'https://prison-register-preprod.hmpps.service.justice.gov.uk/info', url: 'https://prison-register-preprod.hmpps.service.justice.gov.uk/health'},
 ]
 
 staging_servers = [
@@ -137,6 +139,7 @@ dev_servers = [
     {name: 'manage-intelligence-api', versionUrl: 'https://manage-intelligence-api-dev.prison.service.justice.gov.uk/info', url: 'https://manage-intelligence-api-dev.prison.service.justice.gov.uk/health'},
     {name: 'hmpps-book-video-link', url: 'https://book-video-link-dev.prison.service.justice.gov.uk/health'},
     {name: 'court-register', versionUrl: 'https://court-register-dev.hmpps.service.justice.gov.uk/info', url: 'https://court-register-dev.hmpps.service.justice.gov.uk/health'},
+    {name: 'prison-register', versionUrl: 'https://prison-register-dev.hmpps.service.justice.gov.uk/info', url: 'https://prison-register-dev.hmpps.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
