@@ -41,6 +41,7 @@ projects = [
   { vcs: 'github', user: 'ministryofjustice', repo: 'court-register', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'prison-register', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-audit-api', branch: 'main'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-registers', branch: 'main'},
 ]
 
 def duration(time)
