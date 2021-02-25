@@ -64,6 +64,7 @@ prod_servers = [
     {name: 'hmpps-audit-api', versionUrl: 'https://audit-api.hmpps.service.justice.gov.uk/info', url: 'https://audit-api.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-registers', url: 'https://registers.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-registers-to-delius-update', versionUrl: 'https://registers-to-delius-update.hmpps.service.justice.gov.uk/info', url: 'https://registers-to-delius-update.hmpps.service.justice.gov.uk/health'},
+    {name: 'hmpps-registers-to-nomis-update', versionUrl: 'https://registers-to-nomis-update.hmpps.service.justice.gov.uk/info', url: 'https://registers-to-nomis-update.hmpps.service.justice.gov.uk/health'},
 ]
 
 preprod_servers = [
@@ -100,6 +101,7 @@ preprod_servers = [
     {name: 'hmpps-audit-api', versionUrl: 'https://audit-api-preprod.hmpps.service.justice.gov.uk/info', url: 'https://audit-api-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-registers', url: 'https://registers-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-registers-to-delius-update', versionUrl: 'https://registers-to-delius-update-preprod.hmpps.service.justice.gov.uk/info', url: 'https://registers-to-delius-update-preprod.hmpps.service.justice.gov.uk/health'},
+    {name: 'hmpps-registers-to-nomis-update', versionUrl: 'https://registers-to-nomis-update-preprod.hmpps.service.justice.gov.uk/info', url: 'https://registers-to-nomis-update-preprod.hmpps.service.justice.gov.uk/health'},
 ]
 
 staging_servers = [
@@ -149,6 +151,7 @@ dev_servers = [
     {name: 'hmpps-audit-api', versionUrl: 'https://audit-api-dev.hmpps.service.justice.gov.uk/info', url: 'https://audit-api-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-registers', url: 'https://registers-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-registers-to-delius-update', versionUrl: 'https://registers-to-delius-update-dev.hmpps.service.justice.gov.uk/info', url: 'https://registers-to-delius-update-dev.hmpps.service.justice.gov.uk/health'},
+    {name: 'hmpps-registers-to-nomis-update', versionUrl: 'https://registers-to-nomis-update-dev.hmpps.service.justice.gov.uk/info', url: 'https://registers-to-nomis-update-dev.hmpps.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
