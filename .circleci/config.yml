@@ -46,7 +46,7 @@ workflows:
           name: deploy_prod
           env: "prod"
           slack_notification: true
-          retrieve_secrets: false
+          retrieve_secrets: "none"
           context:
             - hmpps-common-vars
             - dps-toolkit
