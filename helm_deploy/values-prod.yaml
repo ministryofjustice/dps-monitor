@@ -33,3 +33,7 @@ whitelist:
   dxc_webproxy2: "195.92.38.21/32"
   dxc_webproxy3: "195.92.38.22/32"
   dxc_webproxy4: "195.92.38.23/32"
+
+# determine which slack channel alerts are sent to, via the correct Alert Manager receiver
+generic-prometheus-alerts:
+  alertSeverity: digital-prison-service
