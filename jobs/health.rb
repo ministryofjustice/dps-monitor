@@ -67,6 +67,9 @@ prod_servers = [
     {name: 'hmpps-registers', url: 'https://registers.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-registers-to-delius-update', versionUrl: 'https://registers-to-delius-update.hmpps.service.justice.gov.uk/info', url: 'https://registers-to-delius-update.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-registers-to-nomis-update', versionUrl: 'https://registers-to-nomis-update.hmpps.service.justice.gov.uk/info', url: 'https://registers-to-nomis-update.hmpps.service.justice.gov.uk/health'},
+    {name: 'hmpps-book-secure-move-frontend', url: 'https://bookasecuremove.service.justice.gov.uk/healthcheck'},
+    {name: 'hmpps-book-secure-move-api', url: 'https://api.bookasecuremove.service.justice.gov.uk/health'},
+    {name: 'calculate-journey-variable-payments', versionUrl: 'https://calculate-journey-variable-payments.hmpps.service.justice.gov.uk/info', url: 'https://calculate-journey-variable-payments.hmpps.service.justice.gov.uk/health'},
 ]
 
 preprod_servers = [
@@ -106,6 +109,9 @@ preprod_servers = [
     {name: 'hmpps-registers', url: 'https://registers-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-registers-to-delius-update', versionUrl: 'https://registers-to-delius-update-preprod.hmpps.service.justice.gov.uk/info', url: 'https://registers-to-delius-update-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-registers-to-nomis-update', versionUrl: 'https://registers-to-nomis-update-preprod.hmpps.service.justice.gov.uk/info', url: 'https://registers-to-nomis-update-preprod.hmpps.service.justice.gov.uk/health'},
+    {name: 'hmpps-book-secure-move-frontend', url: 'https://hmpps-book-secure-move-frontend-preprod.apps.live-1.cloud-platform.service.justice.gov.uk/healthcheck'},
+    {name: 'hmpps-book-secure-move-api', url: 'https://hmpps-book-secure-move-api-preprod.apps.live-1.cloud-platform.service.justice.gov.uk/health'},
+    {name: 'calculate-journey-variable-payments', versionUrl: 'https://calculate-journey-variable-payments-preprod.apps.live-1.cloud-platform.service.justice.gov.uk/info', url: 'https://calculate-journey-variable-payments-preprod.apps.live-1.cloud-platform.service.justice.gov.uk/health'},
 ]
 
 staging_servers = [
@@ -113,6 +119,8 @@ staging_servers = [
     {name: 'probation-offender-search', versionUrl: 'https://probation-offender-search-staging.hmpps.service.justice.gov.uk/info', url: 'https://probation-offender-search-staging.hmpps.service.justice.gov.uk/health'},
     {name: 'probation-offender-search-indexer', versionUrl: 'https://probation-search-indexer-staging.hmpps.service.justice.gov.uk/info', url: 'https://probation-search-indexer-staging.hmpps.service.justice.gov.uk/health'},
     {name: 'probation-offender-events', versionUrl: 'https://probation-offender-events-staging.hmpps.service.justice.gov.uk/info', url: 'https://probation-offender-events-staging.hmpps.service.justice.gov.uk/health'},
+    {name: 'hmpps-book-secure-move-frontend', url: 'https://hmpps-book-secure-move-frontend-staging.apps.live-1.cloud-platform.service.justice.gov.uk/healthcheck'},
+    {name: 'hmpps-book-secure-move-api', url: 'https://hmpps-book-secure-move-api-staging.apps.live-1.cloud-platform.service.justice.gov.uk/health'},
 ]
 
 dev_servers = [
@@ -149,6 +157,7 @@ dev_servers = [
     {name: 'prison-services-feedback-and-support', url: 'https://support-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'manage-intelligence', url: 'https://manage-intelligence-dev.prison.service.justice.gov.uk/health'},
     {name: 'manage-intelligence-api', versionUrl: 'https://manage-intelligence-api-dev.prison.service.justice.gov.uk/info', url: 'https://manage-intelligence-api-dev.prison.service.justice.gov.uk/health'},
+    {name: 'hmpps-submit-information-report', url: 'https://submit-information-report-dev.prison.service.justice.gov.uk/health'},
     {name: 'hmpps-book-video-link', url: 'https://book-video-link-dev.prison.service.justice.gov.uk/health'},
     {name: 'court-register', versionUrl: 'https://court-register-dev.hmpps.service.justice.gov.uk/info', url: 'https://court-register-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'prison-register', versionUrl: 'https://prison-register-dev.hmpps.service.justice.gov.uk/info', url: 'https://prison-register-dev.hmpps.service.justice.gov.uk/health'},
@@ -156,6 +165,7 @@ dev_servers = [
     {name: 'hmpps-registers', url: 'https://registers-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-registers-to-delius-update', versionUrl: 'https://registers-to-delius-update-dev.hmpps.service.justice.gov.uk/info', url: 'https://registers-to-delius-update-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-registers-to-nomis-update', versionUrl: 'https://registers-to-nomis-update-dev.hmpps.service.justice.gov.uk/info', url: 'https://registers-to-nomis-update-dev.hmpps.service.justice.gov.uk/health'},
+    {name: 'calculate-journey-variable-payments', versionUrl: 'https://calculate-journey-variable-payments-dev.apps.live-1.cloud-platform.service.justice.gov.uk/info', url: 'https://calculate-journey-variable-payments-dev.apps.live-1.cloud-platform.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
@@ -236,7 +246,7 @@ def gather_health_data(server)
       if valid_json?(server_response.body)
         result_json = JSON.parse(server_response.body)
 
-        status = result_json['status'] == 'UP' || result_json['healthy']
+        status = result_json['status'] == 'UP' || result_json['status'] == 'OK' || result_json['healthy']
 
         if server[:versionUrl]
           begin
