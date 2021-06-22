@@ -166,6 +166,7 @@ dev_servers = [
     {name: 'hmpps-registers-to-delius-update', versionUrl: 'https://registers-to-delius-update-dev.hmpps.service.justice.gov.uk/info', url: 'https://registers-to-delius-update-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-registers-to-nomis-update', versionUrl: 'https://registers-to-nomis-update-dev.hmpps.service.justice.gov.uk/info', url: 'https://registers-to-nomis-update-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'calculate-journey-variable-payments', versionUrl: 'https://calculate-journey-variable-payments-dev.apps.live-1.cloud-platform.service.justice.gov.uk/info', url: 'https://calculate-journey-variable-payments-dev.apps.live-1.cloud-platform.service.justice.gov.uk/health'},
+    {name: 'hmpps-restricted-patients-api', versionUrl: 'https://restricted-patients-api-dev.hmpps.service.justice.gov.uk/info', url: 'https://restricted-patients-api-dev.hmpps.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
