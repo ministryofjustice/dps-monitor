@@ -49,6 +49,8 @@ projects = [
   { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-book-secure-move-api', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'calculate-journey-variable-payments', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-restricted-patients-api', branch: 'main'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-welcome-people-into-prison-api', branch: 'main'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-welcome-people-into-prison-ui', branch: 'main'},
 ]
 
 def duration(time)
