@@ -1,21 +1,30 @@
-FROM ruby:2-alpine
+FROM ruby:2.7-alpine3.13
 
-RUN apk add --update git build-base nodejs && \
-    gem install bundler:2.0.2
+ARG BUILD_NUMBER
+ARG GIT_REF
 
-RUN addgroup -g 2000 -S appgroup && \
-    adduser -u 2000 -S appuser -G appgroup
+RUN mkdir /app
 
-RUN mkdir /app && chown appuser:appgroup /app
-COPY --chown=appuser:appgroup Gemfile* /app/
+RUN apk update && \
+  apk upgrade && \
+  apk add --no-cache nodejs tzdata build-base
+
+RUN addgroup --gid 2000 appuser && \
+  adduser --uid 2000 --disabled-password --ingroup appuser --home /app appuser
+
 USER 2000
 WORKDIR /app
-RUN bundle install --path=/app/.gem
 
-ADD --chown=appuser:appgroup . .
+COPY Gemfile /app/Gemfile
+COPY Gemfile.lock /app/Gemfile.lock
 
-USER 2000
+RUN bundle config set --local without 'dev' && \
+  bundle config set --local deployment 'true' && \
+  bundle config set --local frozen 'true' && \
+  bundle install
 
-CMD ["bundle", "exec", "smashing", "start"]
+COPY . .
 
 EXPOSE 3030
+
+CMD ["bundle", "exec", "smashing", "start", "-p", "3030", "-e", "production"]

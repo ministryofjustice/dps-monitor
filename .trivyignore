@@ -1,0 +1,2 @@
+# False positive, https://github.com/rails/sprockets/issues/705
+CVE-2014-7819
