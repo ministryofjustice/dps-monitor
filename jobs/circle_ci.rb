@@ -29,6 +29,7 @@ projects = [
   { vcs: 'github', user: 'ministryofjustice', repo: 'prisoner-offender-search', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'pathfinder-api', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'manage-soc-cases', branch: 'main'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'manage-soc-cases-api', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'probation-offender-search-indexer', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-pin-phone-monitor', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-pin-phone-monitor-api', branch: 'main'},
@@ -132,4 +133,3 @@ SCHEDULER.every '5m', :first_in => 0  do
     send_event(data_id, data) unless (data.nil? or data.empty?)
   end
 end
-
