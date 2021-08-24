@@ -1,0 +1,9 @@
+.git
+.cache
+.gitignore
+.env
+.dockerignore
+.circleci/*
+Dockerfile
+helm_deploy/*
+history.yml
