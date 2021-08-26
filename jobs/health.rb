@@ -100,7 +100,7 @@ preprod_servers = [
     {name: 'prisoner-offender-search', versionUrl: 'https://prisoner-offender-search-preprod.prison.service.justice.gov.uk/info', url: 'https://prisoner-offender-search-preprod.prison.service.justice.gov.uk/health'},
     {name: 'pathfinder-api', versionUrl: 'https://preprod-api.pathfinder.service.justice.gov.uk/info', url: 'https://preprod-api.pathfinder.service.justice.gov.uk/health'},
     {name: 'manage-soc-cases', url: 'https://manage-soc-cases-preprod.hmpps.service.justice.gov.uk/health'},
-    {name: 'manage-soc-cases-api', versionUrl: 'https://manage-soc-cases-api-preprod.hmpps.service.justice.gov.uk/info', , url: 'https://manage-soc-cases-api-preprod.hmpps.service.justice.gov.uk/health'},
+    {name: 'manage-soc-cases-api', versionUrl: 'https://manage-soc-cases-api-preprod.hmpps.service.justice.gov.uk/info', url: 'https://manage-soc-cases-api-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'probation-offender-search-indexer', versionUrl: 'https://probation-search-indexer-preprod.hmpps.service.justice.gov.uk/info', url: 'https://probation-search-indexer-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-pin-phone-monitor', url: 'https://pin-phone-monitor-qa.prison.service.justice.gov.uk/health'},
     {name: 'hmpps-pin-phone-monitor-api', versionUrl: 'https://pin-phone-monitor-api-qa.prison.service.justice.gov.uk/info', url: 'https://pin-phone-monitor-api-qa.prison.service.justice.gov.uk/health'},
