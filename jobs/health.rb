@@ -71,7 +71,7 @@ prod_servers = [
     {name: 'hmpps-book-secure-move-frontend', url: 'https://bookasecuremove.service.justice.gov.uk/healthcheck'},
     {name: 'hmpps-book-secure-move-api', url: 'https://api.bookasecuremove.service.justice.gov.uk/health'},
     {name: 'calculate-journey-variable-payments', versionUrl: 'https://calculate-journey-variable-payments.hmpps.service.justice.gov.uk/info', url: 'https://calculate-journey-variable-payments.hmpps.service.justice.gov.uk/health'},
-    {name: 'hmpps-welcome-people-into-prison-api', url: 'https://welcome-api.prison.service.justice.gov.uk/info'},
+    {name: 'hmpps-welcome-people-into-prison-api', versionUrl: 'https://welcome-api.prison.service.justice.gov.uk/info', url: 'https://welcome-api.prison.service.justice.gov.uk/health' },
     {name: 'hmpps-welcome-people-into-prison-ui', url: 'https://welcome.prison.service.justice.gov.uk/health'},
 ]
 
@@ -116,7 +116,7 @@ preprod_servers = [
     {name: 'hmpps-book-secure-move-frontend', url: 'https://hmpps-book-secure-move-frontend-preprod.apps.live-1.cloud-platform.service.justice.gov.uk/healthcheck'},
     {name: 'hmpps-book-secure-move-api', url: 'https://hmpps-book-secure-move-api-preprod.apps.live-1.cloud-platform.service.justice.gov.uk/health'},
     {name: 'calculate-journey-variable-payments', versionUrl: 'https://calculate-journey-variable-payments-preprod.apps.live-1.cloud-platform.service.justice.gov.uk/info', url: 'https://calculate-journey-variable-payments-preprod.apps.live-1.cloud-platform.service.justice.gov.uk/health'},
-    {name: 'hmpps-welcome-people-into-prison-api', url: 'https://welcome-api-preprod.prison.service.justice.gov.uk/info'},
+    {name: 'hmpps-welcome-people-into-prison-api', versionUrl: 'https://welcome-api-preprod.prison.service.justice.gov.uk/info', url: 'https://welcome-api-preprod.prison.service.justice.gov.uk/health'},
     {name: 'hmpps-welcome-people-into-prison-ui', url: 'https://welcome-preprod.prison.service.justice.gov.uk/health'},
 ]
 
@@ -174,7 +174,7 @@ dev_servers = [
     {name: 'hmpps-registers-to-nomis-update', versionUrl: 'https://registers-to-nomis-update-dev.hmpps.service.justice.gov.uk/info', url: 'https://registers-to-nomis-update-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'calculate-journey-variable-payments', versionUrl: 'https://calculate-journey-variable-payments-dev.apps.live-1.cloud-platform.service.justice.gov.uk/info', url: 'https://calculate-journey-variable-payments-dev.apps.live-1.cloud-platform.service.justice.gov.uk/health'},
     {name: 'hmpps-restricted-patients-api', versionUrl: 'https://restricted-patients-api-dev.hmpps.service.justice.gov.uk/info', url: 'https://restricted-patients-api-dev.hmpps.service.justice.gov.uk/health'},
-    {name: 'hmpps-welcome-people-into-prison-api', url: 'https://welcome-api-dev.prison.service.justice.gov.uk/info'},
+    {name: 'hmpps-welcome-people-into-prison-api', versionUrl: 'welcome-dev-api.prison.service.justice.gov.uk/info', url: 'https://welcome-api-dev.prison.service.justice.gov.uk/health'},
     {name: 'hmpps-welcome-people-into-prison-ui', url: 'https://welcome-dev.prison.service.justice.gov.uk/health'},
 ]
 
