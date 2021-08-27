@@ -2,7 +2,7 @@ require 'httparty'
 # require 'digest/md5'
 
 projects = [
-  { vcs: 'github', user: 'ministryofjustice', repo: 'keyworker-ui', branch: 'main'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'manage-key-workers', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'keyworker-service', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'prisonstaffhub', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'manage-hmpps-auth-accounts', branch: 'main'},
