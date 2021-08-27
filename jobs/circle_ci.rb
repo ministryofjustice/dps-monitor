@@ -94,6 +94,11 @@ def build_data(project, auth_token)
   return {} if api_json.empty?
   email_hash = nil
 
+  if api_response.code == 404
+    puts "Project not found, or private: #{project[:repo]}"
+    return {}
+  end
+
   latest_build = api_json.select{ |build| build['status'] != 'queued' }.first
   unless latest_build.nil? or latest_build.empty?
     email = latest_build['author_email']
