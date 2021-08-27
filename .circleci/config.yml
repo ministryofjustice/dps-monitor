@@ -2,29 +2,29 @@ version: 2.1
 
 orbs:
   hmpps: ministryofjustice/hmpps@3.11
+  ruby: circleci/ruby@1
 
 executors:
-  auditor:
+  ruby:
     docker:
-      - image: circleci/ruby:2-buster
+      - image: cimg/ruby:2.7-node
     working_directory: ~/app
 
 jobs:
-  security_audit:
-    executor: auditor
+  tests:
+    executor: ruby
     steps:
       - checkout
       - restore_cache:
           key: gem-cache-{{ checksum "Gemfile.lock" }}
-      - run:
-          name: "Install Dependencies"
-          command: |
-            gem install bundler
-            bundle install --path=./.gem
+      - ruby/install-deps
       - save_cache:
           key: gem-cache-{{ checksum "Gemfile.lock" }}
           paths:
             - ./.gem
+      - ruby/rubocop-check:
+          format: progress
+          label: Inspecting with Rubocop
       - run:
           name: Run security audit
           command: bundle exec bundle audit check --update
@@ -33,7 +33,7 @@ workflows:
   version: 2
   build-test-and-deploy:
     jobs:
-      - security_audit
+      - tests
       - hmpps/helm_lint:
           name: helm_lint
           env: "prod"
@@ -50,7 +50,7 @@ workflows:
             - hmpps-common-vars
             - dps-toolkit
           requires:
-            - security_audit
+            - tests
             - helm_lint
             - build_docker
           filters:
@@ -66,7 +66,6 @@ workflows:
               only:
                 - main
     jobs:
-      - security_audit
       - hmpps/trivy_latest_scan:
           context:
             - hmpps-common-vars

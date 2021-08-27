@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
-gem 'smashing'
-gem 'rest-client', '~> 1.8'
 gem 'httparty'
-gem 'tzinfo-data'
+gem 'smashing'
 
-gem "bundler-audit", "~> 0.7.0"
+group :dev do
+  gem 'bundler-audit', '~> 0.7.0'
+  gem 'rubocop'
+end

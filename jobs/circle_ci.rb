@@ -2,7 +2,7 @@ require 'httparty'
 # require 'digest/md5'
 
 projects = [
-  { vcs: 'github', user: 'ministryofjustice', repo: 'keyworker-ui', branch: 'main'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'manage-key-workers', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'keyworker-service', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'prisonstaffhub', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'manage-hmpps-auth-accounts', branch: 'main'},
@@ -93,6 +93,11 @@ def build_data(project, auth_token)
   api_json = JSON.parse(api_response.body)
   return {} if api_json.empty?
   email_hash = nil
+
+  if api_response.code == 404
+    puts "Project not found, or private: #{project[:repo]}"
+    return {}
+  end
 
   latest_build = api_json.select{ |build| build['status'] != 'queued' }.first
   unless latest_build.nil? or latest_build.empty?
