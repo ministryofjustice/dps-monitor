@@ -5,3 +5,5 @@ history.yml
 *.ipr
 *.iws
 .bundle
+.env
+vendor/*
