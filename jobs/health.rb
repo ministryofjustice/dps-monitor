@@ -7,10 +7,8 @@ require 'httparty'
 ### Global Config
 #
 # httptimeout => Number in seconds for HTTP Timeout. Set to ruby default of 60 seconds.
-# ping_count => Number of pings to perform for the ping method
 #
-httptimeout = 60
-ping_count = 10
+$httptimeout = 2
 
 #
 # Check whether a server is Responding you can set a server to
@@ -231,9 +229,9 @@ def gather_health_data(server)
   puts "requesting #{server[:url]}..."
   begin
     if server[:textOnly]
-      server_response = HTTParty.get(server[:url], headers: {Accept: 'text/html'}, timeout: 2)
+      server_response = HTTParty.get(server[:url], headers: {Accept: 'text/html'}, timeout: $httptimeout)
     else
-      server_response = HTTParty.get(server[:url], headers: {Accept: 'application/json'}, timeout: 2)
+      server_response = HTTParty.get(server[:url], headers: {Accept: 'application/json'}, timeout: $httptimeout)
     end
 
   rescue => e
@@ -260,7 +258,7 @@ def gather_health_data(server)
 
         if server[:versionUrl]
           begin
-            version_response = HTTParty.get(server[:versionUrl], headers: {Accept: 'application/json'}, timeout: 2)
+            version_response = HTTParty.get(server[:versionUrl], headers: {Accept: 'application/json'}, timeout: $httptimeout)
 
             # Useful debugging line
             # puts "Result from version check #server[:versionUrl] is #{version_response}"
@@ -314,7 +312,7 @@ SCHEDULER.every '2m', first_in: 0 do |_job|
     {server[:name] => result[:checks][:VERSION]}
   end.reduce Hash.new, :merge
 
-  staging_versions = staging_servers.map do |server|
+  staging_servers.map do |server|
     result = gather_health_data(server)
     result_with_colour = result.merge(add_outofdate(result[:checks][:VERSION], dev_versions[server[:name]]))
     send_event("#{server[:name]}-staging", result: result_with_colour)
