@@ -177,7 +177,7 @@ dev_servers = [
     {name: 'calculate-journey-variable-payments', versionUrl: 'https://calculate-journey-variable-payments-dev.apps.live-1.cloud-platform.service.justice.gov.uk/info', url: 'https://calculate-journey-variable-payments-dev.apps.live-1.cloud-platform.service.justice.gov.uk/health'},
     {name: 'hmpps-restricted-patients', url: 'https://manage-restricted-patients-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-restricted-patients-api', versionUrl: 'https://restricted-patients-api-dev.hmpps.service.justice.gov.uk/info', url: 'https://restricted-patients-api-dev.hmpps.service.justice.gov.uk/health'},
-    {name: 'hmpps-welcome-people-into-prison-api', versionUrl: 'welcome-dev-api.prison.service.justice.gov.uk/info', url: 'https://welcome-api-dev.prison.service.justice.gov.uk/health'},
+    {name: 'hmpps-welcome-people-into-prison-api', versionUrl: 'https://welcome-api-dev.prison.service.justice.gov.uk/info', url: 'https://welcome-api-dev.prison.service.justice.gov.uk/health'},
     {name: 'hmpps-welcome-people-into-prison-ui', url: 'https://welcome-dev.prison.service.justice.gov.uk/health'},
 ]
 
