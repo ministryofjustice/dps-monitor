@@ -73,6 +73,7 @@ prod_servers = [
     {name: 'hmpps-restricted-patients-api', versionUrl: 'https://restricted-patients-api.hmpps.service.justice.gov.uk/info', url: 'https://restricted-patients-api.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-welcome-people-into-prison-api', versionUrl: 'https://welcome-api.prison.service.justice.gov.uk/info', url: 'https://welcome-api.prison.service.justice.gov.uk/health' },
     {name: 'hmpps-welcome-people-into-prison-ui', url: 'https://welcome.prison.service.justice.gov.uk/health'},
+    {name: 'nomis-user-roles-api', versionUrl: 'https://nomis-user.aks-live-1.studio-hosting.service.justice.gov.uk/info', url: 'https://nomis-user.aks-live-1.studio-hosting.service.justice.gov.uk/health'},
 ]
 
 preprod_servers = [
@@ -120,6 +121,7 @@ preprod_servers = [
     {name: 'hmpps-restricted-patients-api', versionUrl: 'https://restricted-patients-api-preprod.hmpps.service.justice.gov.uk/info', url: 'https://restricted-patients-api-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-welcome-people-into-prison-api', versionUrl: 'https://welcome-api-preprod.prison.service.justice.gov.uk/info', url: 'https://welcome-api-preprod.prison.service.justice.gov.uk/health'},
     {name: 'hmpps-welcome-people-into-prison-ui', url: 'https://welcome-preprod.prison.service.justice.gov.uk/health'},
+    {name: 'nomis-user-roles-api', versionUrl: 'https://nomis-user-pp.aks-live-1.studio-hosting.service.justice.gov.uk/info', url: 'https://nomis-user-pp.aks-live-1.studio-hosting.service.justice.gov.uk/health'},
 ]
 
 staging_servers = [
@@ -179,6 +181,7 @@ dev_servers = [
     {name: 'hmpps-restricted-patients-api', versionUrl: 'https://restricted-patients-api-dev.hmpps.service.justice.gov.uk/info', url: 'https://restricted-patients-api-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-welcome-people-into-prison-api', versionUrl: 'https://welcome-api-dev.prison.service.justice.gov.uk/info', url: 'https://welcome-api-dev.prison.service.justice.gov.uk/health'},
     {name: 'hmpps-welcome-people-into-prison-ui', url: 'https://welcome-dev.prison.service.justice.gov.uk/health'},
+    {name: 'nomis-user-roles-api', versionUrl: 'https://nomis-user-dev.aks-dev-1.studio-hosting.service.justice.gov.uk/info', url: 'https://nomis-user-dev.aks-dev-1.studio-hosting.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
