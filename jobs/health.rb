@@ -38,7 +38,7 @@ prod_servers = [
     {name: 'offender-categorisation', url: 'https://health-kick.prison.service.justice.gov.uk/https/offender-categorisation.service.justice.gov.uk'},
     {name: 'whereabouts-api', versionUrl: 'https://whereabouts-api.service.justice.gov.uk/info', url: 'https://whereabouts-api.service.justice.gov.uk/health'},
     {name: 'offender-case-notes', versionUrl: 'https://offender-case-notes.service.justice.gov.uk/info', url: 'https://offender-case-notes.service.justice.gov.uk/health'},
-    {name: 'community-api', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/community-api-secure.probation.service.justice.gov.uk/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/community-api-secure.probation.service.justice.gov.uk/health'},
+    {name: 'community-api', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/community-api.probation.service.justice.gov.uk/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/community-api.probation.service.justice.gov.uk/health'},
     {name: 'licences', url: 'https://licences.prison.service.justice.gov.uk/health'},
     {name: 'pathfinder', url: 'https://health-kick.prison.service.justice.gov.uk/https/pathfinder.service.justice.gov.uk/health'},
     {name: 'use-of-force', url: 'https://use-of-force.service.justice.gov.uk/health'},
@@ -74,6 +74,7 @@ prod_servers = [
     {name: 'hmpps-welcome-people-into-prison-api', versionUrl: 'https://welcome-api.prison.service.justice.gov.uk/info', url: 'https://welcome-api.prison.service.justice.gov.uk/health' },
     {name: 'hmpps-welcome-people-into-prison-ui', url: 'https://welcome.prison.service.justice.gov.uk/health'},
     {name: 'nomis-user-roles-api', versionUrl: 'https://nomis-user.aks-live-1.studio-hosting.service.justice.gov.uk/info', url: 'https://nomis-user.aks-live-1.studio-hosting.service.justice.gov.uk/health'},
+    {name: 'hmpps-manage-users-api', versionUrl: 'https://hmpps-manage-users-api.hmpps.service.justice.gov.uk/info', url: 'https://hmpps-manage-users-api.hmpps.service.justice.gov.uk/health'},
 ]
 
 preprod_servers = [
@@ -87,7 +88,7 @@ preprod_servers = [
     {name: 'whereabouts-api', versionUrl: 'https://whereabouts-api-preprod.service.justice.gov.uk/info', url: 'https://whereabouts-api-preprod.service.justice.gov.uk/health'},
     {name: 'offender-case-notes', versionUrl: 'https://preprod.offender-case-notes.service.justice.gov.uk/info', url: 'https://preprod.offender-case-notes.service.justice.gov.uk/health'},
     {name: 'licences', url: 'https://licences-preprod.prison.service.justice.gov.uk/health'},
-    {name: 'community-api', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/community-api-secure.pre-prod.delius.probation.hmpps.dsd.io/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/community-api-secure.pre-prod.delius.probation.hmpps.dsd.io/health'},
+    {name: 'community-api', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/community-api.pre-prod.delius.probation.hmpps.dsd.io/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/community-api.pre-prod.delius.probation.hmpps.dsd.io/health'},
     {name: 'pathfinder', url: 'https://health-kick.prison.service.justice.gov.uk/https/preprod.pathfinder.service.justice.gov.uk/health'},
     {name: 'use-of-force', url: 'https://preprod.use-of-force.service.justice.gov.uk/health'},
     {name: 'prison-offender-events', versionUrl: 'https://offender-events-preprod.prison.service.justice.gov.uk/info', url: 'https://offender-events-preprod.prison.service.justice.gov.uk/health'},
@@ -122,10 +123,11 @@ preprod_servers = [
     {name: 'hmpps-welcome-people-into-prison-api', versionUrl: 'https://welcome-api-preprod.prison.service.justice.gov.uk/info', url: 'https://welcome-api-preprod.prison.service.justice.gov.uk/health'},
     {name: 'hmpps-welcome-people-into-prison-ui', url: 'https://welcome-preprod.prison.service.justice.gov.uk/health'},
     {name: 'nomis-user-roles-api', versionUrl: 'https://nomis-user-pp.aks-live-1.studio-hosting.service.justice.gov.uk/info', url: 'https://nomis-user-pp.aks-live-1.studio-hosting.service.justice.gov.uk/health'},
+    {name: 'hmpps-manage-users-api', versionUrl: 'https://hmpps-manage-users-api-preprod.hmpps.service.justice.gov.uk/info', url: 'https://hmpps-manage-users-api-preprod.hmpps.service.justice.gov.uk/health'},
 ]
 
 staging_servers = [
-    {name: 'community-api', versionUrl: 'https://health-kick.prison.service.justice.gov.uk/https/community-api-secure.stage.delius.probation.hmpps.dsd.io/info', url: 'https://health-kick.prison.service.justice.gov.uk/https/community-api-secure.stage.delius.probation.hmpps.dsd.io/health'},
+    {name: 'community-api', versionUrl: 'https://community-api.stage.probation.service.justice.gov.uk/info', url: 'https://community-api.stage.probation.service.justice.gov.uk/health'},
     {name: 'probation-offender-search', versionUrl: 'https://probation-offender-search-staging.hmpps.service.justice.gov.uk/info', url: 'https://probation-offender-search-staging.hmpps.service.justice.gov.uk/health'},
     {name: 'probation-offender-search-indexer', versionUrl: 'https://probation-search-indexer-staging.hmpps.service.justice.gov.uk/info', url: 'https://probation-search-indexer-staging.hmpps.service.justice.gov.uk/health'},
     {name: 'probation-offender-events', versionUrl: 'https://probation-offender-events-staging.hmpps.service.justice.gov.uk/info', url: 'https://probation-offender-events-staging.hmpps.service.justice.gov.uk/health'},
@@ -145,7 +147,7 @@ dev_servers = [
     {name: 'offender-case-notes', versionUrl: 'https://dev.offender-case-notes.service.justice.gov.uk/info', url: 'https://dev.offender-case-notes.service.justice.gov.uk/health'},
     {name: 'offender-assessments-api', versionUrl: 'https://dev.devtest.assessment-api.hmpps.dsd.io/info', url: 'https://dev.devtest.assessment-api.hmpps.dsd.io/health'},
     {name: 'licences', url: 'https://licences-dev.prison.service.justice.gov.uk/health'},
-    {name: 'community-api', versionUrl: 'https://community-api-secure.test.delius.probation.hmpps.dsd.io/info', url: 'https://community-api-secure.test.delius.probation.hmpps.dsd.io/health'},
+    {name: 'community-api', versionUrl: 'https://community-api.test.probation.service.justice.gov.uk/info', url: 'https://community-api.test.probation.service.justice.gov.uk/health'},
     {name: 'use-of-force', url: 'https://dev.use-of-force.service.justice.gov.uk/health'},
     {name: 'pathfinder', url: 'https://dev.pathfinder.service.justice.gov.uk/health'},
     {name: 'prison-offender-events', versionUrl: 'https://offender-events-dev.prison.service.justice.gov.uk/info', url: 'https://offender-events-dev.prison.service.justice.gov.uk/health'},
@@ -182,6 +184,7 @@ dev_servers = [
     {name: 'hmpps-welcome-people-into-prison-api', versionUrl: 'https://welcome-api-dev.prison.service.justice.gov.uk/info', url: 'https://welcome-api-dev.prison.service.justice.gov.uk/health'},
     {name: 'hmpps-welcome-people-into-prison-ui', url: 'https://welcome-dev.prison.service.justice.gov.uk/health'},
     {name: 'nomis-user-roles-api', versionUrl: 'https://nomis-user-dev.aks-dev-1.studio-hosting.service.justice.gov.uk/info', url: 'https://nomis-user-dev.aks-dev-1.studio-hosting.service.justice.gov.uk/health'},
+    {name: 'hmpps-manage-users-api', versionUrl: 'https://hmpps-manage-users-api-dev.hmpps.service.justice.gov.uk/info', url: 'https://hmpps-manage-users-api-dev.hmpps.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
