@@ -188,6 +188,8 @@ dev_servers = [
     {name: 'prison-to-nhs-update', versionUrl: 'https://prison-to-nhs-update-dev.prison.service.justice.gov.uk/info', url: 'https://prison-to-nhs-update-dev.prison.service.justice.gov.uk/health'},
     {name: 'nomis-user-roles-api', versionUrl: 'https://nomis-user-dev.aks-dev-1.studio-hosting.service.justice.gov.uk/info', url: 'https://nomis-user-dev.aks-dev-1.studio-hosting.service.justice.gov.uk/health'},
     {name: 'hmpps-manage-users-api', versionUrl: 'https://hmpps-manage-users-api-dev.hmpps.service.justice.gov.uk/info', url: 'https://hmpps-manage-users-api-dev.hmpps.service.justice.gov.uk/health'},
+    {name: 'create-and-vary-a-licence-api', versionUrl: 'https://create-and-vary-a-licence-api-dev.hmpps.service.justice.gov.uk/info', url: 'https://create-and-vary-a-licence-api-dev.hmpps.service.justice.gov.uk/health'},
+    {name: 'create-and-vary-a-licence', url: 'https://create-and-vary-a-licence-dev.hmpps.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
