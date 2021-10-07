@@ -4,7 +4,7 @@ require 'httparty'
 projects = [
   { vcs: 'github', user: 'ministryofjustice', repo: 'manage-key-workers', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'keyworker-service', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'prisonstaffhub', branch: 'main'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'digital-prison-services', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'manage-hmpps-auth-accounts', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'offender-categorisation', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'offender-risk-profiler', branch: 'main'},
