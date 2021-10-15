@@ -5,21 +5,6 @@ generic-service:
   ingress:
     host: dps-monitor.prison.service.justice.gov.uk
 
-  livenessProbe:
-    httpGet:
-      path: /health
-      port: 3030
-    initialDelaySeconds: 90
-    periodSeconds: 30
-    timeoutSeconds: 20
-
-  readinessProbe:
-    httpGet:
-      path: /health
-      port: 3030
-    initialDelaySeconds: 90
-    periodSeconds: 30
-    timeoutSeconds: 20
 
 # CloudPlatform AlertManager receiver to route prometheus alerts to slack
 generic-prometheus-alerts:

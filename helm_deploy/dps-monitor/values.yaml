@@ -12,6 +12,22 @@ generic-service:
     enabled: true
     tlsSecretName: dps-monitor-cert
 
+  livenessProbe:
+    httpGet:
+      path: /health
+      port: 3030
+    initialDelaySeconds: 90
+    periodSeconds: 30
+    timeoutSeconds: 20
+
+  readinessProbe:
+    httpGet:
+      path: /health
+      port: 3030
+    initialDelaySeconds: 90
+    periodSeconds: 30
+    timeoutSeconds: 20
+
   # Pre-existing kubernetes secrets to load as environment variables in the deployment.
   # namespace_secrets:
   #   [name of kubernetes secret]:
