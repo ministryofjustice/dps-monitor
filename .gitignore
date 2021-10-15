@@ -7,3 +7,5 @@ history.yml
 .bundle
 .env
 vendor/*
+helm_deploy/*/Chart.lock
+helm_deploy/*/charts/
