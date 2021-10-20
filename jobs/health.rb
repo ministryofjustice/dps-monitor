@@ -34,7 +34,7 @@ prod_servers = [
     {name: 'manage-key-workers', url: 'https://manage-key-workers.service.justice.gov.uk/health'},
     {name: 'manage-hmpps-auth-accounts', url: 'https://manage-hmpps-auth-accounts.prison.service.justice.gov.uk/health'},
     {name: 'keyworker-api', versionUrl: 'https://keyworker-api.prison.service.justice.gov.uk/info', url: 'https://keyworker-api.prison.service.justice.gov.uk/health'},
-    {name: 'oauth2', versionUrl: 'https://sign-in.hmpps.service.justice.gov.uk/auth/info', url: 'https://sign-in.hmpps.service.justice.gov.uk/auth/health'},
+    {name: 'hmpps-auth', versionUrl: 'https://sign-in.hmpps.service.justice.gov.uk/auth/info', url: 'https://sign-in.hmpps.service.justice.gov.uk/auth/health'},
     {name: 'offender-categorisation', url: 'https://health-kick.prison.service.justice.gov.uk/https/offender-categorisation.service.justice.gov.uk'},
     {name: 'whereabouts-api', versionUrl: 'https://whereabouts-api.service.justice.gov.uk/info', url: 'https://whereabouts-api.service.justice.gov.uk/health'},
     {name: 'offender-case-notes', versionUrl: 'https://offender-case-notes.service.justice.gov.uk/info', url: 'https://offender-case-notes.service.justice.gov.uk/health'},
@@ -84,7 +84,7 @@ preprod_servers = [
     {name: 'dps-core', url: 'https://digital-preprod.prison.service.justice.gov.uk/health'},
     {name: 'manage-key-workers', url: 'https://preprod.manage-key-workers.service.justice.gov.uk/health'},
     {name: 'manage-hmpps-auth-accounts', url: 'https://manage-hmpps-auth-accounts-preprod.prison.service.justice.gov.uk/health'},
-    {name: 'oauth2', versionUrl: 'https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/info', url: 'https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/health'},
+    {name: 'hmpps-auth', versionUrl: 'https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/info', url: 'https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/health'},
     {name: 'offender-categorisation', url: 'https://health-kick.prison.service.justice.gov.uk/https/preprod.offender-categorisation.service.justice.gov.uk'},
     {name: 'whereabouts-api', versionUrl: 'https://whereabouts-api-preprod.service.justice.gov.uk/info', url: 'https://whereabouts-api-preprod.service.justice.gov.uk/health'},
     {name: 'offender-case-notes', versionUrl: 'https://preprod.offender-case-notes.service.justice.gov.uk/info', url: 'https://preprod.offender-case-notes.service.justice.gov.uk/health'},
@@ -135,6 +135,7 @@ staging_servers = [
     {name: 'probation-offender-events', versionUrl: 'https://probation-offender-events-staging.hmpps.service.justice.gov.uk/info', url: 'https://probation-offender-events-staging.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-book-secure-move-frontend', url: 'https://hmpps-book-secure-move-frontend-staging.apps.live-1.cloud-platform.service.justice.gov.uk/healthcheck'},
     {name: 'hmpps-book-secure-move-api', url: 'https://hmpps-book-secure-move-api-staging.apps.live-1.cloud-platform.service.justice.gov.uk/health'},
+    {name: 'nomis-user-roles-api', versionUrl: 'https://nomis-user-stage.aks-dev-1.studio-hosting.service.justice.gov.uk/info', url: 'https://nomis-user-stage.aks-dev-1.studio-hosting.service.justice.gov.uk/health'},
 ]
 
 dev_servers = [
@@ -143,7 +144,7 @@ dev_servers = [
     {name: 'dps-core', url: 'https://digital-dev.prison.service.justice.gov.uk/health'},
     {name: 'manage-key-workers', url: 'https://dev.manage-key-workers.service.justice.gov.uk/health'},
     {name: 'manage-hmpps-auth-accounts', url: 'https://manage-hmpps-auth-accounts-dev.prison.service.justice.gov.uk/health'},
-    {name: 'oauth2', versionUrl: 'https://sign-in-dev.hmpps.service.justice.gov.uk/auth/info', url: 'https://sign-in-dev.hmpps.service.justice.gov.uk/auth/health'},
+    {name: 'hmpps-auth', versionUrl: 'https://sign-in-dev.hmpps.service.justice.gov.uk/auth/info', url: 'https://sign-in-dev.hmpps.service.justice.gov.uk/auth/health'},
     {name: 'offender-categorisation', url: 'https://dev.offender-categorisation.service.justice.gov.uk/health'},
     {name: 'whereabouts-api', versionUrl: 'https://whereabouts-api-dev.service.justice.gov.uk/info', url: 'https://whereabouts-api-dev.service.justice.gov.uk/health'},
     {name: 'offender-case-notes', versionUrl: 'https://dev.offender-case-notes.service.justice.gov.uk/info', url: 'https://dev.offender-case-notes.service.justice.gov.uk/health'},
