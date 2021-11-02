@@ -1,4 +1,4 @@
-FROM ruby:2.7-alpine3.13
+FROM ruby:3.0-alpine3.14
 
 ARG BUILD_NUMBER
 ARG GIT_REF
