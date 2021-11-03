@@ -1,4 +1,4 @@
-FROM ruby:3.0-alpine3.14
+FROM ruby:3.0-slim-bullseye
 
 ARG BUILD_NUMBER
 ARG GIT_REF
@@ -27,4 +27,4 @@ COPY . .
 
 EXPOSE 3030
 
-CMD ["bundle", "exec", "smashing", "start", "-p", "3030", "-e", "production"]
+CMD ls -ltra /app && bundle env && gem env home
