@@ -3,14 +3,18 @@ FROM ruby:3.0-slim-bullseye
 ARG BUILD_NUMBER
 ARG GIT_REF
 
+RUN apt update && \
+    apt -y upgrade && \
+    apt-get install -y curl g++ gcc make musl-dev && \
+    rm -rf /var/lib/apt/lists/*
+
+ENV TZ=Europe/London
+RUN ln -snf "/usr/share/zoneinfo/$TZ" /etc/localtime && echo "$TZ" > /etc/timezone
+
 RUN mkdir /app
-
-RUN apk update && \
-  apk upgrade && \
-  apk add --no-cache nodejs tzdata build-base
-
-RUN addgroup --gid 2000 appuser && \
-  adduser --uid 2000 --disabled-password --ingroup appuser --home /app appuser
+RUN addgroup --gid 2000 appgroup && \
+  adduser --uid 2000 --disabled-password --ingroup appgroup --home /app appuser
+RUN chown appuser:appgroup /app
 
 USER 2000
 WORKDIR /app
