@@ -39,6 +39,9 @@ workflows:
           env: "prod"
       - hmpps/build_docker:
           name: build_docker
+          filters:
+            branches:
+              only: main
       - hmpps/deploy_env:
           name: deploy_prod
           env: "prod"
@@ -50,6 +53,9 @@ workflows:
             - tests
             - helm_lint
             - build_docker
+          filters:
+            branches:
+              only: main
 
   security:
     triggers:

@@ -5,7 +5,7 @@ ARG GIT_REF
 
 RUN apt update && \
     apt -y upgrade && \
-    apt-get install -y curl g++ gcc make musl-dev && \
+    apt-get install -y curl g++ gcc make musl-dev nodejs && \
     rm -rf /var/lib/apt/lists/*
 
 ENV TZ=Europe/London
@@ -31,4 +31,4 @@ COPY . .
 
 EXPOSE 3030
 
-CMD ls -ltra /app && bundle env && gem env home
+CMD ["bundle", "exec", "smashing", "start", "-p", "3030", "-e", "production"]
