@@ -191,6 +191,8 @@ dev_servers = [
     {name: 'hmpps-manage-users-api', versionUrl: 'https://manage-users-api-dev.hmpps.service.justice.gov.uk/info', url: 'https://manage-users-api-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'create-and-vary-a-licence-api', versionUrl: 'https://create-and-vary-a-licence-api-dev.hmpps.service.justice.gov.uk/info', url: 'https://create-and-vary-a-licence-api-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'create-and-vary-a-licence', url: 'https://create-and-vary-a-licence-dev.hmpps.service.justice.gov.uk/health'},
+    {name: 'calculate-release-dates-api', versionUrl: 'https://calculate-release-dates-api-dev.hmpps.service.justice.gov.uk/info', url: 'https://calculate-release-dates-api-dev.hmpps.service.justice.gov.uk/health'},
+    {name: 'calculate-release-dates', url: 'https://calculate-release-dates-dev.hmpps.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
