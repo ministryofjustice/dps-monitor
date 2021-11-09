@@ -58,6 +58,8 @@ projects = [
   { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-manage-users-api', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'create-and-vary-a-licence', branch: 'main'},
   { vcs: 'github', user: 'ministryofjustice', repo: 'create-and-vary-a-licence-api', branch: 'main'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'calculate-release-dates', branch: 'main'},
+  { vcs: 'github', user: 'ministryofjustice', repo: 'calculate-release-dates-api', branch: 'main'},
 ]
 
 def duration(time)
