@@ -173,7 +173,7 @@ dev_servers = [
     {name: 'prison-services-feedback-and-support', url: 'https://support-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'manage-intelligence', url: 'https://manage-intelligence-dev.prison.service.justice.gov.uk/health'},
     {name: 'manage-intelligence-api', versionUrl: 'https://manage-intelligence-api-dev.prison.service.justice.gov.uk/info', url: 'https://manage-intelligence-api-dev.prison.service.justice.gov.uk/health'},
-    {name: 'hmpps-submit-information-report', url: 'https://submit-information-report-dev.prison.service.justice.gov.uk/health'},
+    {name: 'hmpps-submit-information-report', url: 'https://submit-information-report-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-book-video-link', url: 'https://book-video-link-dev.prison.service.justice.gov.uk/health'},
     {name: 'court-register', versionUrl: 'https://court-register-dev.hmpps.service.justice.gov.uk/info', url: 'https://court-register-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'prison-register', versionUrl: 'https://prison-register-dev.hmpps.service.justice.gov.uk/info', url: 'https://prison-register-dev.hmpps.service.justice.gov.uk/health'},
