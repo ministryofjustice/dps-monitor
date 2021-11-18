@@ -4,6 +4,7 @@ generic-service:
 
   ingress:
     host: dps-monitor.prison.service.justice.gov.uk
+    contextColour: green
 
 
 # CloudPlatform AlertManager receiver to route prometheus alerts to slack
