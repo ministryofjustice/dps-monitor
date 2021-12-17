@@ -78,6 +78,8 @@ prod_servers = [
     {name: 'prison-to-nhs-update', versionUrl: 'https://prison-to-nhs-update-dev.prison.service.justice.gov.uk/info', url: 'https://prison-to-nhs-update-dev.prison.service.justice.gov.uk/health'},
     {name: 'nomis-user-roles-api', versionUrl: 'https://nomis-user.aks-live-1.studio-hosting.service.justice.gov.uk/info', url: 'https://nomis-user.aks-live-1.studio-hosting.service.justice.gov.uk/health'},
     {name: 'hmpps-manage-users-api', versionUrl: 'https://manage-users-api.hmpps.service.justice.gov.uk/info', url: 'https://manage-users-api.hmpps.service.justice.gov.uk/health'},
+    {name: 'book-a-prison-visit-staff-ui', url: 'https://manage-a-prison-visit.hmpps.service.justice.gov.uk/health'},
+    {name: 'visit-scheduler', versionUrl: 'https://visit-scheduler.hmpps.service.justice.gov.uk/info', url: 'https://visit-scheduler.hmpps.service.justice.gov.uk/health'},
 ]
 
 preprod_servers = [
@@ -130,6 +132,8 @@ preprod_servers = [
     {name: 'prison-to-nhs-update', versionUrl: 'https://prison-to-nhs-update-preprod.prison.service.justice.gov.uk/info', url: 'https://prison-to-nhs-update-preprod.prison.service.justice.gov.uk/health'},
     {name: 'nomis-user-roles-api', versionUrl: 'https://nomis-user-pp.aks-live-1.studio-hosting.service.justice.gov.uk/info', url: 'https://nomis-user-pp.aks-live-1.studio-hosting.service.justice.gov.uk/health'},
     {name: 'hmpps-manage-users-api', versionUrl: 'https://manage-users-api-preprod.hmpps.service.justice.gov.uk/info', url: 'https://manage-users-api-preprod.hmpps.service.justice.gov.uk/health'},
+    {name: 'book-a-prison-visit-staff-ui', url: 'https://manage-a-prison-visit-preprod.hmpps.service.justice.gov.uk/health'},
+    {name: 'visit-scheduler', versionUrl: 'https://visit-scheduler-preprod.hmpps.service.justice.gov.uk/info', url: 'https://visit-scheduler-preprod.hmpps.service.justice.gov.uk/health'},
 ]
 
 staging_servers = [
@@ -199,6 +203,8 @@ dev_servers = [
     {name: 'create-and-vary-a-licence', url: 'https://create-and-vary-a-licence-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'calculate-release-dates-api', versionUrl: 'https://calculate-release-dates-api-dev.hmpps.service.justice.gov.uk/info', url: 'https://calculate-release-dates-api-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'calculate-release-dates', url: 'https://calculate-release-dates-dev.hmpps.service.justice.gov.uk/health'},
+    {name: 'book-a-prison-visit-staff-ui', url: 'https://manage-a-prison-visit-dev.hmpps.service.justice.gov.uk/health'},
+    {name: 'visit-scheduler', versionUrl: 'https://visit-scheduler-dev.hmpps.service.justice.gov.uk/info', url: 'https://visit-scheduler-dev.hmpps.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
