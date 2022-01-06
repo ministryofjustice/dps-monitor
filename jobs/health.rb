@@ -207,7 +207,7 @@ dev_servers = [
     {name: 'calculate-release-dates', url: 'https://calculate-release-dates-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'book-a-prison-visit-staff-ui', url: 'https://manage-a-prison-visit-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'visit-scheduler', versionUrl: 'https://visit-scheduler-dev.hmpps.service.justice.gov.uk/info', url: 'https://visit-scheduler-dev.hmpps.service.justice.gov.uk/health'},
-    {name: 'hmpps-prisoner-to-nomis-update', versionUrl: 'https://prisoner-to-nomis-update.hmpps.service.justice.gov.uk/info', url: 'https://prisoner-to-nomis-update.hmpps.service.justice.gov.uk/health'},
+    {name: 'hmpps-prisoner-to-nomis-update', versionUrl: 'https://prisoner-to-nomis-update-dev.hmpps.service.justice.gov.uk/info', url: 'https://prisoner-to-nomis-update-dev.hmpps.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
