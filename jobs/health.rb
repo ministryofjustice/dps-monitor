@@ -80,6 +80,7 @@ prod_servers = [
     {name: 'hmpps-manage-users-api', versionUrl: 'https://manage-users-api.hmpps.service.justice.gov.uk/info', url: 'https://manage-users-api.hmpps.service.justice.gov.uk/health'},
     {name: 'book-a-prison-visit-staff-ui', url: 'https://manage-a-prison-visit.hmpps.service.justice.gov.uk/health'},
     {name: 'visit-scheduler', versionUrl: 'https://visit-scheduler.hmpps.service.justice.gov.uk/info', url: 'https://visit-scheduler.hmpps.service.justice.gov.uk/health'},
+    {name: 'hmpps-prisoner-to-nomis-update', versionUrl: 'https://prisoner-to-nomis-update.hmpps.service.justice.gov.uk/info', url: 'https://prisoner-to-nomis-update.hmpps.service.justice.gov.uk/health'},
 ]
 
 preprod_servers = [
@@ -134,6 +135,7 @@ preprod_servers = [
     {name: 'hmpps-manage-users-api', versionUrl: 'https://manage-users-api-preprod.hmpps.service.justice.gov.uk/info', url: 'https://manage-users-api-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'book-a-prison-visit-staff-ui', url: 'https://manage-a-prison-visit-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'visit-scheduler', versionUrl: 'https://visit-scheduler-preprod.hmpps.service.justice.gov.uk/info', url: 'https://visit-scheduler-preprod.hmpps.service.justice.gov.uk/health'},
+    {name: 'hmpps-prisoner-to-nomis-update', versionUrl: 'https://prisoner-to-nomis-update-preprod.hmpps.service.justice.gov.uk/info', url: 'https://prisoner-to-nomis-update-preprod.hmpps.service.justice.gov.uk/health'},
 ]
 
 staging_servers = [
@@ -205,6 +207,7 @@ dev_servers = [
     {name: 'calculate-release-dates', url: 'https://calculate-release-dates-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'book-a-prison-visit-staff-ui', url: 'https://manage-a-prison-visit-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'visit-scheduler', versionUrl: 'https://visit-scheduler-dev.hmpps.service.justice.gov.uk/info', url: 'https://visit-scheduler-dev.hmpps.service.justice.gov.uk/health'},
+    {name: 'hmpps-prisoner-to-nomis-update', versionUrl: 'https://prisoner-to-nomis-update.hmpps.service.justice.gov.uk/info', url: 'https://prisoner-to-nomis-update.hmpps.service.justice.gov.uk/health'},
 ]
 
 # Any service which does not have a preprod instance should be placed in this list.
