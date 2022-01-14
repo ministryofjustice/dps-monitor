@@ -32,7 +32,7 @@ prod_servers = [
     {name: 'prison-api', versionUrl: 'https://api.prison.service.justice.gov.uk/info', url: 'https://api.prison.service.justice.gov.uk/health'},
     {name: 'dps-core', url: 'https://digital.prison.service.justice.gov.uk/health'},
     {name: 'manage-key-workers', url: 'https://manage-key-workers.service.justice.gov.uk/health'},
-    {name: 'manage-hmpps-auth-accounts', url: 'https://manage-hmpps-auth-accounts.prison.service.justice.gov.uk/health'},
+    {name: 'hmpps-manage-users', url: 'https://manage-users.hmpps.service.justice.gov.uk/health'},
     {name: 'keyworker-api', versionUrl: 'https://keyworker-api.prison.service.justice.gov.uk/info', url: 'https://keyworker-api.prison.service.justice.gov.uk/health'},
     {name: 'hmpps-auth', versionUrl: 'https://sign-in.hmpps.service.justice.gov.uk/auth/info', url: 'https://sign-in.hmpps.service.justice.gov.uk/auth/health'},
     {name: 'offender-categorisation', url: 'https://health-kick.prison.service.justice.gov.uk/https/offender-categorisation.service.justice.gov.uk'},
@@ -75,15 +75,15 @@ prod_servers = [
     {name: 'hmpps-restricted-patients-api', versionUrl: 'https://restricted-patients-api.hmpps.service.justice.gov.uk/info', url: 'https://restricted-patients-api.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-welcome-people-into-prison-api', versionUrl: 'https://welcome-api.prison.service.justice.gov.uk/info', url: 'https://welcome-api.prison.service.justice.gov.uk/health' },
     {name: 'hmpps-welcome-people-into-prison-ui', url: 'https://welcome.prison.service.justice.gov.uk/health'},
-    {name: 'prison-to-nhs-update', versionUrl: 'https://prison-to-nhs-update-dev.prison.service.justice.gov.uk/info', url: 'https://prison-to-nhs-update-dev.prison.service.justice.gov.uk/health'},
+    {name: 'prison-to-nhs-update', versionUrl: 'https://prison-to-nhs-update.prison.service.justice.gov.uk/info', url: 'https://prison-to-nhs-update.prison.service.justice.gov.uk/health'},
     {name: 'nomis-user-roles-api', versionUrl: 'https://nomis-user.aks-live-1.studio-hosting.service.justice.gov.uk/info', url: 'https://nomis-user.aks-live-1.studio-hosting.service.justice.gov.uk/health'},
     {name: 'hmpps-manage-users-api', versionUrl: 'https://manage-users-api.hmpps.service.justice.gov.uk/info', url: 'https://manage-users-api.hmpps.service.justice.gov.uk/health'},
     {name: 'book-a-prison-visit-staff-ui', url: 'https://manage-a-prison-visit.hmpps.service.justice.gov.uk/health'},
     {name: 'visit-scheduler', versionUrl: 'https://visit-scheduler.hmpps.service.justice.gov.uk/info', url: 'https://visit-scheduler.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-prisoner-to-nomis-update', versionUrl: 'https://prisoner-to-nomis-update.hmpps.service.justice.gov.uk/info', url: 'https://prisoner-to-nomis-update.hmpps.service.justice.gov.uk/health'},
+    {name: 'hmpps-nomis-prisoner-api', versionUrl: 'https://nomis-prisoner.aks-live-1.studio-hosting.service.justice.gov.uk/info', url: 'https://nomis-prisoner.aks-live-1.studio-hosting.service.justice.gov.uk/health'},
     {name: 'hmpps-incentives-ui', url: 'https://incentives-ui.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-incentives-api', versionUrl: 'https://incentives-api.hmpps.service.justice.gov.uk/info', url: 'https://incentives-api.hmpps.service.justice.gov.uk/health'},
-
 ]
 
 preprod_servers = [
@@ -91,7 +91,7 @@ preprod_servers = [
     {name: 'keyworker-api', versionUrl: 'https://keyworker-api-preprod.prison.service.justice.gov.uk/info', url: 'https://keyworker-api-preprod.prison.service.justice.gov.uk/health'},
     {name: 'dps-core', url: 'https://digital-preprod.prison.service.justice.gov.uk/health'},
     {name: 'manage-key-workers', url: 'https://preprod.manage-key-workers.service.justice.gov.uk/health'},
-    {name: 'manage-hmpps-auth-accounts', url: 'https://manage-hmpps-auth-accounts-preprod.prison.service.justice.gov.uk/health'},
+    {name: 'hmpps-manage-users', url: 'https://manage-users-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-auth', versionUrl: 'https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/info', url: 'https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/health'},
     {name: 'offender-categorisation', url: 'https://health-kick.prison.service.justice.gov.uk/https/preprod.offender-categorisation.service.justice.gov.uk'},
     {name: 'whereabouts-api', versionUrl: 'https://whereabouts-api-preprod.service.justice.gov.uk/info', url: 'https://whereabouts-api-preprod.service.justice.gov.uk/health'},
@@ -139,9 +139,9 @@ preprod_servers = [
     {name: 'book-a-prison-visit-staff-ui', url: 'https://manage-a-prison-visit-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'visit-scheduler', versionUrl: 'https://visit-scheduler-preprod.hmpps.service.justice.gov.uk/info', url: 'https://visit-scheduler-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-prisoner-to-nomis-update', versionUrl: 'https://prisoner-to-nomis-update-preprod.hmpps.service.justice.gov.uk/info', url: 'https://prisoner-to-nomis-update-preprod.hmpps.service.justice.gov.uk/health'},
+    {name: 'hmpps-nomis-prisoner-api', versionUrl: 'https://nomis-prsner-pp.aks-live-1.studio-hosting.service.justice.gov.uk/info', url: 'https://nomis-prsner-pp.aks-live-1.studio-hosting.service.justice.gov.uk/health'},
     {name: 'hmpps-incentives-ui', url: 'https://incentives-ui-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-incentives-api', versionUrl: 'https://incentives-api-preprod.hmpps.service.justice.gov.uk/info', url: 'https://incentives-api-preprod.hmpps.service.justice.gov.uk/health'},
-
 ]
 
 staging_servers = [
@@ -159,12 +159,11 @@ dev_servers = [
     {name: 'keyworker-api', versionUrl: 'https://keyworker-api-dev.prison.service.justice.gov.uk/info', url: 'https://keyworker-api-dev.prison.service.justice.gov.uk/health'},
     {name: 'dps-core', url: 'https://digital-dev.prison.service.justice.gov.uk/health'},
     {name: 'manage-key-workers', url: 'https://dev.manage-key-workers.service.justice.gov.uk/health'},
-    {name: 'manage-hmpps-auth-accounts', url: 'https://manage-hmpps-auth-accounts-dev.prison.service.justice.gov.uk/health'},
+    {name: 'hmpps-manage-users', url: 'https://manage-users-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-auth', versionUrl: 'https://sign-in-dev.hmpps.service.justice.gov.uk/auth/info', url: 'https://sign-in-dev.hmpps.service.justice.gov.uk/auth/health'},
     {name: 'offender-categorisation', url: 'https://dev.offender-categorisation.service.justice.gov.uk/health'},
     {name: 'whereabouts-api', versionUrl: 'https://whereabouts-api-dev.service.justice.gov.uk/info', url: 'https://whereabouts-api-dev.service.justice.gov.uk/health'},
     {name: 'offender-case-notes', versionUrl: 'https://dev.offender-case-notes.service.justice.gov.uk/info', url: 'https://dev.offender-case-notes.service.justice.gov.uk/health'},
-    {name: 'offender-assessments-api', versionUrl: 'https://dev.devtest.assessment-api.hmpps.dsd.io/info', url: 'https://dev.devtest.assessment-api.hmpps.dsd.io/health'},
     {name: 'licences', url: 'https://licences-dev.prison.service.justice.gov.uk/health'},
     {name: 'community-api', versionUrl: 'https://community-api.test.probation.service.justice.gov.uk/info', url: 'https://community-api.test.probation.service.justice.gov.uk/health'},
     {name: 'use-of-force', url: 'https://dev.use-of-force.service.justice.gov.uk/health'},
@@ -214,6 +213,7 @@ dev_servers = [
     {name: 'book-a-prison-visit-staff-ui', url: 'https://manage-a-prison-visit-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'visit-scheduler', versionUrl: 'https://visit-scheduler-dev.hmpps.service.justice.gov.uk/info', url: 'https://visit-scheduler-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-prisoner-to-nomis-update', versionUrl: 'https://prisoner-to-nomis-update-dev.hmpps.service.justice.gov.uk/info', url: 'https://prisoner-to-nomis-update-dev.hmpps.service.justice.gov.uk/health'},
+    {name: 'hmpps-nomis-prisoner-api', versionUrl: 'https://nomis-prsner-dev.aks-dev-1.studio-hosting.service.justice.gov.uk/info', url: 'https://nomis-prsner-dev.aks-dev-1.studio-hosting.service.justice.gov.uk/health'},
     {name: 'hmpps-incentives-ui', url: 'https://incentives-ui-dev.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-incentives-api', versionUrl: 'https://incentives-api-dev.hmpps.service.justice.gov.uk/info', url: 'https://incentives-api-dev.hmpps.service.justice.gov.uk/health'},
 ]
