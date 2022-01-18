@@ -97,7 +97,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler-audit (~> 0.7.0)
-  date (>= 3.2.1)
+  date (~> 3.2.2)
   httparty
   rubocop
   smashing
