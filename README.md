@@ -7,6 +7,8 @@ The project is based on Smashing.
 Installs
 --------
 
+The docker file uses an image based on Ruby 3.1.0 so local installs should match this and use bundler:2.3.3
+
 Packages needed
 ----
 ```
@@ -21,18 +23,25 @@ e.g. For Ubuntu this was:
 
 ```
 $ sudo apt-get install ruby ruby-dev build-essential nodejs
+```
 
+or (depending on your Ubuntu version)
+
+Install RVM and use it to install version 3.1.0
+
+```
+$ rvm install 3.1.0
 ```
 
 
 Build
 ----
 ```
-$ sudo gem install bundler
+$ sudo gem install bundler (or bundler:2.3.3 if your OS does not match exactly)
 $ sudo gem install smashing
 $ cd dps-monitor/
 $ rm Gemfile.lock   (will not build on some platforms without this - Ubuntu)
-$ bundle install
+$ bundle install    (will recreate Gemfile.lock)
 ```
 
 Run

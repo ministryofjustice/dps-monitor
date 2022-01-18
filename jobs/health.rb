@@ -142,6 +142,8 @@ preprod_servers = [
     {name: 'hmpps-nomis-prisoner-api', versionUrl: 'https://nomis-prsner-pp.aks-live-1.studio-hosting.service.justice.gov.uk/info', url: 'https://nomis-prsner-pp.aks-live-1.studio-hosting.service.justice.gov.uk/health'},
     {name: 'hmpps-incentives-ui', url: 'https://incentives-ui-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-incentives-api', versionUrl: 'https://incentives-api-preprod.hmpps.service.justice.gov.uk/info', url: 'https://incentives-api-preprod.hmpps.service.justice.gov.uk/health'},
+    {name: 'create-and-vary-a-licence-api', versionUrl: 'https://create-and-vary-a-licence-api-preprod.hmpps.service.justice.gov.uk/info', url: 'https://create-and-vary-a-licence-api-preprod.hmpps.service.justice.gov.uk/health'},
+    {name: 'create-and-vary-a-licence', url: 'https://create-and-vary-a-licence-preprod.hmpps.service.justice.gov.uk/health'},
 ]
 
 staging_servers = [
