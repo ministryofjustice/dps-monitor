@@ -7,7 +7,7 @@ orbs:
 executors:
   ruby:
     docker:
-      - image: cimg/ruby:3.0-node
+      - image: cimg/ruby:3.1-node
     working_directory: ~/app
 
 jobs:
