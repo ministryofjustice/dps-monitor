@@ -5,7 +5,7 @@ ruby "~> 3.1.0"
 
 gem 'httparty'
 gem 'smashing'
-gem "date", ">= 3.2.1"
+gem 'date', '~> 3.2.2'
 
 group :dev do
   gem 'bundler-audit', '~> 0.7.0'
