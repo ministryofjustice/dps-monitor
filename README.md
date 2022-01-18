@@ -44,6 +44,18 @@ $ rm Gemfile.lock   (will not build on some platforms without this - Ubuntu)
 $ bundle install    (will recreate Gemfile.lock)
 ```
 
+Auditing - pre-check as could fail in circle tests
+--------------------------------------------------
+
+Run the following after a bundle install has completed:
+
+```
+$ bundle exec bundle audit check --update
+```
+
+If there are vulnerabilities reported, consider updating the version of bundler-audit (current 0.9.0) or other
+gems reporting issues.
+
 Run
 ----
 ```
