@@ -125,3 +125,10 @@ Stop:
 docker stop dps-monitor
 docker rm -vf dps-monitor
 ```
+
+## Trivy scan issues in CircleCI overnight jobs
+
+These can be raised for issues relating to the packages that are installed at the time the image is built.
+A docker image rebuild will usually sort these out as it pulls in the latest packages available at the time, including any fixes.
+Build the image locally (instructions above) to see which versions of packages are used.
+
