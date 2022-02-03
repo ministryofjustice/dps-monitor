@@ -84,6 +84,8 @@ prod_servers = [
     {name: 'hmpps-nomis-prisoner-api', versionUrl: 'https://nomis-prisoner.aks-live-1.studio-hosting.service.justice.gov.uk/info', url: 'https://nomis-prisoner.aks-live-1.studio-hosting.service.justice.gov.uk/health'},
     {name: 'hmpps-incentives-ui', url: 'https://incentives-ui.hmpps.service.justice.gov.uk/health'},
     {name: 'hmpps-incentives-api', versionUrl: 'https://incentives-api.hmpps.service.justice.gov.uk/info', url: 'https://incentives-api.hmpps.service.justice.gov.uk/health'},
+    {name: 'calculate-release-dates-api', versionUrl: 'https://calculate-release-dates-api.hmpps.service.justice.gov.uk/info', url: 'https://calculate-release-dates-api.hmpps.service.justice.gov.uk/health'},
+    {name: 'calculate-release-dates', url: 'https://calculate-release-dates.hmpps.service.justice.gov.uk/health'},
 ]
 
 preprod_servers = [
@@ -144,6 +146,8 @@ preprod_servers = [
     {name: 'hmpps-incentives-api', versionUrl: 'https://incentives-api-preprod.hmpps.service.justice.gov.uk/info', url: 'https://incentives-api-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'create-and-vary-a-licence-api', versionUrl: 'https://create-and-vary-a-licence-api-preprod.hmpps.service.justice.gov.uk/info', url: 'https://create-and-vary-a-licence-api-preprod.hmpps.service.justice.gov.uk/health'},
     {name: 'create-and-vary-a-licence', url: 'https://create-and-vary-a-licence-preprod.hmpps.service.justice.gov.uk/health'},
+    {name: 'calculate-release-dates-api', versionUrl: 'https://calculate-release-dates-api-preprod.hmpps.service.justice.gov.uk/info', url: 'https://calculate-release-dates-api-preprod.hmpps.service.justice.gov.uk/health'},
+    {name: 'calculate-release-dates', url: 'https://calculate-release-dates-preprod.hmpps.service.justice.gov.uk/health'},
 ]
 
 staging_servers = [
