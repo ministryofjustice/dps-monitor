@@ -1,7 +1,7 @@
 <script type='text/javascript'>
   $(function() {
     Dashing.widget_base_dimensions = [300, 150];
-    Dashing.numColumns = 12;
+    Dashing.numColumns = <%= params['team'] ? 6 : 12 %>;
   });
 </script>
 
@@ -9,22 +9,27 @@
 <% end %>
 <div class="gridster">
   <ul>
-    <% Config::PROJECTS.each_with_index do |data, index| %>
+    <% if params['team'] %>
+      <li data-row="1" data-col="1" data-sizex="<%= params['team'] ? 6 : 12 %>" data-sizey="1">
+        <div data-view="ServerStatusSquares" data-title="<%= Config::TEAMS_TITLES[params['team']] %> - Service Health"></div>
+      </li>
+    <% end %>
+    <% (params['team'] ? Config::TEAM_PROJECTS[params['team']] : Config::PROJECTS).each_with_index do |data, index| %>
       <% if data[:prodUrl] %>
-        <li data-row="<%= (index / 12) * 4 + 1 %>" data-col="<%= (index % 12) + 1 %>" data-sizex="1" data-sizey="1">
+        <li data-row="<%= (index / (params['team'] ? 6 : 12)) * 4 + (params['team'] ? 1 : 0) + 1 %>" data-col="<%= (index % (params['team'] ? 6 : 12)) + 1 %>" data-sizex="1" data-sizey="1">
           <div data-id="<%= data[:name] %>-prod" data-view="ServerStatusSquares" data-title="<%= data[:title] %> - Prod"></div>
         </li>
       <% end %>
       <% if data[:preprodUrl] %>
-        <li data-row="<%= (index / 12) * 4 + 2 %>" data-col="<%= (index % 12) + 1 %>" data-sizex="1" data-sizey="1">
+        <li data-row="<%= (index / (params['team'] ? 6 : 12)) * 4 + (params['team'] ? 1 : 0) + 2 %>" data-col="<%= (index % (params['team'] ? 6 : 12)) + 1 %>" data-sizex="1" data-sizey="1">
           <div data-id="<%= data[:name] %>-preprod" data-view="ServerStatusSquares" data-title="<%= data[:title] %> - PreProd"></div>
         </li>
       <% end %>
-      <li data-row="<%= (index / 12) * 4 + 3 %>" data-col="<%= (index % 12) + 1 %>" data-sizex="1" data-sizey="1">
+      <li data-row="<%= (index / (params['team'] ? 6 : 12)) * 4 + (params['team'] ? 1 : 0) + 3 %>" data-col="<%= (index % (params['team'] ? 6 : 12)) + 1 %>" data-sizex="1" data-sizey="1">
         <div data-id="<%= data[:name] %>-dev" data-view="ServerStatusSquares" data-title="<%= data[:title] %> - Dev"></div>
       </li>
       <% if data[:stagingUrl] %>
-        <li data-row="<%= (index / 12) * 4 + 4 %>" data-col="<%= (index % 12) + 1 %>" data-sizex="1" data-sizey="1">
+        <li data-row="<%= (index / (params['team'] ? 6 : 12)) * 4 + (params['team'] ? 1 : 0) + 4 %>" data-col="<%= (index % (params['team'] ? 6 : 12)) + 1 %>" data-sizex="1" data-sizey="1">
           <div data-id="<%= data[:name] %>-staging" data-view="ServerStatusSquares" data-title="<%= data[:title] %> - Staging"></div>
         </li>
       <% end %>
