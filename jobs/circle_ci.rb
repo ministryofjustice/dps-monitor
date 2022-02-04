@@ -1,80 +1,11 @@
 require 'httparty'
 # require 'digest/md5'
 
-projects = [
-  { vcs: 'github', user: 'ministryofjustice', repo: 'manage-key-workers', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'keyworker-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'digital-prison-services', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-manage-users', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'offender-categorisation', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'offender-risk-profiler', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'new-nomis-ui', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-auth', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'prison-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'community-api', branch: 'master'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'whereabouts-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'offender-case-notes', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'licences', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'use-of-force', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'pathfinder', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'prison-offender-events', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'dps-data-compliance', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'case-notes-to-probation', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'probation-teams', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'prison-to-probation-update', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'probation-offender-search', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'check-my-diary', branch: 'master'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'token-verification-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'prisoner-offender-search', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'pathfinder-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'manage-soc-cases', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'manage-soc-cases-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'probation-offender-search-indexer', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-prisoner-communication-monitoring', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-prisoner-communication-monitoring-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'probation-offender-events', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-template-kotlin', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'prison-services-feedback-and-support', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'manage-intelligence', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'manage-intelligence-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-submit-information-report', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-book-video-link', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'court-register', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'prison-register', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-audit-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-registers', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-registers-to-delius-update', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-registers-to-nomis-update', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-book-secure-move-frontend', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-book-secure-move-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'calculate-journey-variable-payments', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-manage-adjudications', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-manage-adjudications-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-restricted-patients', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-restricted-patients-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-welcome-people-into-prison-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-welcome-people-into-prison-ui', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'nomis-user-roles-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-nomis-prisoner-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'prison-to-nhs-update', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-manage-users-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'create-and-vary-a-licence', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'create-and-vary-a-licence-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'calculate-release-dates', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'calculate-release-dates-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'visit-scheduler', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'book-a-prison-visit-staff-ui', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-nomis-prisoner-api', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-prisoner-to-nomis-update', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-incentives-ui', branch: 'main'},
-  { vcs: 'github', user: 'ministryofjustice', repo: 'hmpps-incentives-api', branch: 'main'},
-]
-
 def duration(time)
-  secs  = time.to_int
-  mins  = secs / 60
+  secs = time.to_int
+  mins = secs / 60
   hours = mins / 60
-  days  = hours / 24
+  days = hours / 24
 
   if days > 0
     "#{days}d #{hours % 24}h ago"
@@ -94,32 +25,32 @@ end
 def translate_status_to_class(status)
   statuses = {
     'success' => 'passed',
-      'fixed' => 'passed',
+    'fixed' => 'passed',
     'running' => 'pending',
-     'failed' => 'failed'
+    'failed' => 'failed'
   }
   statuses[status] || 'pending'
 end
 
-
-def build_data(project, auth_token)
+def build_data(auth_token, repo)
   api_url = 'https://circleci.com/api/v1.1/project/%s/%s/%s/tree/%s?circle-token=%s&limit=1'
-  api_url = api_url % [project[:vcs], project[:user], project[:repo], project[:branch], auth_token]
-  api_response =  HTTParty.get(api_url, :headers => { "Accept" => "application/json" } )
+  api_url = api_url % ['github', 'ministryofjustice', repo, 'main', auth_token]
+  api_response = HTTParty.get(api_url, :headers => { "Accept" => "application/json" })
+
   api_json = JSON.parse(api_response.body)
   return {} if api_json.empty?
   email_hash = nil
 
   if api_response.code == 404
-    puts "Project not found, or private: #{project[:repo]}"
+    puts "Project not found, or private: #{repo}"
     return {}
   end
 
-  latest_build = api_json.select{ |build| build['status'] != 'queued' }.first
+  latest_build = api_json.select { |build| build['status'] != 'queued' }.first
   unless latest_build.nil? or latest_build.empty?
     email = latest_build['author_email']
     unless email.nil?
-       email_hash = Digest::MD5.hexdigest(email)
+      email_hash = Digest::MD5.hexdigest(email)
     end
 
     build_id = "#{latest_build['branch']}, build ##{latest_build['build_num']}"
@@ -132,7 +63,7 @@ def build_data(project, auth_token)
 
     data = {
       build_id: build_id,
-      repo: "#{project[:repo]}",
+      repo: repo,
       branch: "#{latest_build['branch']}",
       time: "#{calculate_time(latest_build['stop_time'])}",
       state: "#{latest_build['status'].capitalize}",
@@ -147,10 +78,11 @@ def build_data(project, auth_token)
   nil
 end
 
-SCHEDULER.every '5m', :first_in => 0  do
-  projects.each do |project|
-    data_id = "circle-ci-#{project[:user]}-#{project[:repo]}-#{project[:branch]}"
-    data = build_data(project, ENV['CIRCLE_CI_TOKEN'])
+SCHEDULER.every '5m', :first_in => 0 do
+  Config::PROJECTS.each do |project|
+    repo = project[:repo] || project[:name]
+    data_id = "circle-ci-ministryofjustice-#{repo}-main"
+    data = build_data(ENV['CIRCLE_CI_TOKEN'], repo)
     send_event(data_id, data) unless (data.nil? or data.empty?)
   end
 end
