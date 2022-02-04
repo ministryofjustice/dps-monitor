@@ -15,6 +15,7 @@ module Config
       preprodUrl: 'https://api-preprod.prison.service.justice.gov.uk',
       devUrl: 'https://api-dev.prison.service.justice.gov.uk',
       title: 'Prison API',
+      teams: ['syscon'],
     },
     {
       name: 'hmpps-restricted-patients',
@@ -68,6 +69,7 @@ module Config
       preprodUrl: 'https://manage-soc-cases-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://manage-soc-cases-dev.hmpps.service.justice.gov.uk',
       title: 'Manage SOC Cases',
+      teams: ['mase'],
     },
     {
       name: 'offender-case-notes',
@@ -84,6 +86,7 @@ module Config
       preprodUrl: 'https://health-kick.prison.service.justice.gov.uk/https/preprod.offender-categorisation.service.justice.gov.uk',
       devUrl: 'https://dev.offender-categorisation.service.justice.gov.uk',
       title: 'Offender Categorisation',
+      teams: ['mase'],
     },
     {
       name: 'check-my-diary',
@@ -99,6 +102,14 @@ module Config
       preprodUrl: 'https://offender-events-preprod.prison.service.justice.gov.uk',
       devUrl: 'https://offender-events-dev.prison.service.justice.gov.uk',
       title: 'Prison Offender Events',
+      teams: ['syscon'],
+    },
+    {
+      name: 'offender-events-ui',
+      versionPath: '/info',
+      devUrl: 'https://offender-events-ui-dev.prison.service.justice.gov.uk',
+      title: 'Offender Events UI',
+      teams: ['syscon'],
     },
     {
       name: 'prisoner-offender-search',
@@ -107,6 +118,7 @@ module Config
       preprodUrl: 'https://prisoner-offender-search-preprod.prison.service.justice.gov.uk',
       devUrl: 'https://prisoner-offender-search-dev.prison.service.justice.gov.uk',
       title: 'Prisoner Offender Search',
+      teams: ['syscon'],
     },
     {
       name: 'licences',
@@ -121,6 +133,7 @@ module Config
       preprodUrl: 'https://health-kick.prison.service.justice.gov.uk/https/preprod.pathfinder.service.justice.gov.uk',
       devUrl: 'https://dev.pathfinder.service.justice.gov.uk',
       title: 'Pathfinder',
+      teams: ['mase'],
     },
     {
       name: 'use-of-force',
@@ -176,6 +189,7 @@ module Config
       preprodUrl: 'https://preprod-api.pathfinder.service.justice.gov.uk',
       devUrl: 'https://dev-api.pathfinder.service.justice.gov.uk',
       title: 'Pathfinder API',
+      teams: ['mase'],
     },
     {
       name: 'prison-services-feedback-and-support',
@@ -227,6 +241,7 @@ module Config
       preprodUrl: 'https://pcms-qa.prison.service.justice.gov.uk',
       devUrl: 'https://pcms-dev.prison.service.justice.gov.uk',
       title: 'PCMS',
+      teams: ['mase'],
     },
     {
       name: 'pcms-api',
@@ -236,6 +251,7 @@ module Config
       preprodUrl: 'https://pcms-api-qa.prison.service.justice.gov.uk',
       devUrl: 'https://pcms-api-dev.prison.service.justice.gov.uk',
       title: 'PCMS API',
+      teams: ['mase'],
     },
     {
       name: 'hmpps-manage-users',
@@ -254,12 +270,46 @@ module Config
       name: 'manage-intelligence',
       devUrl: 'https://manage-intelligence-dev.prison.service.justice.gov.uk',
       title: 'Manage Intelligence',
+      teams: ['mase'],
     },
     {
       name: 'manage-intelligence-api',
       versionPath: '/info',
       devUrl: 'https://manage-intelligence-api-dev.prison.service.justice.gov.uk',
       title: 'Manage Intelligence API',
+      teams: ['mase'],
+    },
+    {
+      name: 'hmpps-submit-information-report',
+      devUrl: 'https://submit-information-report-dev.hmpps.service.justice.gov.uk',
+      title: 'HMPPS Submit Information Report',
+      teams: ['mase'],
+    },
+    {
+      name: 'calculate-journey-variable-payments',
+      versionPath: '/info',
+      prodUrl: 'https://calculate-journey-variable-payments.hmpps.service.justice.gov.uk',
+      preprodUrl: 'https://calculate-journey-variable-payments-preprod.apps.live-1.cloud-platform.service.justice.gov.uk',
+      devUrl: 'https://calculate-journey-variable-payments-dev.apps.live-1.cloud-platform.service.justice.gov.uk',
+      title: 'Calculate Journey Variable Payments',
+      teams: ['mase'],
+    },
+    {
+      name: 'hmpps-book-secure-move-frontend',
+      healthPath: '/healthcheck',
+      prodUrl: 'https://bookasecuremove.service.justice.gov.uk',
+      preprodUrl: 'https://hmpps-book-secure-move-frontend-preprod.apps.live-1.cloud-platform.service.justice.gov.uk',
+      devUrl: 'https://hmpps-book-secure-move-frontend-staging.apps.live-1.cloud-platform.service.justice.gov.uk',
+      title: 'HMPPS Book A Secure Move',
+      teams: ['mase'],
+    },
+    {
+      name: 'hmpps-book-secure-move-api',
+      prodUrl: 'https://api.bookasecuremove.service.justice.gov.uk',
+      preprodUrl: 'https://hmpps-book-secure-move-api-preprod.apps.live-1.cloud-platform.service.justice.gov.uk',
+      devUrl: 'https://hmpps-book-secure-move-api-staging.apps.live-1.cloud-platform.service.justice.gov.uk',
+      title: 'HMPPS Book A Secure Move API',
+      teams: ['mase'],
     },
     {
       name: 'nomis-user-roles-api',
@@ -277,6 +327,7 @@ module Config
       preprodUrl: 'https://nomis-prsner-pp.aks-live-1.studio-hosting.service.justice.gov.uk',
       devUrl: 'https://nomis-prsner-dev.aks-dev-1.studio-hosting.service.justice.gov.uk',
       title: 'NOMIS Prisoner API',
+      teams: ['syscon'],
     },
     {
       name: 'court-register',
@@ -331,6 +382,7 @@ module Config
       preprodUrl: 'https://registers-to-nomis-update-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://registers-to-nomis-update-dev.hmpps.service.justice.gov.uk',
       title: 'HMPPS Registers to Nomis Update',
+      teams: ['syscon'],
     },
     {
       name: 'hmpps-welcome-people-into-prison-api',
@@ -354,6 +406,7 @@ module Config
       preprodUrl: 'https://manage-soc-cases-api-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://manage-soc-cases-api-dev.hmpps.service.justice.gov.uk',
       title: 'Manage SOC Cases API',
+      teams: ['mase'],
     },
     {
       name: 'hmpps-manage-adjudications',
@@ -436,6 +489,25 @@ module Config
       preprodUrl: 'https://prisoner-to-nomis-update-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://prisoner-to-nomis-update-dev.hmpps.service.justice.gov.uk',
       title: 'HMPPS Prisoner to NOMIS Update',
+      teams: ['syscon'],
+    },
+    {
+      name: 'hmpps-prisoner-from-nomis-migration',
+      versionPath: '/info',
+      prodUrl: 'https://prisoner-nomis-migration.hmpps.service.justice.gov.uk',
+      preprodUrl: 'https://prisoner-nomis-migration-preprod.hmpps.service.justice.gov.uk',
+      devUrl: 'https://prisoner-nomis-migration-dev.hmpps.service.justice.gov.uk',
+      title: 'HMPPS Prisoner from NOMIS Migration',
+      teams: ['syscon'],
+    },
+    {
+      name: 'hmpps-nomis-visits-mapping-service',
+      versionPath: '/info',
+      prodUrl: 'https://nomis-visits-mapping.hmpps.service.justice.gov.uk',
+      preprodUrl: 'https://nomis-visits-mapping-preprod.hmpps.service.justice.gov.uk',
+      devUrl: 'https://nomis-visits-mapping-dev.hmpps.service.justice.gov.uk',
+      title: 'HMPPS NOMIS Visits Mapping',
+      teams: ['syscon']
     },
     {
       name: 'hmpps-incentives-ui',
@@ -453,4 +525,14 @@ module Config
       title: 'Incentives API',
     },
   ]
+
+  TEAMS = [
+    { name: 'mase', title: 'Manage a Secure Area (MASE)' },
+    { name: 'syscon', title: 'Syscon Projects' }
+  ]
+  TEAMS_TITLES = TEAMS.map { |team| [team[:name], team[:title]] }.to_h
+
+  TEAM_PROJECTS = TEAMS.map { |team|
+    [team[:name], PROJECTS.filter { |project| project[:teams]&.include? team[:name] }]
+  }.to_h
 end

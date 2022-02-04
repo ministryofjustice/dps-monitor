@@ -1,14 +1,20 @@
 <script type='text/javascript'>
     $(function() {
         Dashing.widget_base_dimensions = [350, 350]
-        Dashing.numColumns = 10
+        Dashing.numColumns = <%= params['team'] ? 6 : 10 %>
     });
 </script>
 <% content_for(:title) { "Build Status" } %>
 <div class="gridster">
   <ul>
-    <% Config::PROJECTS.each_with_index do |data, index| %>
-      <li data-row="<%= (index / 10) + 1 %>" data-col="<%= (index % 10) + 1 %>" data-sizex="1" data-sizey="1">
+    <% if params['team'] %>
+      <li data-row="1" data-col="1" data-sizex="<%= params['team'] ? 6 : 10 %>" data-sizey="1">
+        <div data-view="ServerStatusSquares" data-title="<%= Config::TEAMS_TITLES[params['team']] %> - Circle Health"></div>
+      </li>
+    <% end %>
+
+    <% (params['team'] ? Config::TEAM_PROJECTS[params['team']] : Config::PROJECTS).each_with_index do |data, index| %>
+      <li data-row="<%= (index / (params['team'] ? 6 : 10)) + 1 %>" data-col="<%= (index % (params['team'] ? 6 : 10)) + 1 %>" data-sizex="1" data-sizey="1">
         <div data-id="circle-ci-ministryofjustice-<%=data[:repo] || data[:name]%>-main" data-view="CircleCi" data-title="<%=data[:title]%>"></div>
       </li>
     <% end %>

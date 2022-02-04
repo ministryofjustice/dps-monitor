@@ -41,38 +41,34 @@ def valid_json?(string)
 end
 
 def get_version(version_data)
-  version = nil
-
-  unless version_data.nil?
-
-    # Try a top-level key called 'version'
-    if version_data.key?("version")
-      version = version_data['version']
-    end
-
-    # Try ['healthInfo]['version']
-    if version.nil?
-      if version_data.key?("healthInfo")
-        version = version_data['healthInfo']['version']
-      end
-    end
-
-    # Try ['build']['buildNumber']
-    if version.nil?
-      if version_data.key?("build")
-        version = version_data['build']['buildNumber']
-      end
-    end
-
-    # Try ['build']['status']
-    if version.nil?
-      if version_data.key?("build")
-        version = version_data['build']['status']
-      end
-    end
+  if version_data.nil?
+    return nil
   end
 
-  version
+  # Try a top-level key called 'version'
+  if version_data.key?("version")
+    return version_data['version']
+  end
+
+  # Try ['healthInfo]['version']
+  if version_data.key?("healthInfo")
+    return version_data['healthInfo']['version']
+  end
+
+  # Try ['build']['buildNumber']
+  if version_data.key?("build")
+    return version_data['build']['buildNumber']
+  end
+
+  # Try ['build']['status']
+  if version_data.key?("build")
+    return version_data['build']['status']
+  end
+
+  # Try a top-level key called 'build_date'
+  if version_data.key?("build_date")
+    version_data['build_date']
+  end
 end
 
 def gather_health_data(server, env)

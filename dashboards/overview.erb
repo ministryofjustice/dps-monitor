@@ -1,22 +1,28 @@
 <script type='text/javascript'>
     $(function() {
         Dashing.widget_base_dimensions = [320, 400]
-        Dashing.numColumns = 10
+        Dashing.numColumns = <%= params['team'] ? 6 : 10 %>
     });
 </script>
 
 <% content_for(:title) {"Overview"} %>
 <div class="gridster">
   <ul>
-    <% Config::PROJECTS.each do |data| %>
+    <% if params['team'] %>
+      <li data-row="1" data-col="1" data-sizex="<%= params['team'] ? 6 : 10 %>" data-sizey="1">
+        <div data-view="ServerStatusSquares" data-title="<%= Config::TEAMS_TITLES[params['team']] %> - Build Status"></div>
+      </li>
+    <% end %>
+
+    <% (params['team'] ? Config::TEAM_PROJECTS[params['team']] : Config::PROJECTS).each do |data| %>
       <% if data[:prodUrl] %>
-        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
           <div data-id="<%= data[:name] %>-prod" data-view="ServerStatusSquares" data-title="<%= data[:title] %> - Prod"></div>
         </li>
       <% end %>
     <% end %>
-    <% Config::PROJECTS.each do |data| %>
-      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    <% (params['team'] ? Config::TEAM_PROJECTS[params['team']] : Config::PROJECTS).each do |data| %>
+      <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
         <div data-id="circle-ci-ministryofjustice-<%=data[:repo] || data[:name]%>-main" data-view="CircleCi" data-title="<%=data[:title]%>"></div>
       </li>
     <% end %>
