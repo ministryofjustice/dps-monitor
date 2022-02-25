@@ -424,14 +424,6 @@ module Config
       title: 'HMPPS Adjudications API',
     },
     {
-      name: 'prison-to-nhs-update',
-      versionPath: '/info',
-      prodUrl: 'https://prison-to-nhs-update.prison.service.justice.gov.uk',
-      preprodUrl: 'https://prison-to-nhs-update-preprod.prison.service.justice.gov.uk',
-      devUrl: 'https://prison-to-nhs-update-dev.prison.service.justice.gov.uk',
-      title: 'Prison to NHS Update',
-    },
-    {
       name: 'hmpps-manage-users-api',
       versionPath: '/info',
       prodUrl: 'https://manage-users-api.hmpps.service.justice.gov.uk',
