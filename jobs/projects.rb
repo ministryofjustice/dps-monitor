@@ -175,14 +175,6 @@ module Config
       title: 'Probation Teams',
     },
     {
-      name: 'prison-to-probation-update',
-      versionPath: '/info',
-      prodUrl: 'https://prison-to-probation-update.prison.service.justice.gov.uk',
-      preprodUrl: 'https://prison-to-probation-update-preprod.prison.service.justice.gov.uk',
-      devUrl: 'https://prison-to-probation-update-dev.prison.service.justice.gov.uk',
-      title: 'Prison to Probation Update',
-    },
-    {
       name: 'pathfinder-api',
       versionPath: '/info',
       prodUrl: 'https://api.pathfinder.service.justice.gov.uk',
