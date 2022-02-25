@@ -128,6 +128,14 @@ module Config
       title: 'Licences',
     },
     {
+       name: 'prison-to-probation-update',
+       versionPath: '/info',
+       prodUrl: 'https://prison-to-probation-update.prison.service.justice.gov.uk',
+       preprodUrl: 'https://prison-to-probation-update-preprod.prison.service.justice.gov.uk',
+       devUrl: 'https://prison-to-probation-update-dev.prison.service.justice.gov.uk',
+       title: 'Prison to Probation Update',
+     },
+    {
       name: 'pathfinder',
       prodUrl: 'https://health-kick.prison.service.justice.gov.uk/https/pathfinder.service.justice.gov.uk',
       preprodUrl: 'https://health-kick.prison.service.justice.gov.uk/https/preprod.pathfinder.service.justice.gov.uk',
@@ -414,14 +422,6 @@ module Config
       preprodUrl: 'https://restricted-patients-api.hmpps.service.justice.gov.uk',
       devUrl: 'https://restricted-patients-api.hmpps.service.justice.gov.uk',
       title: 'HMPPS Adjudications API',
-    },
-    {
-      name: 'prison-to-nhs-update',
-      versionPath: '/info',
-      prodUrl: 'https://prison-to-nhs-update.prison.service.justice.gov.uk',
-      preprodUrl: 'https://prison-to-nhs-update-preprod.prison.service.justice.gov.uk',
-      devUrl: 'https://prison-to-nhs-update-dev.prison.service.justice.gov.uk',
-      title: 'Prison to NHS Update',
     },
     {
       name: 'hmpps-manage-users-api',
