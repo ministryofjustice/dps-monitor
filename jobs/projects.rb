@@ -518,6 +518,21 @@ module Config
       devUrl: 'https://incentives-api-dev.hmpps.service.justice.gov.uk',
       title: 'Incentives API',
     },
+    {
+      name: 'send-legal-mail-to-prisons-api',
+      versionPath: '/info',
+      prodUrl: 'https://send-legal-mail-api.prison.service.justice.gov.uk',
+      preprodUrl: 'https://send-legal-mail-api-preprod.prison.service.justice.gov.uk',
+      devUrl: 'https://send-legal-mail-api-dev.prison.service.justice.gov.uk',
+      title: 'Send Legal Mail To Prisons API',
+    },
+    {
+      name: 'send-legal-mail-to-prisons',
+      prodUrl: 'https://send-legal-mail.prison.service.justice.gov.uk',
+      preprodUrl: 'https://send-legal-mail-preprod.prison.service.justice.gov.uk',
+      devUrl: 'https://send-legal-mail-dev.prison.service.justice.gov.uk',
+      title: 'Send Legal Mail To Prisons',
+    },
   ]
 
   TEAMS = [
