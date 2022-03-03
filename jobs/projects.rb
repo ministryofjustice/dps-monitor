@@ -434,12 +434,14 @@ module Config
     {
       name: 'create-and-vary-a-licence-api',
       versionPath: '/info',
+      prodUrl: 'https://create-and-vary-a-licence-api.hmpps.service.justice.gov.uk',
       preprodUrl: 'https://create-and-vary-a-licence-api-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://create-and-vary-a-licence-api-dev.hmpps.service.justice.gov.uk',
       title: 'Create and Vary a Licence API',
     },
     {
       name: 'create-and-vary-a-licence',
+      prodUrl: 'https://create-and-vary-a-licence.hmpps.service.justice.gov.uk',
       preprodUrl: 'https://create-and-vary-a-licence-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://create-and-vary-a-licence-dev.hmpps.service.justice.gov.uk',
       title: 'Create and Vary a Licence',
