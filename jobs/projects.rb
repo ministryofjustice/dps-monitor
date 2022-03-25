@@ -495,6 +495,14 @@ module Config
       teams: ['syscon'],
     },
     {
+      name: 'hmpps-nomis-sync-dashboard',
+      prodUrl: 'https://nomis-sync-dashboard.hmpps.service.justice.gov.uk',
+      preprodUrl: 'https://nomis-sync-dashboard-preprod.hmpps.service.justice.gov.uk',
+      devUrl: 'https://nomis-sync-dashboard-dev.hmpps.service.justice.gov.uk',
+      title: 'NOMIS Migration Dashboard',
+      teams: ['syscon'],
+    },
+    {
       name: 'hmpps-nomis-visits-mapping-service',
       versionPath: '/info',
       prodUrl: 'https://nomis-visits-mapping.hmpps.service.justice.gov.uk',
