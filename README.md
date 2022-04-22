@@ -36,6 +36,7 @@ $ rvm install 3.1.0
 
 Build
 ----
+These steps will also pull the latest dependencies, potentially fixing any vulnerability issues
 ```
 $ sudo gem install bundler (or bundler:2.3.3 if your OS does not match exactly)
 $ sudo gem install smashing
@@ -104,7 +105,6 @@ Dashboard Configuration
 4. Edit the projects element in jobs/health.rb
 5. Edit dashboards/overview.erb to add production service info
 
-
 ## Running Locally
 To test the application it is best to run using docker
 
@@ -130,5 +130,6 @@ docker rm -vf dps-monitor
 
 These can be raised for issues relating to the packages that are installed at the time the image is built.
 A docker image rebuild will usually sort these out as it pulls in the latest packages available at the time, including any fixes.
-Build the image locally (instructions above) to see which versions of packages are used.
-
+You can either:
+ - Build the image locally (instructions above) to see which versions of packages are used.
+ - Navigate to CircleCI and rebuild the latest `build-test-and-deploy` commit on `main`. This will deploy a new version and should hopefully fix the Trivy issue.  
