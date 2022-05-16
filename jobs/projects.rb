@@ -7,6 +7,7 @@ module Config
       preprodUrl: 'https://sign-in-preprod.hmpps.service.justice.gov.uk/auth',
       devUrl: 'https://sign-in-dev.hmpps.service.justice.gov.uk/auth',
       title: 'HMPPS Auth',
+      teams: ['sed']
     },
     {
       name: 'prison-api',
@@ -15,7 +16,7 @@ module Config
       preprodUrl: 'https://api-preprod.prison.service.justice.gov.uk',
       devUrl: 'https://api-dev.prison.service.justice.gov.uk',
       title: 'Prison API',
-      teams: ['syscon'],
+      teams: ['syscon', 'sed'],
     },
     {
       name: 'hmpps-restricted-patients',
@@ -54,6 +55,7 @@ module Config
       preprodUrl: 'https://digital-preprod.prison.service.justice.gov.uk',
       devUrl: 'https://digital-dev.prison.service.justice.gov.uk',
       title: 'DPS Core',
+      teams: ['sed']
     },
     {
       name: 'whereabouts-api',
@@ -69,7 +71,7 @@ module Config
       preprodUrl: 'https://manage-soc-cases-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://manage-soc-cases-dev.hmpps.service.justice.gov.uk',
       title: 'Manage SOC Cases',
-      teams: ['mase'],
+      teams: ['mase', 'sed'],
     },
     {
       name: 'offender-case-notes',
@@ -86,7 +88,7 @@ module Config
       preprodUrl: 'https://health-kick.prison.service.justice.gov.uk/https/preprod.offender-categorisation.service.justice.gov.uk',
       devUrl: 'https://dev.offender-categorisation.service.justice.gov.uk',
       title: 'Offender Categorisation',
-      teams: ['mase'],
+      teams: ['mase', 'sed'],
     },
     {
       name: 'check-my-diary',
@@ -118,7 +120,7 @@ module Config
       preprodUrl: 'https://prisoner-offender-search-preprod.prison.service.justice.gov.uk',
       devUrl: 'https://prisoner-offender-search-dev.prison.service.justice.gov.uk',
       title: 'Prisoner Offender Search',
-      teams: ['syscon'],
+      teams: ['syscon', 'sed'],
     },
     {
       name: 'licences',
@@ -141,7 +143,7 @@ module Config
       preprodUrl: 'https://health-kick.prison.service.justice.gov.uk/https/preprod.pathfinder.service.justice.gov.uk',
       devUrl: 'https://dev.pathfinder.service.justice.gov.uk',
       title: 'Pathfinder',
-      teams: ['mase'],
+      teams: ['mase', 'sed'],
     },
     {
       name: 'use-of-force',
@@ -157,6 +159,7 @@ module Config
       preprodUrl: 'https://token-verification-api-preprod.prison.service.justice.gov.uk',
       devUrl: 'https://token-verification-api-dev.prison.service.justice.gov.uk',
       title: 'Token Verification api',
+      teams: ['sed'],
     },
     {
       name: 'dps-data-compliance',
@@ -165,6 +168,7 @@ module Config
       preprodUrl: 'https://prison-data-compliance-preprod.prison.service.justice.gov.uk',
       devUrl: 'https://prison-data-compliance-dev.prison.service.justice.gov.uk',
       title: 'Data Compliance',
+      teams: ['sed']
     },
     {
       name: 'case-notes-to-probation',
@@ -189,7 +193,7 @@ module Config
       preprodUrl: 'https://preprod-api.pathfinder.service.justice.gov.uk',
       devUrl: 'https://dev-api.pathfinder.service.justice.gov.uk',
       title: 'Pathfinder API',
-      teams: ['mase'],
+      teams: ['mase', 'sed'],
     },
     {
       name: 'prison-services-feedback-and-support',
@@ -206,6 +210,7 @@ module Config
       stagingUrl: 'https://community-api.stage.probation.service.justice.gov.uk',
       devUrl: 'https://community-api.test.probation.service.justice.gov.uk',
       title: 'Community API',
+      teams: ['sed']
     },
     {
       name: 'probation-offender-search-indexer',
@@ -224,6 +229,7 @@ module Config
       stagingUrl: 'https://probation-offender-search-staging.hmpps.service.justice.gov.uk',
       devUrl: 'https://probation-offender-search-dev.hmpps.service.justice.gov.uk',
       title: 'Probation Offender Search',
+      teams: ['sed']
     },
     {
       name: 'probation-offender-events',
@@ -241,7 +247,7 @@ module Config
       preprodUrl: 'https://pcms-qa.prison.service.justice.gov.uk',
       devUrl: 'https://pcms-dev.prison.service.justice.gov.uk',
       title: 'PCMS',
-      teams: ['mase'],
+      teams: ['mase', 'sed'],
     },
     {
       name: 'pcms-api',
@@ -251,7 +257,7 @@ module Config
       preprodUrl: 'https://pcms-api-qa.prison.service.justice.gov.uk',
       devUrl: 'https://pcms-api-dev.prison.service.justice.gov.uk',
       title: 'PCMS API',
-      teams: ['mase'],
+      teams: ['mase', 'sed'],
     },
     {
       name: 'hmpps-manage-users',
@@ -406,7 +412,7 @@ module Config
       preprodUrl: 'https://manage-soc-cases-api-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://manage-soc-cases-api-dev.hmpps.service.justice.gov.uk',
       title: 'Manage SOC Cases API',
-      teams: ['mase'],
+      teams: ['mase', 'sed'],
     },
     {
       name: 'hmpps-manage-adjudications',
@@ -545,7 +551,8 @@ module Config
 
   TEAMS = [
     { name: 'mase', title: 'Manage a Secure Area (MASE)' },
-    { name: 'syscon', title: 'Syscon Projects' }
+    { name: 'syscon', title: 'Syscon Projects' },
+    { name: 'sed', title: 'Secure Estate Digital' }
   ]
   TEAMS_TITLES = TEAMS.map { |team| [team[:name], team[:title]] }.to_h
 
