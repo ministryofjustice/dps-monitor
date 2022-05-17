@@ -544,7 +544,7 @@ module Config
   ]
 
   TEAMS = [
-    { name: 'syscon', title: 'Syscon Projects' }
+    { name: 'syscon', title: 'Syscon Projects' },
     { name: 'sed', title: 'Secure Estate Digital' }
   ]
   TEAMS_TITLES = TEAMS.map { |team| [team[:name], team[:title]] }.to_h
