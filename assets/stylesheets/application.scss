@@ -49,6 +49,13 @@ body {
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 15px;
+  padding: 10px 0;
+}
+
 b, strong {
   font-weight: bold;
 }
