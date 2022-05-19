@@ -71,7 +71,7 @@ module Config
       preprodUrl: 'https://manage-soc-cases-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://manage-soc-cases-dev.hmpps.service.justice.gov.uk',
       title: 'Manage SOC Cases',
-      teams: ['mase', 'sed'],
+      teams: ['sed'],
     },
     {
       name: 'offender-case-notes',
@@ -88,7 +88,7 @@ module Config
       preprodUrl: 'https://health-kick.prison.service.justice.gov.uk/https/preprod.offender-categorisation.service.justice.gov.uk',
       devUrl: 'https://dev.offender-categorisation.service.justice.gov.uk',
       title: 'Offender Categorisation',
-      teams: ['mase', 'sed'],
+      teams: ['sed'],
     },
     {
       name: 'check-my-diary',
@@ -143,7 +143,7 @@ module Config
       preprodUrl: 'https://health-kick.prison.service.justice.gov.uk/https/preprod.pathfinder.service.justice.gov.uk',
       devUrl: 'https://dev.pathfinder.service.justice.gov.uk',
       title: 'Pathfinder',
-      teams: ['mase', 'sed'],
+      teams: ['sed'],
     },
     {
       name: 'use-of-force',
@@ -193,7 +193,7 @@ module Config
       preprodUrl: 'https://preprod-api.pathfinder.service.justice.gov.uk',
       devUrl: 'https://dev-api.pathfinder.service.justice.gov.uk',
       title: 'Pathfinder API',
-      teams: ['mase', 'sed'],
+      teams: ['sed'],
     },
     {
       name: 'prison-services-feedback-and-support',
@@ -247,7 +247,7 @@ module Config
       preprodUrl: 'https://pcms-qa.prison.service.justice.gov.uk',
       devUrl: 'https://pcms-dev.prison.service.justice.gov.uk',
       title: 'PCMS',
-      teams: ['mase', 'sed'],
+      teams: ['sed'],
     },
     {
       name: 'pcms-api',
@@ -257,7 +257,7 @@ module Config
       preprodUrl: 'https://pcms-api-qa.prison.service.justice.gov.uk',
       devUrl: 'https://pcms-api-dev.prison.service.justice.gov.uk',
       title: 'PCMS API',
-      teams: ['mase', 'sed'],
+      teams: ['sed'],
     },
     {
       name: 'hmpps-manage-users',
@@ -276,20 +276,17 @@ module Config
       name: 'manage-intelligence',
       devUrl: 'https://manage-intelligence-dev.prison.service.justice.gov.uk',
       title: 'Manage Intelligence',
-      teams: ['mase'],
     },
     {
       name: 'manage-intelligence-api',
       versionPath: '/info',
       devUrl: 'https://manage-intelligence-api-dev.prison.service.justice.gov.uk',
       title: 'Manage Intelligence API',
-      teams: ['mase'],
     },
     {
       name: 'hmpps-submit-information-report',
       devUrl: 'https://submit-information-report-dev.hmpps.service.justice.gov.uk',
       title: 'HMPPS Submit Information Report',
-      teams: ['mase'],
     },
     {
       name: 'calculate-journey-variable-payments',
@@ -298,7 +295,6 @@ module Config
       preprodUrl: 'https://calculate-journey-variable-payments-preprod.apps.live-1.cloud-platform.service.justice.gov.uk',
       devUrl: 'https://calculate-journey-variable-payments-dev.apps.live-1.cloud-platform.service.justice.gov.uk',
       title: 'Calculate Journey Variable Payments',
-      teams: ['mase'],
     },
     {
       name: 'hmpps-book-secure-move-frontend',
@@ -307,7 +303,6 @@ module Config
       preprodUrl: 'https://hmpps-book-secure-move-frontend-preprod.apps.live-1.cloud-platform.service.justice.gov.uk',
       devUrl: 'https://hmpps-book-secure-move-frontend-staging.apps.live-1.cloud-platform.service.justice.gov.uk',
       title: 'HMPPS Book A Secure Move',
-      teams: ['mase'],
     },
     {
       name: 'hmpps-book-secure-move-api',
@@ -315,7 +310,6 @@ module Config
       preprodUrl: 'https://hmpps-book-secure-move-api-preprod.apps.live-1.cloud-platform.service.justice.gov.uk',
       devUrl: 'https://hmpps-book-secure-move-api-staging.apps.live-1.cloud-platform.service.justice.gov.uk',
       title: 'HMPPS Book A Secure Move API',
-      teams: ['mase'],
     },
     {
       name: 'nomis-user-roles-api',
@@ -412,7 +406,7 @@ module Config
       preprodUrl: 'https://manage-soc-cases-api-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://manage-soc-cases-api-dev.hmpps.service.justice.gov.uk',
       title: 'Manage SOC Cases API',
-      teams: ['mase', 'sed'],
+      teams: ['sed'],
     },
     {
       name: 'hmpps-manage-adjudications',
@@ -550,7 +544,6 @@ module Config
   ]
 
   TEAMS = [
-    { name: 'mase', title: 'Manage a Secure Area (MASE)' },
     { name: 'syscon', title: 'Syscon Projects' },
     { name: 'sed', title: 'Secure Estate Digital' }
   ]
