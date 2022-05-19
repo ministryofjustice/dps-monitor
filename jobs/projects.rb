@@ -91,6 +91,15 @@ module Config
       teams: ['sed'],
     },
     {
+      name: 'offender-risk-profiler',
+      healthPath: '',
+      prodUrl: 'http://offender-risk-profiler/',
+      preprodUrl: 'http://offender-risk-profiler/',
+      devUrl: 'http://offender-risk-profiler/',
+      title: 'Offender Risk Profiler ',
+      teams: ['sed'],
+    },
+    {
       name: 'check-my-diary',
       prodUrl: 'https://checkmydiary.service.justice.gov.uk',
       preprodUrl: 'https://check-my-diary-preprod.prison.service.justice.gov.uk',
