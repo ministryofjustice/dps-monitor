@@ -427,9 +427,9 @@ module Config
     {
       name: 'hmpps-manage-adjudications-api',
       versionPath: '/info',
-      prodUrl: 'https://restricted-patients-api.hmpps.service.justice.gov.uk',
-      preprodUrl: 'https://restricted-patients-api.hmpps.service.justice.gov.uk',
-      devUrl: 'https://restricted-patients-api.hmpps.service.justice.gov.uk',
+      prodUrl: 'https://manage-adjudications-api.hmpps.service.justice.gov.uk',
+      preprodUrl: 'https://manage-adjudications-api-preprod.hmpps.service.justice.gov.uk',
+      devUrl: 'https://manage-adjudications-api-dev.hmpps.service.justice.gov.uk',
       title: 'HMPPS Adjudications API',
     },
     {
