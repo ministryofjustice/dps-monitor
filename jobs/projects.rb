@@ -377,23 +377,6 @@ module Config
       title: 'HMPPS Registers UI',
     },
     {
-      name: 'hmpps-registers-to-delius-update',
-      versionPath: '/info',
-      prodUrl: 'https://registers-to-delius-update.hmpps.service.justice.gov.uk',
-      preprodUrl: 'https://registers-to-delius-update-preprod.hmpps.service.justice.gov.uk',
-      devUrl: 'https://registers-to-delius-update-dev.hmpps.service.justice.gov.uk',
-      title: 'HMPPS Registers to Delius Update',
-    },
-    {
-      name: 'hmpps-registers-to-nomis-update',
-      versionPath: '/info',
-      prodUrl: 'https://registers-to-nomis-update.hmpps.service.justice.gov.uk',
-      preprodUrl: 'https://registers-to-nomis-update-preprod.hmpps.service.justice.gov.uk',
-      devUrl: 'https://registers-to-nomis-update-dev.hmpps.service.justice.gov.uk',
-      title: 'HMPPS Registers to Nomis Update',
-      teams: ['syscon'],
-    },
-    {
       name: 'hmpps-welcome-people-into-prison-api',
       versionPath: '/info',
       prodUrl: 'https://welcome-api.prison.service.justice.gov.uk',
