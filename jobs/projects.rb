@@ -455,17 +455,17 @@ module Config
     },
     {
       name: 'book-a-prison-visit-staff-ui',
-      prodUrl: 'https://manage-a-prison-visit.hmpps.service.justice.gov.uk',
-      preprodUrl: 'https://manage-a-prison-visit-preprod.hmpps.service.justice.gov.uk',
-      devUrl: 'https://manage-a-prison-visit-dev.hmpps.service.justice.gov.uk',
+      prodUrl: 'https://manage-prison-visits.prison.service.justice.gov.uk',
+      preprodUrl: 'https://manage-prison-visits-preprod.prison.service.justice.gov.uk',
+      devUrl: 'https://manage-prison-visits-dev.prison.service.justice.gov.uk',
       title: 'VSiP Staff UI',
     },
     {
       name: 'visit-scheduler',
       versionPath: '/info',
-      prodUrl: 'https://visit-scheduler.hmpps.service.justice.gov.uk',
-      preprodUrl: 'https://visit-scheduler-preprod.hmpps.service.justice.gov.uk',
-      devUrl: 'https://visit-scheduler-dev.hmpps.service.justice.gov.uk',
+      prodUrl: 'https://visit-scheduler.prison.service.justice.gov.uk',
+      preprodUrl: 'https://visit-scheduler-preprod.prison.service.justice.gov.uk',
+      devUrl: 'https://visit-scheduler-dev.prison.service.justice.gov.uk',
       title: 'Visit Scheduler API',
     },
     {
