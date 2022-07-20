@@ -565,8 +565,8 @@ module Config
   ]
 
   TEAMS = [
-    { name: 'haar', title: 'HMPPS Auth, Audit & Registers' }
-    { name: 'incentives', title: 'Incentives' }
+    { name: 'haar', title: 'HMPPS Auth, Audit & Registers' },
+    { name: 'incentives', title: 'Incentives' },
     { name: 'syscon', title: 'Syscon Projects' },
     { name: 'sed', title: 'Secure Estate Digital' }
   ]
