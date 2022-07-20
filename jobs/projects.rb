@@ -7,7 +7,7 @@ module Config
       preprodUrl: 'https://sign-in-preprod.hmpps.service.justice.gov.uk/auth',
       devUrl: 'https://sign-in-dev.hmpps.service.justice.gov.uk/auth',
       title: 'HMPPS Auth',
-      teams: ['sed']
+      teams: ['sed', 'haar']
     },
     {
       name: 'prison-api',
@@ -16,7 +16,7 @@ module Config
       preprodUrl: 'https://api-preprod.prison.service.justice.gov.uk',
       devUrl: 'https://api-dev.prison.service.justice.gov.uk',
       title: 'Prison API',
-      teams: ['syscon', 'sed'],
+      teams: ['syscon', 'sed', 'haar'],
     },
     {
       name: 'hmpps-restricted-patients',
@@ -55,7 +55,7 @@ module Config
       preprodUrl: 'https://digital-preprod.prison.service.justice.gov.uk',
       devUrl: 'https://digital-dev.prison.service.justice.gov.uk',
       title: 'DPS Core',
-      teams: ['sed']
+      teams: ['sed', 'haar','incentives'],
     },
     {
       name: 'whereabouts-api',
@@ -80,6 +80,7 @@ module Config
       preprodUrl: 'https://preprod.offender-case-notes.service.justice.gov.uk',
       devUrl: 'https://dev.offender-case-notes.service.justice.gov.uk',
       title: 'Offender Case Notes',
+      teams: ['haar'],
     },
     {
       name: 'offender-categorisation',
@@ -161,7 +162,7 @@ module Config
       preprodUrl: 'https://token-verification-api-preprod.prison.service.justice.gov.uk',
       devUrl: 'https://token-verification-api-dev.prison.service.justice.gov.uk',
       title: 'Token Verification api',
-      teams: ['sed'],
+      teams: ['sed', 'haar'],
     },
     {
       name: 'dps-data-compliance',
@@ -267,6 +268,7 @@ module Config
       preprodUrl: 'https://manage-users-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://manage-users-dev.hmpps.service.justice.gov.uk',
       title: 'HMPPS User Manager',
+      teams: ['haar'],
     },
     {
       name: 'hmpps-template-kotlin',
@@ -321,6 +323,7 @@ module Config
       stagingUrl: 'https://nomis-user-stage.aks-dev-1.studio-hosting.service.justice.gov.uk',
       devUrl: 'https://nomis-user-dev.aks-dev-1.studio-hosting.service.justice.gov.uk',
       title: 'NOMIS User Roles API',
+      teams: ['haar'],
     },
     {
       name: 'hmpps-nomis-prisoner-api',
@@ -338,6 +341,7 @@ module Config
       preprodUrl: 'https://court-register-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://court-register-dev.hmpps.service.justice.gov.uk',
       title: 'Court Register',
+      teams: ['haar'],
     },
     {
       name: 'prison-register',
@@ -346,6 +350,7 @@ module Config
       preprodUrl: 'https://prison-register-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://prison-register-dev.hmpps.service.justice.gov.uk',
       title: 'Prison Register',
+      teams: ['haar'],
     },
     {
       name: 'hmpps-book-video-link',
@@ -361,6 +366,7 @@ module Config
       preprodUrl: 'https://audit-api-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://audit-api-dev.hmpps.service.justice.gov.uk',
       title: 'HMPPS Audit API',
+      teams: ['haar'],
     },
     {
       name: 'hmpps-registers',
@@ -368,6 +374,7 @@ module Config
       preprodUrl: 'https://registers-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://registers-dev.hmpps.service.justice.gov.uk',
       title: 'HMPPS Registers UI',
+      teams: ['haar'],
     },
     {
       name: 'hmpps-welcome-people-into-prison-api',
@@ -415,6 +422,7 @@ module Config
       preprodUrl: 'https://manage-users-api-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://manage-users-api-dev.hmpps.service.justice.gov.uk',
       title: 'HMPPS Manage Users API',
+      teams: ['haar'],
     },
     {
       name: 'create-and-vary-a-licence-api',
@@ -502,6 +510,7 @@ module Config
       preprodUrl: 'https://incentives-ui-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://incentives-ui-dev.hmpps.service.justice.gov.uk',
       title: 'Incentives UI',
+      teams: ['incentives'],
     },
     {
       name: 'hmpps-incentives-api',
@@ -510,6 +519,7 @@ module Config
       preprodUrl: 'https://incentives-api-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://incentives-api-dev.hmpps.service.justice.gov.uk',
       title: 'Incentives API',
+      teams: ['incentives'],
     },
     {
       name: 'send-legal-mail-to-prisons-api',
@@ -555,6 +565,8 @@ module Config
   ]
 
   TEAMS = [
+    { name: 'haar', title: 'HMPPS Auth, Audit & Registers' },
+    { name: 'incentives', title: 'Incentives' },
     { name: 'syscon', title: 'Syscon Projects' },
     { name: 'sed', title: 'Secure Estate Digital' }
   ]
