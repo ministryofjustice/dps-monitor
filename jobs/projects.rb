@@ -100,13 +100,6 @@ module Config
       teams: ['sed'],
     },
     {
-      name: 'check-my-diary',
-      prodUrl: 'https://checkmydiary.service.justice.gov.uk',
-      preprodUrl: 'https://check-my-diary-preprod.prison.service.justice.gov.uk',
-      devUrl: 'https://check-my-diary-dev.prison.service.justice.gov.uk',
-      title: 'Check My Diary',
-    },
-    {
       name: 'prison-offender-events',
       versionPath: '/info',
       prodUrl: 'https://offender-events.prison.service.justice.gov.uk',
@@ -532,6 +525,32 @@ module Config
       preprodUrl: 'https://send-legal-mail-preprod.prison.service.justice.gov.uk',
       devUrl: 'https://send-legal-mail-dev.prison.service.justice.gov.uk',
       title: 'Send Legal Mail To Prisons',
+    },
+    {
+      name: 'check-my-diary',
+      prodUrl: 'https://checkmydiary.service.justice.gov.uk',
+      preprodUrl: 'https://check-my-diary-preprod.prison.service.justice.gov.uk',
+      devUrl: 'https://check-my-diary-dev.prison.service.justice.gov.uk',
+      title: 'Check My Diary',
+      teams: ['syscon'],
+    },
+    {
+      name: 'cmd-api',
+      versionPath: '/info',
+      prodUrl: 'https://health-kick.prison.service.justice.gov.uk/http/cmd-api.check-my-diary-prod.svc.cluster.local',
+      preprodUrl: 'https://health-kick.prison.service.justice.gov.uk/http/cmd-api.check-my-diary-preprod.svc.cluster.local',
+      devUrl: 'https://health-kick.prison.service.justice.gov.uk/http/cmd-api.check-my-diary-dev.svc.cluster.local',
+      title: 'CMD API',
+      teams: ['syscon'],
+    },
+    {
+      name: 'csr-api',
+      versionPath: '/info',
+      prodUrl: 'https://csr-api.aks-live-1.studio-hosting.service.justice.gov.uk',
+      preprodUrl: 'https://csr-api-prprod.aks-live-1.studio-hosting.service.justice.gov.uk',
+      devUrl: 'https://csr-api-dev.aks-dev-1.studio-hosting.service.justice.gov.uk',
+      title: 'CSR API',
+      teams: ['syscon'],
     },
   ]
 
