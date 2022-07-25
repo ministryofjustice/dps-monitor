@@ -84,7 +84,7 @@ module Config
     },
     {
       name: 'offender-categorisation',
-      healthPath: '',
+      healthPath: '/healthcheck',
       prodUrl: 'https://health-kick.prison.service.justice.gov.uk/https/offender-categorisation.service.justice.gov.uk',
       preprodUrl: 'https://health-kick.prison.service.justice.gov.uk/https/preprod.offender-categorisation.service.justice.gov.uk',
       devUrl: 'https://dev.offender-categorisation.service.justice.gov.uk',
@@ -93,10 +93,10 @@ module Config
     },
     {
       name: 'offender-risk-profiler',
-      healthPath: '',
-      prodUrl: 'http://offender-risk-profiler/',
-      preprodUrl: 'http://offender-risk-profiler/',
-      devUrl: 'http://offender-risk-profiler/',
+      versionPath: '/info',
+      prodUrl: 'https://offender-risk-profiler.hmpps.service.justice.gov.uk',
+      preprodUrl: 'https://offender-risk-profiler-preprod.hmpps.service.justice.gov.uk',
+      devUrl: 'https://offender-risk-profiler-dev.hmpps.service.justice.gov.uk',
       title: 'Offender Risk Profiler ',
       teams: ['sed'],
     },
