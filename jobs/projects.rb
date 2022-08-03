@@ -174,14 +174,6 @@ module Config
       teams: ['sed']
     },
     {
-      name: 'case-notes-to-probation',
-      versionPath: '/info',
-      prodUrl: 'https://health-kick.prison.service.justice.gov.uk/https/case-notes-to-probation.prison.service.justice.gov.uk',
-      preprodUrl: 'https://health-kick.prison.service.justice.gov.uk/https/case-notes-to-probation-preprod.prison.service.justice.gov.uk',
-      devUrl: 'https://case-notes-to-probation-dev.prison.service.justice.gov.uk',
-      title: 'Case Notes to Probation',
-    },
-    {
       name: 'probation-teams',
       versionPath: '/info',
       prodUrl: 'https://probation-teams.prison.service.justice.gov.uk',
