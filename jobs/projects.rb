@@ -569,7 +569,7 @@ module Config
     },
     {
       name: 'hmpps-historical-prisoner',
-      devUrl: 'https://historical-prisoner-dev.hmpps.service.justice.gov.uk',
+      devUrl: 'https://historical-prisoner-dev.prison.service.justice.gov.uk',
       title: 'Historical Prisoner',
       teams: ['haar'],
     },
