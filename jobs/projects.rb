@@ -567,6 +567,19 @@ module Config
       devUrl: 'https://manage-offences-dev.hmpps.service.justice.gov.uk',
       title: 'Manage offences',
     },
+    {
+      name: 'hmpps-historical-prisoner',
+      devUrl: 'https://historical-prisoner-dev.hmpps.service.justice.gov.uk',
+      title: 'Historical Prisoner',
+      teams: ['haar'],
+    },
+    {
+      name: 'hmpps-historical-prisoner-api',
+      versionPath: '/info',
+      devUrl: 'https://historical-prisoner-api-dev.prison.service.justice.gov.uk',
+      title: 'Historical Prisoner API',
+      teams: ['haar'],
+    },
   ]
 
   TEAMS = [
