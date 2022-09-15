@@ -583,14 +583,14 @@ module Config
     {
       name: 'hmpps-activities-management',
       devUrl: 'https://activities-dev.prison.service.justice.gov.uk',
-      title: 'HMPPS Activities Management',
+      title: 'Activities Management UI',
       teams: ['activities'],
     },
     {
       name: 'hmpps-activities-management-api',
       versionPath: '/info',
       devUrl: 'https://activities-api-dev.prison.service.justice.gov.uk',
-      title: 'HMPPS Activities Management API',
+      title: 'Activities Management API',
       teams: ['activities'],
     },
   ]
