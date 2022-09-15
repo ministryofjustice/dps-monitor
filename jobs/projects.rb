@@ -580,9 +580,23 @@ module Config
       title: 'Historical Prisoner API',
       teams: ['haar'],
     },
+    {
+      name: 'hmpps-activities-management',
+      devUrl: 'https://activities-dev.prison.service.justice.gov.uk',
+      title: 'HMPPS Activities Management',
+      teams: ['activities'],
+    },
+    {
+      name: 'hmpps-activities-management-api',
+      versionPath: '/info',
+      devUrl: 'https://activities-api-dev.prison.service.justice.gov.uk',
+      title: 'HMPPS Activities Management API',
+      teams: ['activities'],
+    },
   ]
 
   TEAMS = [
+    { name: 'activities', title: 'Activities Management' },
     { name: 'haar', title: 'HMPPS Auth, Audit & Registers' },
     { name: 'incentives', title: 'Incentives' },
     { name: 'syscon', title: 'Syscon Projects' },
