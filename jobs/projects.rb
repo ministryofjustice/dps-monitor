@@ -208,20 +208,10 @@ module Config
       teams: ['sed']
     },
     {
-      name: 'probation-offender-search-indexer',
-      versionPath: '/info',
-      prodUrl: 'https://probation-search-indexer.hmpps.service.justice.gov.uk',
-      preprodUrl: 'https://probation-search-indexer-preprod.hmpps.service.justice.gov.uk',
-      stagingUrl: 'https://probation-search-indexer-staging.hmpps.service.justice.gov.uk',
-      devUrl: 'https://probation-search-indexer-dev.hmpps.service.justice.gov.uk',
-      title: 'Probation Search Indexer',
-    },
-    {
       name: 'probation-offender-search',
       versionPath: '/info',
       prodUrl: 'https://probation-offender-search.hmpps.service.justice.gov.uk',
       preprodUrl: 'https://probation-offender-search-preprod.hmpps.service.justice.gov.uk',
-      stagingUrl: 'https://probation-offender-search-staging.hmpps.service.justice.gov.uk',
       devUrl: 'https://probation-offender-search-dev.hmpps.service.justice.gov.uk',
       title: 'Probation Offender Search',
       teams: ['sed']
