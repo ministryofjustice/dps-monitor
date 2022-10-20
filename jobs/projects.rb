@@ -547,12 +547,14 @@ module Config
     {
       name: 'manage-offences-api',
       versionPath: '/info',
+      prodUrl: 'https://manage-offences-api.hmpps.service.justice.gov.uk',
       preprodUrl: 'https://manage-offences-api-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://manage-offences-api-dev.hmpps.service.justice.gov.uk',
       title: 'Manage offences API',
     },
     {
       name: 'manage-offences',
+      prodUrl: 'https://manage-offences.hmpps.service.justice.gov.uk',
       preprodUrl: 'https://manage-offences-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://manage-offences-dev.hmpps.service.justice.gov.uk',
       title: 'Manage offences',
