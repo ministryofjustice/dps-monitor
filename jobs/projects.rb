@@ -478,11 +478,11 @@ module Config
       teams: ['syscon'],
     },
     {
-      name: 'hmpps-nomis-visits-mapping-service',
+      name: 'hmpps-nomis-mapping-service',
       versionPath: '/info',
-      prodUrl: 'https://nomis-visits-mapping.hmpps.service.justice.gov.uk',
-      preprodUrl: 'https://nomis-visits-mapping-preprod.hmpps.service.justice.gov.uk',
-      devUrl: 'https://nomis-visits-mapping-dev.hmpps.service.justice.gov.uk',
+      prodUrl: 'https://nomis-sync-prisoner-mapping.hmpps.service.justice.gov.uk',
+      preprodUrl: 'https://nomis-sync-prisoner-mapping-preprod.hmpps.service.justice.gov.uk',
+      devUrl: 'https://nomis-sync-prisoner-mapping-dev.hmpps.service.justice.gov.uk',
       title: 'HMPPS NOMIS Visits Mapping',
       teams: ['syscon']
     },
