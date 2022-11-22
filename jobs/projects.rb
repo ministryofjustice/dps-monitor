@@ -87,7 +87,7 @@ module Config
       healthPath: '/healthcheck',
       prodUrl: 'https://health-kick.prison.service.justice.gov.uk/https/offender-categorisation.service.justice.gov.uk',
       preprodUrl: 'https://health-kick.prison.service.justice.gov.uk/https/preprod.offender-categorisation.service.justice.gov.uk',
-      devUrl: 'https://dev.offender-categorisation.service.justice.gov.uk',
+      devUrl: 'https://health-kick.prison.service.justice.gov.uk/https/dev.offender-categorisation.service.justice.gov.uk',
       title: 'Offender Categorisation',
       teams: ['sed'],
     },
