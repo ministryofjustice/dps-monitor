@@ -585,6 +585,15 @@ module Config
       title: 'Activities Management API',
       teams: ['activities'],
     },
+    {
+      name: 'hmpps-external-users-api',
+      versionPath: '/info',
+      prodUrl: 'https://external-users-api.hmpps.service.justice.gov.uk',
+      preprodUrl: 'https://external-users-api-preprod.hmpps.service.justice.gov.uk',
+      devUrl: 'https://external-users-api-dev.hmpps.service.justice.gov.uk',
+      title: 'External Users API',
+      teams: ['haar'],
+    },
   ]
 
   TEAMS = [
