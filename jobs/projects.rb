@@ -16,7 +16,7 @@ module Config
       preprodUrl: 'https://api-preprod.prison.service.justice.gov.uk',
       devUrl: 'https://api-dev.prison.service.justice.gov.uk',
       title: 'Prison API',
-      teams: ['syscon', 'sed', 'haar'],
+      teams: ['syscon', 'sed', 'haar', 'incentives'],
     },
     {
       name: 'hmpps-restricted-patients',
@@ -107,7 +107,7 @@ module Config
       preprodUrl: 'https://offender-events-preprod.prison.service.justice.gov.uk',
       devUrl: 'https://offender-events-dev.prison.service.justice.gov.uk',
       title: 'Prison Offender Events',
-      teams: ['syscon'],
+      teams: ['syscon', 'incentives'],
     },
     {
       name: 'offender-events-ui',
@@ -123,7 +123,7 @@ module Config
       preprodUrl: 'https://prisoner-offender-search-preprod.prison.service.justice.gov.uk',
       devUrl: 'https://prisoner-offender-search-dev.prison.service.justice.gov.uk',
       title: 'Prisoner Offender Search',
-      teams: ['syscon', 'sed'],
+      teams: ['syscon', 'sed', 'incentives'],
     },
     {
       name: 'licences',
@@ -458,7 +458,7 @@ module Config
       preprodUrl: 'https://prisoner-to-nomis-update-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://prisoner-to-nomis-update-dev.hmpps.service.justice.gov.uk',
       title: 'HMPPS Prisoner to NOMIS Update',
-      teams: ['syscon'],
+      teams: ['syscon', 'incentives'],
     },
     {
       name: 'hmpps-prisoner-from-nomis-migration',
@@ -484,7 +484,7 @@ module Config
       preprodUrl: 'https://nomis-sync-prisoner-mapping-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://nomis-sync-prisoner-mapping-dev.hmpps.service.justice.gov.uk',
       title: 'HMPPS NOMIS Visits Mapping',
-      teams: ['syscon']
+      teams: ['syscon', 'incentives']
     },
     {
       name: 'hmpps-incentives-ui',
