@@ -217,15 +217,6 @@ module Config
       teams: ['sed']
     },
     {
-      name: 'probation-offender-events',
-      versionPath: '/info',
-      prodUrl: 'https://probation-offender-events.hmpps.service.justice.gov.uk',
-      preprodUrl: 'https://probation-offender-events-preprod.hmpps.service.justice.gov.uk',
-      stagingUrl: 'https://probation-offender-events-staging.hmpps.service.justice.gov.uk',
-      devUrl: 'https://probation-offender-events-dev.hmpps.service.justice.gov.uk',
-      title: 'Probation Offender Events',
-    },
-    {
       name: 'pcms',
       repo: 'hmpps-prisoner-communication-monitoring',
       prodUrl: 'https://pcms.prison.service.justice.gov.uk',
