@@ -585,6 +585,22 @@ module Config
       title: 'External Users API',
       teams: ['haar'],
     },
+    {
+      name: 'hmpps-prisoner-contacts',
+      devUrl: 'https://prisoner-contacts-dev.hmpps.service.justice.gov.uk',
+      title: 'HMPPS Prisoner Contacts',
+      teams: ['syscon'],
+    },
+    {
+      name: 'hmpps-prisoner-events',
+      versionPath: '/info',
+      prodUrl: 'https://prisoner-events.aks-live-1.studio-hosting.service.justice.gov.uk',
+      preprodUrl: 'https://prsnr-events-pp.aks-live-1.studio-hosting.service.justice.gov.uk',
+      devUrl: 'https://prsnr-events-dev.aks-dev-1.studio-hosting.service.justice.gov.uk',
+      title: 'HMPPS Prisoner Events',
+      teams: ['syscon'],
+    },
+
   ]
 
   TEAMS = [
