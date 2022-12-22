@@ -217,15 +217,6 @@ module Config
       teams: ['sed']
     },
     {
-      name: 'probation-offender-events',
-      versionPath: '/info',
-      prodUrl: 'https://probation-offender-events.hmpps.service.justice.gov.uk',
-      preprodUrl: 'https://probation-offender-events-preprod.hmpps.service.justice.gov.uk',
-      stagingUrl: 'https://probation-offender-events-staging.hmpps.service.justice.gov.uk',
-      devUrl: 'https://probation-offender-events-dev.hmpps.service.justice.gov.uk',
-      title: 'Probation Offender Events',
-    },
-    {
       name: 'pcms',
       repo: 'hmpps-prisoner-communication-monitoring',
       prodUrl: 'https://pcms.prison.service.justice.gov.uk',
@@ -594,6 +585,22 @@ module Config
       title: 'External Users API',
       teams: ['haar'],
     },
+    {
+      name: 'hmpps-prisoner-contacts',
+      devUrl: 'https://prisoner-contacts-dev.hmpps.service.justice.gov.uk',
+      title: 'HMPPS Prisoner Contacts',
+      teams: ['syscon'],
+    },
+    {
+      name: 'hmpps-prisoner-events',
+      versionPath: '/info',
+      prodUrl: 'https://prisoner-events.aks-live-1.studio-hosting.service.justice.gov.uk',
+      preprodUrl: 'https://prsnr-events-pp.aks-live-1.studio-hosting.service.justice.gov.uk',
+      devUrl: 'https://prsnr-events-dev.aks-dev-1.studio-hosting.service.justice.gov.uk',
+      title: 'HMPPS Prisoner Events',
+      teams: ['syscon'],
+    },
+
   ]
 
   TEAMS = [
