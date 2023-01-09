@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 ruby "~> 3.1.0"
 
-gem 'httparty'
+gem 'httparty', "~> 0.21.0"
 gem 'smashing'
 
 group :dev do
