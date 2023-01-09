@@ -600,6 +600,15 @@ module Config
       title: 'HMPPS Prisoner Events',
       teams: ['syscon'],
     },
+    {
+      name: 'hmpps-domain-event-logger',
+      versionPath: '/info',
+      prodUrl: 'https://domain-event-logger.hmpps.service.justice.gov.uk',
+      preprodUrl: 'https://domain-event-logger-preprod.hmpps.service.justice.gov.uk',
+      devUrl: 'https://domain-event-logger-dev.hmpps.service.justice.gov.uk',
+      title: 'HMPPS Domain Event Logger',
+      teams: ['syscon'],
+    },
 
   ]
 
