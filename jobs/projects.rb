@@ -587,7 +587,7 @@ module Config
     },
     {
       name: 'hmpps-prisoner-contacts',
-      devUrl: 'https://prisoner-contacts-dev.hmpps.service.justice.gov.uk',
+      devUrl: 'https://prisoner-contacts-dev.prison.service.justice.gov.uk',
       title: 'HMPPS Prisoner Contacts',
       teams: ['syscon'],
     },
