@@ -32,7 +32,7 @@ GEM
     parser (3.1.2.0)
       ast (~> 2.4.1)
     raabro (1.4.0)
-    rack (2.2.4)
+    rack (2.2.6.4)
     rack-protection (2.2.3)
       rack
     rainbow (3.1.1)
