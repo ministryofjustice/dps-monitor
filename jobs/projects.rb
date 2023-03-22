@@ -586,12 +586,6 @@ module Config
       teams: ['haar'],
     },
     {
-      name: 'hmpps-prisoner-contacts',
-      devUrl: 'https://prisoner-contacts-dev.prison.service.justice.gov.uk',
-      title: 'HMPPS Prisoner Contacts',
-      teams: ['syscon'],
-    },
-    {
       name: 'hmpps-prisoner-events',
       versionPath: '/info',
       prodUrl: 'https://prisoner-events.aks-live-1.studio-hosting.service.justice.gov.uk',
