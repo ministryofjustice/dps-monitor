@@ -25,9 +25,11 @@
           <div data-id="<%= data[:name] %>-preprod" data-view="ServerStatusSquares" data-title="<%= data[:title] %> - PreProd"></div>
         </li>
       <% end %>
+      <% if data[:devUrl] %>
       <li data-row="<%= (index / (params['team'] ? 6 : 12)) * 4 + (params['team'] ? 1 : 0) + 3 %>" data-col="<%= (index % (params['team'] ? 6 : 12)) + 1 %>" data-sizex="1" data-sizey="1">
         <div data-id="<%= data[:name] %>-dev" data-view="ServerStatusSquares" data-title="<%= data[:title] %> - Dev"></div>
       </li>
+      <% end %>
       <% if data[:stagingUrl] %>
         <li data-row="<%= (index / (params['team'] ? 6 : 12)) * 4 + (params['team'] ? 1 : 0) + 4 %>" data-col="<%= (index % (params['team'] ? 6 : 12)) + 1 %>" data-sizex="1" data-sizey="1">
           <div data-id="<%= data[:name] %>-staging" data-view="ServerStatusSquares" data-title="<%= data[:title] %> - Staging"></div>

@@ -132,7 +132,7 @@ def gather_health_data(server, env)
 end
 
 def add_outofdate(version, check_version)
-  if version == check_version
+  if version == check_version or !check_version
     { outofdate: 0 }
   else
     begin
@@ -149,15 +149,20 @@ end
 SCHEDULER.every '2m', first_in: 0 do |_job|
   Config::PROJECTS.each do |server|
     dev_result = gather_health_data(server, 'dev')
-    send_event("#{server[:name]}-dev", result: dev_result)
+    if dev_result
+      send_event("#{server[:name]}-dev", result: dev_result)
+      dev_version = dev_result[:checks][:VERSION]
+    else
+      dev_version = nil
+    end
     staging_result = gather_health_data(server, 'staging')
     if staging_result
-      staging_result_with_colour = staging_result.merge(add_outofdate(staging_result[:checks][:VERSION], dev_result[:checks][:VERSION]))
+      staging_result_with_colour = staging_result.merge(add_outofdate(staging_result[:checks][:VERSION], dev_version))
       send_event("#{server[:name]}-staging", result: staging_result_with_colour)
     end
     preprod_result = gather_health_data(server, 'preprod')
     if preprod_result
-      preprod_result_with_colour = preprod_result.merge(add_outofdate(preprod_result[:checks][:VERSION], dev_result[:checks][:VERSION]))
+      preprod_result_with_colour = preprod_result.merge(add_outofdate(preprod_result[:checks][:VERSION], dev_version))
       send_event("#{server[:name]}-preprod", result: preprod_result_with_colour)
 
       prod_result = gather_health_data(server, 'prod')
