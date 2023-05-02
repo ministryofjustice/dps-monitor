@@ -48,7 +48,6 @@ workflows:
           slack_notification: true
           context:
             - hmpps-common-vars
-            - dps-toolkit
           requires:
             - tests
             - helm_lint
