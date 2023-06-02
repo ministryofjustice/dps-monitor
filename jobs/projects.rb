@@ -126,6 +126,13 @@ module Config
       teams: ['syscon', 'sed', 'incentives'],
     },
     {
+      name: 'prisoner-search-indexer',
+      versionPath: '/info',
+      devUrl: 'https://prisoner-search-indexer-dev.prison.service.justice.gov.uk',
+      title: 'Prisoner Search Indexer',
+      teams: ['syscon'],
+    },
+    {
       name: 'licences',
       prodUrl: 'https://licences.prison.service.justice.gov.uk',
       preprodUrl: 'https://licences-preprod.prison.service.justice.gov.uk',
