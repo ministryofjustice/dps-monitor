@@ -17,10 +17,20 @@
 
 </head>
   <body>
+    <form>
+      <label for="team">Team:</label>
+      <select name="team" id="team" onchange="this.form.submit()">
+         <option disabled <% if params['team'].nil? %>selected<% end %>>select a team...</option>
+        <% $teams.each do |team| %>
+          <option value="<%= team[:name] %>" <% if team[:name] == params['team'] %>selected<% end %> ><%= team[:name] %></option>
+        <% end %>
+      </select>
+     
+    </form>
     <nav style="display:flex;">
-       <a href="/overview"> Overview</a>
-       <a href="/health"> Health Dashboard</a>
-       <a href="/circle"> CircleCI </a>
+       <a href="/overview<% unless params['team'].nil? %>?team=<%= params['team'] %><% end %>">Overview</a>
+       <a href="/health<% unless params['team'].nil? %>?team=<%= params['team'] %><% end %>">Health Dashboard</a>
+       <a href="/circle<% unless params['team'].nil? %>?team=<%= params['team'] %><% end %>">CircleCI </a>
        <a href="/stats"> Stats </a>
     </nav>
     <div id="container">
