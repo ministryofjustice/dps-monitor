@@ -210,9 +210,10 @@ SCHEDULER.every '10m', first_in: 0 do |job_sc|
           puts "Environment #{env_name} not valid"
         end
       end
-      unless environments.empty? && (project[:health_path].nil? && project[:version_path].nil?)
-        # add project to global projects hash
-        $projects << project if project.key?(:devUrl) || project.key?(:preprodUrl) || project.key?(:stagingUrl) || project.key?(:prodUrl)
+      if project.key?(:devUrl) || project.key?(:preprodUrl) || project.key?(:stagingUrl) || project.key?(:prodUrl)
+        if project.key?(:healthPath) || project.key?(:versionPath)
+          $projects << project
+        end
       end
     end
 
