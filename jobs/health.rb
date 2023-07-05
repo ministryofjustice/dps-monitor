@@ -11,7 +11,6 @@ require 'rest-client'
 # global vars to store projects/teams data.
 $projects = []
 $teams = []
-$teams_titles_global = {}
 $team_projects = {}
 
 #
@@ -162,7 +161,6 @@ SCHEDULER.every '10m', first_in: 0 do |job_sc|
   begin
     $projects = []
     $teams = []
-    $teams_titles_global = {}
     $team_projects = {}
 
     filter = '' # e.g. filter projects start with hmpps="filters%5Bname%5D%5B%24startsWith%5D=hmpps"
