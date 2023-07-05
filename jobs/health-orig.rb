@@ -1,25 +1,14 @@
 #!/usr/bin/env ruby
-
 require 'net/http'
 require 'uri'
 require 'httparty'
-require 'rest-client'
 
 #
 ### Global Config
-
-# global vars to store projects/teams data.
-$projects = []
-$teams = []
-$team_projects = {}
-
 #
 # httptimeout => Number in seconds for HTTP Timeout. Set to ruby default of 60 seconds.
 #
 $httptimeout = 2
-
-# Service catalogue endpoint
-$sc_endpoint_url = 'https://service-catalogue.hmpps.service.justice.gov.uk/v1'
 
 #
 # Check whether a server is Responding you can set a server to
@@ -87,9 +76,10 @@ def gather_health_data(server, env)
     return nil
   end
   url = server["#{env}Url".to_sym] + (server[:healthPath] || '/health')
-  puts "requesting #{url}"
+  puts "requesting #{url}..."
   begin
-    server_response = HTTParty.get(url, headers: { Accept: 'application/json' }, timeout: $httptimeout, follow_redirects: false)
+    server_response = HTTParty.get(url, headers: { Accept: 'application/json' }, timeout: $httptimeout)
+
   rescue => e
     puts "Caught #{e.inspect} whilst reading health for #{url}"
     server_response = false
@@ -109,9 +99,8 @@ def gather_health_data(server, env)
 
       if server[:versionPath]
         version_url = server["#{env}Url".to_sym] + (server[:versionPath])
-        puts version_url
         begin
-          version_response = HTTParty.get(version_url, headers: { Accept: 'application/json' }, timeout: $httptimeout, follow_redirects: false)
+          version_response = HTTParty.get(version_url, headers: { Accept: 'application/json' }, timeout: $httptimeout)
 
           # Useful debugging line
           # puts "Result from version check #server[:versionUrl] is #{version_response}"
@@ -157,86 +146,8 @@ def add_outofdate(version, check_version)
   end
 end
 
-SCHEDULER.every '10m', first_in: 0 do |job_sc|
-  begin
-    $projects = []
-    $teams = []
-    $team_projects = {}
-
-    filter = '' # e.g. filter projects start with hmpps="filters%5Bname%5D%5B%24startsWith%5D=hmpps"
-    response = RestClient.get $sc_endpoint_url + "/components?populate=environments&#{filter}", { accept: :json }
-    data = JSON.parse(response.body)
-    data['data'].each do |component|
-      name = component['attributes']['name']
-      teams = component['attributes']['github_project_teams_admin']
-
-      unless teams.nil?
-        teams.each do |team|
-          team_hash = { name: team, title: team }
-          $teams << team_hash unless $teams.one? { |t| t[:name] == team }
-        end
-      end
-
-      project = {
-        name: name,
-        title: name,
-        teams: teams
-      }
-
-      environments = component['attributes']['environments']
-
-      environments.each do |env|
-        env_name = env['name']
-        url = env['url']
-        health_path = env['health_path']
-        version_path = env['info_path']
-
-        # Skip if no URL found.
-        next if url.nil?
-
-        project.store(:healthPath, health_path) unless health_path.nil?
-        project.store(:versionPath, version_path) unless version_path.nil?
-
-        case env_name
-        when 'dev'
-          project.store(:devUrl, url)
-        when 'preprod'
-          project.store(:preprodUrl, url)
-        when 'stage'
-          project.store(:stagingUrl, url)
-        when 'prod'
-          project.store(:prodUrl, url)
-        else
-          puts "Environment #{env_name} not valid"
-        end
-      end
-      unless environments.empty? && (project[:health_path].nil? && project[:version_path].nil?)
-        # add project to global projects hash
-        $projects << project if project.key?(:devUrl) || project.key?(:preprodUrl) || project.key?(:stagingUrl) || project.key?(:prodUrl)
-      end
-    end
-
-    puts 'projects'
-    puts $projects
-
-    puts 'teams_global'
-    puts $teams
-
-    puts 'teams_title_global'
-    $teams_title = $teams.map { |team| [team[:name], team[:title]] }.to_h
-    puts $teams_title
-
-    puts 'team_projects_global'
-    $team_projects = $teams.map { |team|[team[:name], $projects.filter { |project| project[:teams]&.include? team[:name] }] }.to_h
-    puts $team_projects
-
-  rescue RestClient::ExceptionWithResponse => e
-    puts e.response
-  end
-end
-
-SCHEDULER.every '10m', first_in: '5s' do |_job|
-  $projects.each do |server|
+SCHEDULER.every '2m', first_in: 0 do |_job|
+  Config::PROJECTS.each do |server|
     dev_result = gather_health_data(server, 'dev')
     if dev_result
       send_event("#{server[:name]}-dev", result: dev_result)

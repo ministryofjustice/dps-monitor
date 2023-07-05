@@ -11,6 +11,8 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.10)
     daemons (1.4.1)
+    domain_name (0.5.20190701)
+      unf (>= 0.0.5, < 1.0.0)
     et-orbi (1.2.7)
       tzinfo
     eventmachine (1.2.7)
@@ -19,15 +21,22 @@ GEM
     fugit (1.5.3)
       et-orbi (~> 1, >= 1.2.7)
       raabro (~> 1.4)
+    http-accept (1.7.0)
+    http-cookie (1.0.5)
+      domain_name (~> 0.5)
     httparty (0.21.0)
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
     json (2.6.3)
+    mime-types (3.4.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2023.0218.1)
     mini_mime (1.1.2)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     mustermann (2.0.2)
       ruby2_keywords (~> 0.0.1)
+    netrc (0.11.0)
     parallel (1.22.1)
     parser (3.1.2.0)
       ast (~> 2.4.1)
@@ -37,6 +46,11 @@ GEM
       rack
     rainbow (3.1.1)
     regexp_parser (2.5.0)
+    rest-client (2.1.0)
+      http-accept (>= 1.7.0, < 2.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     rexml (3.2.5)
     rubocop (1.32.0)
       json (~> 2.3)
@@ -89,6 +103,9 @@ GEM
     tilt (2.0.11)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.8.2)
     unicode-display_width (2.2.0)
 
 PLATFORMS
@@ -97,11 +114,12 @@ PLATFORMS
 DEPENDENCIES
   bundler-audit (~> 0.9.0)
   httparty (~> 0.21.0)
+  rest-client
   rubocop
   smashing
 
 RUBY VERSION
-   ruby 3.1.0p0
+   ruby 3.2.2p53
 
 BUNDLED WITH
    2.3.3

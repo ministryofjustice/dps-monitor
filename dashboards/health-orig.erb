@@ -11,10 +11,10 @@
   <ul>
     <% if params['team'] %>
       <li data-row="1" data-col="1" data-sizex="<%= params['team'] ? 6 : 12 %>" data-sizey="1">
-        <div data-view="ServerStatusSquares" data-title="<%= $teams_title[params['team']] %> - Service Health"></div>
+        <div data-view="ServerStatusSquares" data-title="<%= Config::TEAMS_TITLES[params['team']] %> - Service Health"></div>
       </li>
     <% end %>
-    <% (params['team'] ? $team_projects[params['team']] : $projects).each_with_index do |data, index| %>
+    <% (params['team'] ? Config::TEAM_PROJECTS[params['team']] : Config::PROJECTS).each_with_index do |data, index| %>
       <% if data[:prodUrl] %>
         <li data-row="<%= (index / (params['team'] ? 6 : 12)) * 4 + (params['team'] ? 1 : 0) + 1 %>" data-col="<%= (index % (params['team'] ? 6 : 12)) + 1 %>" data-sizex="1" data-sizey="1">
           <div data-id="<%= data[:name] %>-prod" data-view="ServerStatusSquares" data-title="<%= data[:title] %> - Prod"></div>

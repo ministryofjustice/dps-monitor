@@ -10,18 +10,18 @@
   <ul>
     <% if params['team'] %>
       <li data-row="1" data-col="1" data-sizex="<%= params['team'] ? 6 : 10 %>" data-sizey="1">
-        <div data-view="ServerStatusSquares" data-title="<%= Config::TEAMS_TITLES[params['team']] %> - Build Status"></div>
+        <div data-view="ServerStatusSquares" data-title="<%= $teams_title[params['team']] %> - Build Status"></div>
       </li>
     <% end %>
 
-    <% (params['team'] ? Config::TEAM_PROJECTS[params['team']] : Config::PROJECTS).each do |data| %>
+    <% (params['team'] ? $team_projects[params['team']] : $projects).each do |data| %>
       <% if data[:prodUrl] %>
         <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
           <div data-id="<%= data[:name] %>-prod" data-view="ServerStatusSquares" data-title="<%= data[:title] %> - Prod"></div>
         </li>
       <% end %>
     <% end %>
-    <% (params['team'] ? Config::TEAM_PROJECTS[params['team']] : Config::PROJECTS).each do |data| %>
+    <% (params['team'] ? $team_projects[params['team']] : $projects).each do |data| %>
       <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
         <div data-id="circle-ci-ministryofjustice-<%=data[:repo] || data[:name]%>-main" data-view="CircleCi" data-title="<%=data[:title]%>"></div>
       </li>
