@@ -172,15 +172,6 @@ module Config
       teams: ['sed', 'haar'],
     },
     {
-      name: 'dps-data-compliance',
-      versionPath: '/info',
-      prodUrl: 'https://prison-data-compliance.prison.service.justice.gov.uk',
-      preprodUrl: 'https://prison-data-compliance-preprod.prison.service.justice.gov.uk',
-      devUrl: 'https://prison-data-compliance-dev.prison.service.justice.gov.uk',
-      title: 'Data Compliance',
-      teams: ['sed']
-    },
-    {
       name: 'probation-teams',
       versionPath: '/info',
       prodUrl: 'https://probation-teams.prison.service.justice.gov.uk',
