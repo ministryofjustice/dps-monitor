@@ -17,22 +17,22 @@
     <% (params['team'] ? Config::TEAM_PROJECTS[params['team']] : Config::PROJECTS).each_with_index do |data, index| %>
       <% if data[:prodUrl] %>
         <li data-row="<%= (index / (params['team'] ? 6 : 12)) * 4 + (params['team'] ? 1 : 0) + 1 %>" data-col="<%= (index % (params['team'] ? 6 : 12)) + 1 %>" data-sizex="1" data-sizey="1">
-          <div data-id="<%= data[:name] %>-prod" data-view="ServerStatusSquares" data-title="<%= data[:title] %> - Prod"></div>
+          <div data-id="<%= data[:name] %>-orig-prod" data-view="ServerStatusSquares" data-title="<%= data[:title] %> - Prod"></div>
         </li>
       <% end %>
       <% if data[:preprodUrl] %>
         <li data-row="<%= (index / (params['team'] ? 6 : 12)) * 4 + (params['team'] ? 1 : 0) + 2 %>" data-col="<%= (index % (params['team'] ? 6 : 12)) + 1 %>" data-sizex="1" data-sizey="1">
-          <div data-id="<%= data[:name] %>-preprod" data-view="ServerStatusSquares" data-title="<%= data[:title] %> - PreProd"></div>
+          <div data-id="<%= data[:name] %>-orig-preprod" data-view="ServerStatusSquares" data-title="<%= data[:title] %> - PreProd"></div>
         </li>
       <% end %>
       <% if data[:devUrl] %>
       <li data-row="<%= (index / (params['team'] ? 6 : 12)) * 4 + (params['team'] ? 1 : 0) + 3 %>" data-col="<%= (index % (params['team'] ? 6 : 12)) + 1 %>" data-sizex="1" data-sizey="1">
-        <div data-id="<%= data[:name] %>-dev" data-view="ServerStatusSquares" data-title="<%= data[:title] %> - Dev"></div>
+        <div data-id="<%= data[:name] %>-orig-dev" data-view="ServerStatusSquares" data-title="<%= data[:title] %> - Dev"></div>
       </li>
       <% end %>
       <% if data[:stagingUrl] %>
         <li data-row="<%= (index / (params['team'] ? 6 : 12)) * 4 + (params['team'] ? 1 : 0) + 4 %>" data-col="<%= (index % (params['team'] ? 6 : 12)) + 1 %>" data-sizex="1" data-sizey="1">
-          <div data-id="<%= data[:name] %>-staging" data-view="ServerStatusSquares" data-title="<%= data[:title] %> - Staging"></div>
+          <div data-id="<%= data[:name] %>-orig-staging" data-view="ServerStatusSquares" data-title="<%= data[:title] %> - Staging"></div>
         </li>
       <% end %>
     <% end %>
