@@ -299,7 +299,7 @@ module Config
     {
       name: 'hmpps-nomis-prisoner-api',
       versionPath: '/info',
-      prodUrl: 'https://nomis-prisoner.aks-live-1.studio-hosting.service.justice.gov.uk',
+      prodUrl: 'https://nomis-prisoner-api-dev.prison.service.justice.gov.uk',
       preprodUrl: 'https://nomis-prsner-pp.aks-live-1.studio-hosting.service.justice.gov.uk',
       devUrl: 'https://nomis-prsner-dev.aks-dev-1.studio-hosting.service.justice.gov.uk',
       title: 'NOMIS Prisoner API',
@@ -583,7 +583,7 @@ module Config
     {
       name: 'hmpps-prisoner-events',
       versionPath: '/info',
-      prodUrl: 'https://prisoner-events.aks-live-1.studio-hosting.service.justice.gov.uk',
+      prodUrl: 'https://prisoner-events-dev.prison.service.justice.gov.uk',
       preprodUrl: 'https://prsnr-events-pp.aks-live-1.studio-hosting.service.justice.gov.uk',
       devUrl: 'https://prsnr-events-dev.aks-dev-1.studio-hosting.service.justice.gov.uk',
       title: 'HMPPS Prisoner Events',
