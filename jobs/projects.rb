@@ -14,7 +14,7 @@ module Config
       versionPath: '/info',
       prodUrl: 'https://api.prison.service.justice.gov.uk',
       preprodUrl: 'https://api-preprod.prison.service.justice.gov.uk',
-      devUrl: 'https://api-dev.prison.service.justice.gov.uk',
+      devUrl: 'https://prison-api-dev.prison.service.justice.gov.uk',
       title: 'Prison API',
       teams: ['syscon', 'sed', 'haar', 'incentives'],
     },
