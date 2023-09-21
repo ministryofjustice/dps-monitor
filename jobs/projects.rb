@@ -305,15 +305,6 @@ module Config
       teams: ['syscon'],
     },
     {
-      name: 'court-register',
-      versionPath: '/info',
-      prodUrl: 'https://court-register.hmpps.service.justice.gov.uk',
-      preprodUrl: 'https://court-register-preprod.hmpps.service.justice.gov.uk',
-      devUrl: 'https://court-register-dev.hmpps.service.justice.gov.uk',
-      title: 'Court Register',
-      teams: ['haar'],
-    },
-    {
       name: 'prison-register',
       versionPath: '/info',
       prodUrl: 'https://prison-register.hmpps.service.justice.gov.uk',
