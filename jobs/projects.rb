@@ -121,7 +121,7 @@ module Config
       versionPath: '/info',
       prodUrl: 'https://prisoner-offender-search.prison.service.justice.gov.uk',
       preprodUrl: 'https://prisoner-offender-search-preprod.prison.service.justice.gov.uk',
-      devUrl: 'https://prisoner-offender-search-dev.prison.service.justice.gov.uk',
+      devUrl: 'https://prisoner-search-dev.prison.service.justice.gov.uk',
       title: 'Prisoner Offender Search',
       teams: ['syscon', 'sed', 'incentives'],
     },
