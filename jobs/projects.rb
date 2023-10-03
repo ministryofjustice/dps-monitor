@@ -291,7 +291,7 @@ module Config
       versionPath: '/info',
       prodUrl: 'https://nomis-user.aks-live-1.studio-hosting.service.justice.gov.uk',
       preprodUrl: 'https://nomis-user-pp.aks-live-1.studio-hosting.service.justice.gov.uk',
-      devUrl: 'https://nomis-user-dev.aks-dev-1.studio-hosting.service.justice.gov.uk',
+      devUrl: 'https://nomis-user-roles-api-dev.prison.service.justice.gov.uk',
       title: 'NOMIS User Roles API',
       teams: ['haar'],
     },
