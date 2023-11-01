@@ -117,14 +117,6 @@ module Config
       teams: ['syscon'],
     },
     {
-      name: 'prisoner-offender-search',
-      versionPath: '/info',
-      prodUrl: 'https://prisoner-offender-search.prison.service.justice.gov.uk',
-      preprodUrl: 'https://prisoner-offender-search-preprod.prison.service.justice.gov.uk',
-      title: 'Prisoner Offender Search',
-      teams: ['syscon', 'sed', 'incentives'],
-    },
-    {
       name: 'hmpps-prisoner-search',
       versionPath: '/info',
       prodUrl: 'https://prisoner-search.prison.service.justice.gov.uk',
