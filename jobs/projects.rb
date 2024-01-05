@@ -308,6 +308,13 @@ module Config
       teams: ['syscon'],
     },
     {
+      name: 'hmpps-prisoner-download-api',
+      versionPath: '/info',
+      devUrl: 'https://prisoner-download-api-dev.prison.service.justice.gov.uk',
+      title: 'Prisoner Download API',
+      teams: ['syscon'],
+    },
+    {
       name: 'prison-register',
       versionPath: '/info',
       prodUrl: 'https://prison-register.hmpps.service.justice.gov.uk',
