@@ -14,6 +14,7 @@ module Config
       versionPath: '/info',
       prodUrl: 'https://api.prison.service.justice.gov.uk',
       preprodUrl: 'https://api-preprod.prison.service.justice.gov.uk',
+      stagingUrl: 'https://prison-api-preprod.prison.service.justice.gov.uk',
       devUrl: 'https://prison-api-dev.prison.service.justice.gov.uk',
       title: 'Prison API',
       teams: ['syscon', 'sed', 'haar', 'incentives'],
@@ -202,7 +203,6 @@ module Config
       versionPath: '/info',
       prodUrl: 'https://community-api.probation.service.justice.gov.uk',
       preprodUrl: 'https://community-api.pre-prod.delius.probation.hmpps.dsd.io',
-      stagingUrl: 'https://community-api.stage.probation.service.justice.gov.uk',
       devUrl: 'https://community-api.test.probation.service.justice.gov.uk',
       title: 'Community API',
       teams: ['sed']
@@ -302,8 +302,16 @@ module Config
       versionPath: '/info',
       prodUrl: 'https://nomis-prisoner.aks-live-1.studio-hosting.service.justice.gov.uk',
       preprodUrl: 'https://nomis-prsner-pp.aks-live-1.studio-hosting.service.justice.gov.uk',
+      stagingUrl: 'https://nomis-prisoner-api-preprod.prison.service.justice.gov.uk',
       devUrl: 'https://nomis-prisoner-api-dev.prison.service.justice.gov.uk',
       title: 'NOMIS Prisoner API',
+      teams: ['syscon'],
+    },
+    {
+      name: 'hmpps-prisoner-download-api',
+      versionPath: '/info',
+      devUrl: 'https://prisoner-download-api-dev.prison.service.justice.gov.uk',
+      title: 'Prisoner Download API',
       teams: ['syscon'],
     },
     {
