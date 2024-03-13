@@ -464,7 +464,7 @@ module Config
       prodUrl: 'https://nomis-sync-prisoner-mapping.hmpps.service.justice.gov.uk',
       preprodUrl: 'https://nomis-sync-prisoner-mapping-preprod.hmpps.service.justice.gov.uk',
       devUrl: 'https://nomis-sync-prisoner-mapping-dev.hmpps.service.justice.gov.uk',
-      title: 'HMPPS NOMIS Visits Mapping',
+      title: 'HMPPS NOMIS Mapping',
       teams: ['syscon', 'incentives']
     },
     {
@@ -517,8 +517,8 @@ module Config
     {
       name: 'csr-api',
       versionPath: '/info',
-      prodUrl: 'https://csr-api.aks-live-1.studio-hosting.service.justice.gov.uk',
-      preprodUrl: 'https://csr-api-prprod.aks-live-1.studio-hosting.service.justice.gov.uk',
+      prodUrl: 'https://health-kick.prison.service.justice.gov.uk/http/csr-api.check-my-diary-prod.svc.cluster.local',
+      preprodUrl: 'https://health-kick.prison.service.justice.gov.uk/http/csr-api.check-my-diary-preprod.svc.cluster.local',
       title: 'CSR API',
       teams: ['syscon'],
     },
